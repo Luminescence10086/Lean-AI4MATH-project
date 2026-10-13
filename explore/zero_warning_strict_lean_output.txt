@@ -1,0 +1,7 @@
+'SigmaRouteAudit.legal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SigmaRouteAudit.legal_counterexample_B' depends on axioms: [propext, Classical.choice, Quot.sound]
+'matching_capacity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'truncated_cover_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T23prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'problem7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'main_induction_strong' depends on axioms: [propext, Classical.choice, Quot.sound]

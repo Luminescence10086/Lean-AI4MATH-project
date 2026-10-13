@@ -1,0 +1,4 @@
+A/V/deep {"n": 720, "alpha": 4, "census": {"6": 1, "12": 1, "24": 1, "30": 16, "36": 18, "48": 2, "360": 12}, "O": [1, 2], "sumO": 3, "deep_census": 2, "TGT": true, "Pp": true, "Rp": true, "Rpp": true, "R": true}
+y=6: {'y': 6, 'M': {1: 2, 2: 3}, 'F': 5, 'saturated': [1, 2]}
+B {"n": 720, "alpha": 4, "census": {"6": 1, "12": 1, "16": 1, "24": 1, "30": 16, "36": 18, "48": 1, "360": 12}, "O": [1, 2], "sumO": 3, "deep_census": 2, "TGT": true, "Pp": true, "Rp": true, "Rpp": true, "R": true}
+y=6: {'y': 6, 'M': {1: 2, 2: 3, 4: 1}, 'F': 6, 'saturated': [1, 2]}

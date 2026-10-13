@@ -1,0 +1,17 @@
+warning: could not canonicalize path: 'C:\Users\18746\Desktop\数竞屠宰场'
+warning: could not canonicalize path: 'C:\Users\18746\Desktop\数竞屠宰场'
+IMO组合预选题.lean:2599:37: warning: Variable name `hν` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hν
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+IMO组合预选题.lean:2752:8: warning: declaration uses `sorry`
+IMO组合预选题.lean:2766:8: warning: declaration uses `sorry`
+'SigmaRouteAudit.legal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SigmaRouteAudit.legal_counterexample_B' depends on axioms: [propext, Classical.choice, Quot.sound]
+'matching_capacity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'truncated_cover_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T23prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'problem7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'main_induction_strong' depends on axioms: [propext, Classical.choice, Quot.sound]

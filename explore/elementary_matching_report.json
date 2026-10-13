@@ -1,0 +1,130 @@
+{
+  "failure_mechanism_cases": 3,
+  "inductive_route_graphs": {
+    "graphs": 512,
+    "full_slot_matches": 247,
+    "positive_deficit_matches": 96
+  },
+  "named": {
+    "n720_A": {
+      "n": 720,
+      "blocks": 51,
+      "slots": 12,
+      "anchor": 7,
+      "selected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        17,
+        49
+      ],
+      "selected_census": {
+        "30": 8,
+        "36": 3,
+        "48": 1,
+        "360": 1
+      }
+    },
+    "n720_B": {
+      "n": 720,
+      "blocks": 51,
+      "slots": 12,
+      "anchor": 7,
+      "selected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        17,
+        49
+      ],
+      "selected_census": {
+        "30": 8,
+        "36": 3,
+        "48": 1,
+        "360": 1
+      }
+    },
+    "n60": {
+      "n": 60,
+      "blocks": 32,
+      "slots": 8,
+      "anchor": 4,
+      "selected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "selected_census": {
+        "12": 5,
+        "20": 4
+      }
+    },
+    "n240": {
+      "n": 240,
+      "blocks": 22,
+      "slots": 10,
+      "anchor": 5,
+      "selected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "selected_census": {
+        "10": 6,
+        "12": 3,
+        "80": 2
+      }
+    }
+  },
+  "exhaustive": {
+    "6": {
+      "K": 7,
+      "covers": 24
+    },
+    "12": {
+      "K": 7,
+      "covers": 592
+    },
+    "18": {
+      "K": 7,
+      "covers": 387
+    },
+    "24": {
+      "K": 7,
+      "covers": 3652
+    }
+  },
+  "exact_partitions": 160,
+  "mixed_covers": 160,
+  "large_true_lcm_cases": 307
+}

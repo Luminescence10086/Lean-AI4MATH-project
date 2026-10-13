@@ -1,0 +1,2868 @@
+arXiv:1904.04806v2 [math.CO] 16 Nov 2022
+
+THE STRUCTURE AND NUMBER OF ERDO S COVERING SYSTEMS
+
+PAUL BALISTER, BE´ LA BOLLOBA´ S, ROBERT MORRIS, JULIAN SAHASRABUDHE, AND MARIUS TIBA
+
+Abstract. Introduced by Erdos in 1950, a covering system of the integers is a finite col-
+
+lection of arithmetic progressions whose union is the set Z. Many beautiful questions and
+
+conjectures about covering systems have been posed over the past several decades, but un-
+
+til recently little was known about their properties. Most famously, the so-called minimum
+
+modulus problem of Erdos was resolved in 2015 by Hough, who proved that in every covering
+
+system with distinct moduli, the minimum modulus is at most 1016.
+
+In this paper we answer another question of Erdos, asked in 1952, on the number of
+
+minimal covering systems. More precisely, we show that the number of minimal covering
+
+systems with exactly n elements is exp
+
+4 3 + o(1)
+
+n3/2 (log n)1/2
+
+as n  , where
+
+ t+1 2  = log t .
+t=1
+
+En route to this counting result, we obtain a structural description of all covering systems
+
+that are close to optimal in an appropriate sense.
+
+1. Introduction
+A covering system is a finite collection of arithmetic progressions that covers1 the integers. Erdos [5] initiated the study of covering systems in 1950, and since then numerous beautiful questions have been asked about their properties (see, for example, [5-13, 20, 21]). Until recently little progress had been made on these problems, but following groundbreaking work of Filaseta, Ford, Konyagin, Pomerance and Yu [13] in 2007, a fundamental result was obtained by Hough [16], who resolved a problem from the original paper of Erdos [5] by proving that there do not exist covering systems with distinct moduli and arbitrarily large minimum modulus. Building on his work, the authors of this paper [1, 2] recently made further progress on several related open problems.
+In this paper we will study another problem on covering systems, whose study was initiated by Erdos [6] in 1952:
+How many minimal covering systems of size n are there?
+The first two authors were partially supported by NSF grant DMS 1600742, the third author was partially supported by FAPERJ (Proc. E-26/202.993/2017) and CNPq (Proc. 304237/2016-7), and the fifth author was supported by a Trinity Hall Research Studentship. 1We emphasize that we do not require the progressions to be disjoint. For related work on covering systems with this additional property (sometimes called exactly covering systems), see for example [14, 15, 19, 23].
+
+Erdos [6] gave a simple proof that there are only finitely many minimal2 covering systems of size n, but the bound he obtained on their number was doubly exponential. A more reasonable upper bound follows from a result of Simpson [22], who proved in 1985 (see Section 2) that the largest modulus in a minimal covering system of size n is at most 2n-1. Note that this bound is best possible, since A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1) is a minimal covering system, and that it easily implies that there are at most 2O(n2) minimal covering systems of size n. We will show that there are in fact rather fewer such systems, and we will moreover determine asymptotically the logarithm of their number. The main aim of this paper is to prove the following theorem.
+
+Theorem 1.1. The number of minimal covering systems of Z of size n is 4 n3/2
+exp 3 + o(1) (log n)1/2 (1)
+
+as n  , where
+
+
+=
+t=1
+
+log t + 1 2 . t
+
+We remark that proving a weaker upper bound, with a different constant in the exponent,
+is significantly easier, and we will give a short proof of such a bound in Section 6. Let us
+also note here that we will prove the lower bound under the additional restriction that the
+moduli are distinct, and so the conclusion of Theorem 1.1 also holds for such systems.
+In order to motivate the form of the formula (1), let us begin by describing a simple
+construction that gives a slightly weaker lower bound. Let p1 < . . . < pk be the first k primes, and for each i  [k], choose pi - 1 arithmetic progressions A1(i), . . . , Api-1 (i) with the following properties: for each j  [pi - 1], the modulus of Aj(i) is divisible by pi and divides Qi := p1 · · · pi, and Aj(i) contains j · Qi-1. It is not difficult to show that, for each such choice, by adding the progression 0 (mod Qk) we obtain a distinct minimal covering system of size n = i=1 k (pi - 1) + 1  k2 log k. Since we have 2i-1 choices for the progression Aj(i) for each i  [k] and j  [pi - 1], this implies that there are at least
+
+k
+2(i-1)(pi-1) = exp
+i=1
+
+ k3 log k
+
+= exp
+
+ n3/2 (log n)1/2
+
+minimal covering systems of Z of size n. In Section 5 we will describe a somewhat more
+
+complicated construction that proves the lower bound in Theorem 1.1.
+
+We will refer to collections of progressions as in the construction above as "frames" (see
+
+Section 2 for a precise definition). The second main result of this paper, and the key step in
+
+the proof of Theorem 1.1, will be a structural description of all "efficient" covering systems;
+
+roughly speaking, we will show that every such covering system contains a large "approximate
+
+frame". The purpose of the next section is to state this structural theorem.
+
+2A covering system A is minimal if no proper subset of it covers Z. Without this restriction there are infinitely many covering systems of size 2, since we can take A = {Z, A} for any arithmetic progression A.
+2
+
+2. The structure of efficient coverings
+
+In this section we will state our main structural theorem. In order to do so, it will be
+convenient to shift our attention to the following (slightly more general) geometric setting.
+Let S1, . . . , Sk be finite sets with at least two elements and set SI := iI Si for each I  [k]. If H = H1 × · · · × Hk  S[k] with each Hi either equal to Si or a singleton element of Si, then we say that H is a hyperplane. We write F (H) := {i  [k] : |Hi| = 1} for the fixed coordinates of H, and F (A) := HA F (H) if A is a collection of hyperplanes. We will also write H = [x1, . . . , xk], where xi  Si  {} for each i  [k], and  indicates that Hi = Si.
+
+Definition 2.1. A simple frame centred at an element (s1, . . . , sk)  S[k] (which we call the axis), is a sequence (F1, . . . , Fk), where Fi is a collection of |Si| - 1 hyperplanes of the form
+
+x1, . . . , xi-1, a, , · · · ,  ,
+
+(2)
+
+one for each a  Si \ {si}, with xj  {sj, } for each j  [i - 1]. A frame is obtained from a simple frame by permuting the order of the sets S1, . . . , Sk.
+
+Observe that if (F1, . . . , Fk) is a frame centred at (s1, . . . , sk), then the collection
+
+A := F1  · · ·  Fk  [s1, . . . , sk]
+
+is a minimal cover of S[k]. Indeed, if we remove the hyperplane x1, . . . , xi-1, a, , · · · ,  from A, then the element (s1, . . . , si-1, a, si+1, . . . , sk) will be uncovered by the remaining hyperplanes. Note that if we set Si = {0, . . . , pi - 1} for each i  [k], then the construction given in the introduction is equivalent to a frame centred at (0, . . . , 0). When we (for now
+informally, but later on precisely) discuss frames in Z, we will always mean that each set Si = {0, . . . , p - 1} for some prime p (these primes will not generally be distinct), and we will map S1 × · · · × Sk into ZN , where N = i=1 k |Si|, using the Chinese Remainder Theorem to identify ZN with the product of groups Zp , and then expanding base p.3 Note that every arithmetic progression in Z corresponds to a hyperplane, but not every hyperplane
+corresponds to an arithmetic progression if primes are repeated (see Sections 5 and 7).
+The key idea behind the proof of Theorem 1.1 is the following (imprecise) conjecture:
+
+"Almost every minimal covering system of Z of size n is close to a frame."
+
+We will not prove a result of this form; instead, we will use a slightly weaker notion, which we call a -generalized frame. These objects differ from frames in two key ways: the fixed elements "to the left" of i in a hyperplane H  Fi are allowed to vary with i, and instead of insisting that "all coordinates to the right are free" (as in (2)), we allow a few "small" coordinates to be fixed (with the product of their sizes bounded by 1/).
+The next definition is both important and somewhat technical, and we will need some additional notation. Given a hyperplane H, we write Hi for its ith coordinate, and for any I  [k] we will write HI = iI Hi for the hyperplane in SI obtained by restricting H to the coordinates of I, and define µI(H) := |HI| · |SI|-1 when I = , and µ(H) := 1.
+
+3For example, (a0, a1, . . . , a-1)  Zp × · · · × Zp corresponds to the element 3
+
+i=0 -1 aipi  Zp .
+
+Definition 2.2 (-generalized frames). Let  > 0, and let S1, . . . , Sk be finite sets with at least two elements. A simple -generalized frame in S[k] is a sequence (F1, . . . , Fk), where Fi is a collection of at most |Si| - 1 hyperplanes, satisfying the following conditions. For each i  [k], there exists a set I(i)  {i + 1, . . . , k}, and for each j  I(i)  {i}, there exists an element sj(i)  Sj, such that, for each H  Fi,
+
+i  F (H),
+
+µI(i)(H) > 
+
+and
+
+Hj  sj(i), Sj .
+
+Moreover, if min |Si|, |Sj| -1 and i = j, then Fi and Fj are disjoint. A -generalized frame is obtained from a simple -generalized frame by permuting the sets S1, . . . , Sk.
+
+We are now ready to state our main structural theorem for covering systems that contain roughly (up to a constant factor) the same number of elements as a frame.
+
+Theorem 2.3. For every C,  > 0 there exists  = (C, ) > 0 so that for every collection of finite sets S1, . . . , Sk with at least two elements, the following holds. If A is a minimal cover of S[k] with hyperplanes such that F (A) = [k] and
+
+k
+
+|A| C |Si| - 1 ,
+
+(3)
+
+i=1
+
+then A contains a -generalized frame (F1, . . . , Fk), with
+
+k
+
+k
+
+|Fi| (1 - ) |Si| - 1 .
+
+(4)
+
+i=1
+
+i=1
+
+The theorem above can be thought of as an inverse theorem for the following extremal result of Simpson [22]. If A is a collection of arithmetic progressions, then we write lcm(A) for the least common multiple of the moduli of the progressions in A.
+
+Theorem 2.4 (Simpson's theorem). If A is a minimal cover of S[k] with hyperplanes such
+
+that F (A) = [k], then
+k
+
+|A|
+
+|Si| - 1 + 1.
+
+i=1
+
+In
+
+particular,
+
+if
+
+A
+
+is
+
+a
+
+minimal
+
+covering
+
+system
+
+of
+
+Z
+
+with
+
+lcm(A)
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+p
+
+m m
+
+,
+
+then
+
+m
+
+|A|
+
+i pi - 1 + 1.
+
+i=1
+
+In the appendix, we will provide (for the reader's convenience) a proof of Simpson's theorem. Let us also remark here that, while the form of the function (C, ) will not matter for our purposes, we will prove that Theorem 2.3 holds with  = (/C)O(log(1/)).
+In order to deduce Theorem 1.1 from Theorem 2.3, we will need to count -generalized frames quite precisely, and show that there are relatively few choices for the remaining elements; we will also need to show that there are few minimal covering systems that fail to satisfy (3). These calculations are carried out in Sections 6 and 7.
+
+4
+
+2.1. An outline of the proof of the structural theorem. The proof of Theorem 2.3 requires a few somewhat technical definitions, and to prepare the reader for these we will begin by giving an outline of the argument. The idea is to construct a tree that encodes the structure of the covering system by `exploring' it coordinate by coordinate. To be more precise, given a minimal cover A of S[k], let us choose a coordinate i  [k] to explore, and observe (see Section 3.2 for the details) that for each s  Si we obtain a covering system of
+S1 × · · · × Si-1 × {s} × Si+1 × · · · × Sk,
+which we identify with S[k]\{i}. (Here the hyperplanes H  A with Hi = Si appear in each of the |Si| covering systems corresponding to coordinate i.) These covering systems may not be minimal, but for each s  Si we can take a minimal sub-covering As.
+Now, some of the systems As may be trivial (i.e., may consist of a single hyperplane), and when this occurs we are happy, because such hyperplanes can be used in the frame that we are trying to construct. For the remaining elements s  Si, we consider the set of fixed coordinates F (As) of As, and observe (see Lemma 3.7) that every coordinate (except i) is in F (As) for some s  Si. We may now choose, for each s such that F (As) is non-empty, a coordinate j  F (As), and repeat the above construction, exploring the minimal covering system As, starting with the coordinate j. Iterating this process produces a rooted tree (which we call an `index tree', see Definition 3.1), each of whose vertices is labelled with a set I  [k] and a coordinate i  I, which are the fixed coordinates of the corresponding minimal covering system, and the coordinate `explored' at that vertex, respectively.
+So far, we have not said anything about how to construct the sets Fi, or how to choose the coordinate i that we explore in a given step. For simplicity, let us explain this only for the first step (the choice for later steps is similar). First, if there exists i  [k] such that there are at least (1 - ) |Si| - 1 hyperplanes H  A with i  F (H) and µ[k]\{i}(H) > , then we choose such a coordinate i to explore, and associate this collection of `frame-like' hyperplanes with the current vertex (in this case, the root of the tree). One of the key ideas of the paper is that, if such a collection of hyperplanes does not exist for any i  [k], then we may use the Lova´sz Local Lemma to deduce (see Lemma 3.5) that there exists a coordinate j (which we will choose to explore), and a `large' collection G of hyperplanes in the current collection, such that j is a fixed coordinate of each. This collection of `garbage' hyperplanes will later be used, together with (3), to show that this case does not occur too often.
+The plan described above is carried out in Section 3, the main result being Lemma 3.3, which states that if  is sufficiently small, then there exists a suitable `exploration tree' T of A (see Definition 3.2). This exploration tree can be very large, however, and to extract our -generalized frame from it we will need to choose a suitable sub-tree T . To do so, we choose k `special' vertices of T, one for each coordinate, and take the union of the paths from these vertices to the root. If almost all of these special vertices are `good' (that is, we found a large collection of frame-like hyperplanes when exploring them), then we obtain a sufficiently large -generalized frame. On the other hand, if a positive proportion of them are `bad', then we use the `garbage' hyperplanes to show that inequality (3) cannot hold. In order to carry out this argument, we need to choose the special vertices carefully; it turns out that it is sufficient to choose them via a depth-first search, see Section 4 for the details.
+5
+
+3. Exploring the cover
+
+In this section we will take the first step towards Theorem 2.3 by describing a much larger object that is somewhat easier to construct, the exploration tree. To define these, we first need to introduce the following simpler objects, which we call index trees. Let us fix, for the rest of the proof of Theorem 2.3, a collection of finite sets S1, . . . , Sk with at least two elements, and let us write N(u) for the set of out-neighbours of u in a rooted tree, where we orient the edges away from the root.
+
+Definition 3.1. An index tree T of [k] is a rooted tree, equipped with a labelling of its vertices u  (Iu, iu), where Iu  [k] and iu  Iu, that satisfies the following conditions:
+(i) the root of T has label ([k], i) for some i  [k]; (ii) for each vertex v  V (T),
+
+Iu = Iv \ {iv}.
+
+(5)
+
+uN (v)
+
+We can now define the exploration tree of a collection of hyperplanes in S[k]. Given a rooted tree T and vertices u, v  V (T ), let us write u T v to indicate that u lies on the path from v to the root (so, in particular, v T v).
+
+Definition 3.2. Let , ,  > 0, and let A be a collection of hyperplanes in S[k]. An (, , )exploration tree of A is an index tree T of [k] such that, for each vertex u  V (T):
+
+(a)
+
+there
+
+exists
+
+a
+
+collection
+
+Au
+
+
+
+A
+
+such
+
+that
+
+A
+u
+
+:=
+
+HIu : H  Au
+
+is a minimal cover
+
+of
+
+SIu
+
+with
+
+F
+
+(
+
+A
+
+ u
+
+)
+
+=
+
+Iu,
+
+and
+
+if
+
+u
+
+
+
+N (v),
+
+then:
+
+(i) Au  Av;
+
+(ii) F (Au)  iw : w T v  Iu;
+
+(iii) there exists an element su  Siv such that Hiv  {su, Siv } for each H  Au.
+
+Moreover, for each vertex u  V (T), one of the following holds:
+
+(b) u is good, which means that there exists a collection of hyperplanes Fu  Au, with
+
+|Fu| (1 - ) |Siu| - 1 ,
+
+(6)
+
+such that iu  F (H) and µIu\{iu}(H) >  for each H  Fu. (c) u is bad, which means that there exists a collection of hyperplanes Gu  Au, with
+2-|F (H)Iu|/4 |Siu | , (7) HGu 
+
+such that iu  F (H) and |F (H)  Iu| 2 for each H  Gu.
+
+We think of the elements of Fu (when u is good) and Gu (when u is bad) as hyperplanes that (respectively) do and do not look like parts of a frame from the perspective of the vertex u. We will show (see Lemma 3.3, below) that exploration trees always exist, as long as we choose  to be sufficiently small, depending on  and . We will then, in Section 4,
+6
+
+carefully choose a subtree T of our exploration tree T, and one `special' vertex for each coordinate i  [k], with the following three properties: the frames corresponding to good special vertices are disjoint (unless one of the corresponding sets Si is very small); if `many' special vertices of T are bad, then A fails to satisfy (3); and if `almost all' of the special vertices of T are good, then there exists a sufficiently large -generalized frame in A.
+The main aim of this section is to prove the following lemma.
+
+Lemma 3.3. Let ,   (0, 1), and let A be a minimal cover of S[k] with hyperplanes such that F (A) = [k]. If
+0 <  < 2-922 log2(1/)+11, (8)
+then there exists an (, , )-exploration tree of A.
+
+Let us fix, for the rest of this section, constants 0 < ,  < 1 and  > 0 satisfying (8). We will prove Lemma 3.3 by iteratively extending a `partial' exploration tree by applying the following lemma to a leaf of the current tree.
+
+Lemma 3.4. Let  = I  [k], and let A be a minimal cover of SI with F (A) = I. (a) For each i  I, there exists a map J : Si  P(I \ {i}), with
+
+J(s) = I \ {i},
+
+(9)
+
+sSi
+
+and
+
+for
+
+each
+
+s
+
+
+
+Si
+
+there
+
+exists
+
+As
+
+
+
+A
+
+such
+
+that
+
+A
+s
+
+:=
+
+HJ(s) : H  As
+
+is a
+
+minimal cover of SJ(s), F (As) \ {i} = J(s), and Hi  {s, Si} for each H  As.
+
+Moreover, there exists i  I such that one of the following holds:
+
+(b) there exists a collection F  A, with
+
+|F | (1 - ) |Si| - 1 ,
+
+such that i  F (H) and µI\{i}(H) >  for each H  F .
+
+(c) there exists a collection G  A, with
+
+2-|F (H)|/4
+H G
+
+|Si| , 
+
+(10)
+
+such that i  F (H) and |F (H)| 2 for each H  G.
+
+Let us fix a set  = I  [k] until the end of the proof of Lemma 3.4. This section is organised as follows: in Section 3.1 we will prove two (straightforward) technical lemmas, in Section 3.2, we will introduce the operation that we will use to construct the map J and the families As, and in Section 3.3, we will prove Lemma 3.4, and deduce Lemma 3.3.
+
+3.1. Two technical lemmas. Our first technical lemma (Lemma 3.5, below) follows from a straightforward application of the Lova´sz Local Lemma. We will apply it, in the case that there does not exist a collection F  A as in Lemma 3.4(b) for any i  I, to a certain subset
+iI Ri  SI, in order to find an index such that (c) holds. Our second technical lemma
+7
+
+(Lemma 3.6, below) will allow us to deduce the bound (10) from the condition given by the local lemma. Let us say that a hyperplane H in RI is non-trivial if H = RI.
+
+Lemma 3.5. Let 0 <  < 1/5 and let {Ri : i  I} be a collection of finite sets, each with at
+
+least two elements. Let A be a collection of non-trivial hyperplanes in RI, and let µ~ denote
+
+the uniform measure on RI. If
+
+e|F (H)|µ~(H) <  HA : iF (H) 2
+
+(11)
+
+for every i  [k], then RI is not covered by the hyperplanes in A.
+
+Proof. We choose a point y  RI uniformly at random and apply the local lemma. For
+each hyperplane H  A we define EH to be the ("bad") event that y  H. Observe that P(EH) = µ~(H), and define a dependency graph G on the events {EH}HA by setting EH  EH if F (H)  F (H) = . Observe that if F (H)  F (H(1))  · · ·  F (H(t)) = , then
+EH is independent of the collection EH(1), . . . , EH(t) , so G is a valid dependency graph. Next, we define weights x(H) = e|F (H)|µ~(H)
+
+for each H  A. To apply the local lemma we need to show that
+
+P(EH )
+
+x(H )
+
+1 - x(H) .
+
+EH EH
+
+To do so, we first claim that 1 - x(H) e-2x(H) for every H  A. This holds because
+
+x(H ) = e|F (H)|µ~(H ) e/2 |F (H)| 1 - e-1 |F (H)| 1 - e-1,
+
+where the first inequality is µ~(H) 2-|F (H)|, which holds because each set Si has at least two elements, the second follows since  < 1/5, and the third since the hyperplanes in A are non-trivial, so |F (H)| 1. Therefore, for each H  A, we have
+
+1 - x(H)
+EH EH
+
+exp - 2
+
+x(H )
+
+EH EH
+
+exp - 2
+
+x(H )
+
+iF (H) HA : iF (H)
+
+= exp
+
+- 2 e|F (H)|µ~(H )
+iF (H) HA : iF (H)
+
+exp - |F (H)| ,
+
+where the last inequality follows from (11). This implies that
+
+x(H )
+
+1 - x(H) x(H)e-|F (H)| = µ~(H) = P(EH ),
+
+EH EH
+
+as required. By the local lemma, it follows that the probability that none of the events EH holds is non-zero, and hence there exists a point y  RI that is not covered by A.
+
+The second technical lemma is even more straightforward. Recall that S1, . . . , Sk are fixed finite sets with at least two elements, and that the (non-empty) set I  [k] and positive constants  and  were fixed above.
+8
+
+Lemma 3.6. For each j  I, let Rj  Sj be such that |Rj|  |Sj| - 1 + 1, and let µ~ denote the uniform measure on RI . Let H be a hyperplane in SI, and let i  F (H). If
+µI\{i}(H ) 2-922 log2(1/)+11,
+
+then
+
+µ~ H  RI
+
+. 2|F (H)|/2+4|Si|
+
+(12)
+
+Proof. Set  := |F (H)| and 0 := 2-922 log2(1/)+11, and observe that
+
+µ~ H  RI · |Ri|
+
+µI\{i}(H) |Sj| jF (H), i=j |Rj |
+
+0-(-1).
+
+Now, note that |Rj| 2 for every j  I, and suppose that (12) does not hold. Then
+
+2-(-1)
+
+1 = µ~ H  RI jF (H), j=i |Rj |
+
+· |Ri|
+
+ |Ri| 2/2+4 · |Si|
+
+ 2/2+4 ,
+
+and hence  2 log2(1/) + 10. It follows that
+
+2/2+4 · µ~ H  RI
+
+29/20 2 -1
+
+29/20 2 2 log2(1/)+9  =
+
+|Ri| 
+
+|Ri| 
+
+|Ri|
+
+as required.
+
+, |Si|
+
+3.2. An operation on a covering system. We next introduce a simple operation that, given a minimal cover of SI, produces a map J and a collection {As : s  Si} as required by Lemma 3.4(a). This operation is the basic tool we will use in the construction of our exploration trees. Recall that the (non-empty) set I  [k] was fixed above, and let A be a minimal cover of SI with F (A) = I. For each i  I and s  Si, set
+
+H(i, s) := H  A : Hi  {s, Si} ,
+
+and observe that the collection H(i, s) := HI\{i} : H  H(i, s) is a cover of SI\{i}. Note
+
+that moreover, since A is minimal, there is a bijection between H(i, s) and H(i, s). Let
+
+A
+s
+
+
+
+H(i,
+
+s)
+
+be
+
+an
+
+arbitrary
+
+minimal
+
+subcover
+
+of
+
+SI \{i} ,
+
+and
+
+define
+
+J(s) := F (As)
+
+and
+
+As :=
+
+H
+
+
+
+H(i, s)
+
+:
+
+HI \{i}
+
+
+
+
+As
+
+.
+
+Note
+
+that
+
+A
+s
+
+=
+
+HJ(s) : H  As
+
+is a minimal cover of SJ(s), that F (As) \ {i} = J(s), and
+
+that Hi  {s, Si} for each H  As. To verify that J and {As : s  Si} satisfy Lemma 3.4(a),
+
+it therefore only remains to check that (9) holds.
+
+Lemma 3.7. Let A be a minimal cover of SI with hyperplanes. If F (A) = I, then
+
+for each i  I.
+
+J(s) = I \ {i}
+sSi
+
+Proof. We will in fact show that for every H  A, there exists s  Si with HI\{i}  As.
+
+Since
+
+J (s)
+
+=
+
+F
+
+(
+
+A
+
+ s
+
+)
+
+
+
+I
+
+\
+
+{i}
+
+and
+
+F (A)
+
+=
+
+I,
+
+this
+
+will
+
+be
+
+enough
+
+to
+
+prove
+
+the
+
+lemma.
+
+9
+
+To prove the claim, let x  SI be an element that is only covered by H (recall that A is
+
+minimal),
+
+and
+
+set
+
+s
+
+:=
+
+xi.
+
+We
+
+claim
+
+that
+
+HI \{i}
+
+
+
+As .
+
+Indeed,
+
+since
+
+A
+s
+
+is
+
+a
+
+cover
+
+of
+
+SI \{i} ,
+
+it must cover the vector x obtained from x by ignoring the ith coordinate, and HI\{i} is the
+
+only
+
+potential
+
+element
+
+of
+
+A
+s
+
+that
+
+can
+
+do
+
+so.
+
+3.3. Construction of the exploration tree. Having completed our preparations, we are now ready to prove Lemma 3.4, and deduce Lemma 3.3.
+
+Proof of Lemma 3.4. Let  = I  [k], and let A be a minimal cover of SI such that F (A) = I.
+
+To prove part (a), for each i  I we apply the construction defined in Section 3.2 to obtain
+
+a map J : Si  P(I \ {i}) and a collection {As : s  Si}, where As  A, as required.
+
+In
+
+particular,
+
+A
+s
+
+=
+
+HJ(s) : H  As
+
+is a minimal cover of SJ(s), F (As) \ {i} = J(s),
+
+Hi  {s, Si} for each H  As, and the map J satisfies (9) by Lemma 3.7.
+
+To prove that there exists i  I such that either (b) or (c) holds, let us define an element
+
+s  Si to be special for i if there exists a hyperplane H  A such that
+
+Hi = s and µI\{i}(H) > .
+
+If this holds, then we say that the hyperplane H is a witness for the pair (s, i). Now, for each
+
+i
+
+
+
+I
+
+define
+
+S
+i
+
+to
+
+be
+
+the
+
+set
+
+of
+
+elements
+
+s
+
+
+
+Si
+
+that
+
+are
+
+special
+
+for
+
+i,
+
+and
+
+set
+
+Ri
+
+:=
+
+Si
+
+\
+
+Si.
+
+We consider two cases, corresponding to conditions (b) and (c) of Definition 3.2, respectively.
+
+Case 1: There exists i  I with |Ri| <  |Si| - 1 + 1.
+
+In this case we define
+
+F :=
+
+H  A : H is a witness for (s, i) .
+
+sSi
+
+Since a hyperplane H cannot witness (s, i) for more than one element s  Si, we have
+
+|F | |Si| |Si| -  |Si| - 1 - 1 = (1 - ) |Si| - 1 ,
+
+and by definition i  F (H) and µI\{i}(H) >  for each H  F .
+
+Case 2: |Ri|  |Si| - 1 + 1 for every i  I.
+
+In this case we shall apply Lemma 3.5 to the set RI := iI Ri with  = 1/6. Define A  A by removing all hyperplanes that are witness for (s, i) for some i  I and s  Si.
+
+Observe that none of the witness hyperplanes intersects RI, so A := {H  RI : H  A} is
+
+a cover of RI . We claim that there exists a coordinate i  I such that
+
+e|F (H)|µ~ H  RI  , HA : iF (H) 2
+
+(13)
+
+where µ~ denotes the uniform measure on RI. Since A is a cover of RI, and noting that
+|Ri| 2 for every i  I (by assumption, and since |Si| 2), this will follow from Lemma 3.5 if we show that A is a collection of non-trivial hyperplanes in RI. To do so, suppose for a contradiction that RI  H for some H  A, and observe that therefore F (H)  I = ,
+and hence also SI  H. However, since A is a minimal cover of SI, this implies that
+
+10
+
+A = {H}, and hence F (A) = . This contradicts our assumption that F (A) = I, and thus each hyperplane in A is indeed non-trivial. As observed above, it follows by Lemma 3.5
+that (13) holds for some i  I, as claimed. Fix such an i  I, and define G := G(1)  · · ·  G(k), where
+
+G() := H  A : i  F (H) and |F (H)| = 
+
+for each   [k]. Observe that G(1) = , since if H  A and F (H) = {i}, then µI\{i}(H) = 1, and so H would have been removed when we formed A. Similarly, for each H  A with
+i  F (H) we have µI\{i}(H )  < 2-922 log2(1/)+11,
+
+since otherwise H would witness (s, i) for some s  Si, and so would been removed when we formed A. It follows, by Lemma 3.6, that
+
+µ~ H  RI
+
+ 2|F (H)|/2+4|Si|
+
+for every H  A with i  F (H). Finally, combining this with (13) gives
+
+|G()| e = 
+
+e|F (H)|
+
+2/2
+
+2|F (H)|/2
+
+2
+
+HA : iF (H)
+
+e|F (H)|µ~(H  RI ) 16|Si| HA : iF (H) 
+
+8|Si| , 
+
+and hence
+
+2-|F (H)|/4 =
+
+|G()| =
+
+|G()| e
+
+H G
+
+2/4
+
+2
+
+2
+
+2/2
+
+as required by (10).
+
+8|Si| 
+
+|Si| , 
+
+The deduction of Lemma 3.3 is now straightforward. Let (T ) denote the set of vertices of a rooted tree T with no out-neighbours, and call (T ) the boundary of T .
+
+Proof of Lemma 3.3. We construct T, our exploration tree, inductively, with Lemma 3.4
+
+providing the induction step. We begin our induction by defining T0 to be a single vertex v,
+
+and setting Iv := [k], and Av := A. For the induction step, suppose that we have constructed
+
+a rooted tree Tt (with root v), a set  = Iu  [k] and a collection Au  A for each vertex
+
+u  V (Tt), and an index iu  Iu for each non-boundary vertex u  V (Tt) \ (Tt), such
+
+that condition (a) of Definition 3.2 holds for every vertex u  V (Tt), and condition (ii) of
+
+Definition 3.1, and either condition (b) or (c) of Definition 3.2, hold for every non-boundary
+
+vertex u  V (Tt) \ (Tt). Observe that, since A is a minimal cover of S[k] with hyperplanes
+
+such that F (A) = [k], these conditions are satisfied in the base case t = 0.
+
+To construct Tt+1, choose a vertex u  (T ) such that |Iu| 2, if one exists (we will
+
+deal with the other case below), and apply Lemma 3.4 to the set Iu and minimal cover
+
+A
+u
+
+=
+
+{HIu
+
+:H
+
+ Au} of SIu
+
+(noting
+
+that
+
+F
+
+(
+
+A
+
+ u
+
+)
+
+=
+
+Iu,
+
+by
+
+the
+
+induction
+
+hypothesis).
+
+We
+
+obtain an index i  Iu, a map J : Si  P(I \ {i}) and a collection {As : s  Si} as in
+
+part
+
+(a)
+
+of
+
+the
+
+lemma,
+
+and
+
+either
+
+a
+
+collection
+
+F
+
+
+
+A
+u
+
+as
+
+in
+
+part
+
+(b),
+
+or
+
+a
+
+collection
+
+G
+
+
+
+A
+u
+
+as in part (c). In either case, we set iu := i, add an out-neighbour of u for each element
+
+s  Si such that J(s) = , and to the new vertex w(s) corresponding to s we assign the set
+
+11
+
+Iw(s) = J(s), the element sw(s) := s, and the collection of hyperplanes
+
+Aw(s) := H  Au : HIu  As .
+
+Observe first that condition (a) of Definition 3.2 holds for each vertex w(s). Indeed, we have Aw(s)  Au  A, and it follows from Lemma 3.4(a) that the family
+
+
+Aw(s)
+
+=
+
+{HJ (s)
+
+:
+
+H
+
+
+
+Aw(s)}
+
+=
+
+{HJ (s)
+
+:
+
+H
+
+
+
+As}
+
+is
+
+a
+
+minimal
+
+cover
+
+of
+
+SJ (s)
+
+with
+
+F
+
+(
+
+A
+
+ w
+
+(s
+
+)
+
+)
+
+=
+
+F (As)
+
+\
+
+{i}
+
+=
+
+J (s),
+
+that
+
+Hiu
+
+
+
+{s, Siu}
+
+for
+
+each
+
+H  Aw(s), and that
+
+F (Aw(s))  F (Au) \ Iu  F (As)  iw : w T u  J(s).
+
+Note also that, by (9), u satisfies condition (ii) of Definition 3.1. To complete the induction step, it remains to observe that u is either good or bad, i.e.,
+satisfies either condition (b) or (c) of Definition 3.2. Indeed, if Lemma 3.4(b) holds then set
+
+Fu := H  Au : HIu  F ,
+
+and if Lemma 3.4(c) holds then set
+
+Gu := H  Au : HIu  G .
+
+In each case, the properties guaranteed by the lemma are exactly those that we require. Since
+
+the properties required of all vertices of Tt+1 other than u and its out-neighbours continue
+
+to hold, it follows that Tt+1 satisfies the same properties that we assumed for Tt.
+
+Finally, observe that in passing from Tt to Tt+1 we replace a vertex of the boundary by
+
+a finite number of boundary elements, each associated with with strictly smaller sets. This
+
+process must therefore eventually end, and when it does, it follows that |Iu| = 1 for every
+
+boundary vertex u  (Tt). When this happens, we simply set iu equal to the unique member
+
+of Iu for each u  (Tt), and claim that u is good. Indeed, by the induction hypothesis, the
+
+collection
+
+A
+u
+
+forms
+
+a
+
+minimal
+
+cover
+
+of
+
+Siu
+
+with
+
+iu
+
+ F (Au).
+
+It
+
+follows
+
+that
+
+A
+u
+
+consists
+
+of
+
+exactly |Siu| singleton hyperplanes, and so (6) holds with Fu := Au. Since condition (ii) of
+
+Definition 3.1 holds automatically (with both sides equal to the empty set), it follows that
+
+the tree T that we have constructed is an (, , )-exploration tree of A, as required.
+
+4. Extraction of the frame, and the proof of Theorem 2.3
+In order to prove Theorem 2.3, we will use the exploration tree T constructed in the previous section, together with the bound (3), to find a -generalized frame for A. Roughly speaking, we would like to do this by choosing k vertices (1), . . . , (k) such that the label of (i) in T is i, define a tree T to be the union of the paths (in T) from (i) to the root, and define the elements sj(i) using the elements su. For each good vertex (i) we have a collection Fi of hyperplanes more or less as required, and for each bad vertex we obtain a large collection of `garbage' hyperplanes. We might therefore hope to use (3) to show that there are few bad vertices, and thus to deduce the bound (4).
+There are two main problems with the strategy described above: the frame elements obtained for good vertices might not be disjoint, and each hyperplane might be included in
+12
+
+the garbage set Gu for a very large number of bad vertices. We overcome both obstacles in the same way: by choosing the vertices (i) via a depth-first search algorithm. We do not expect the reader to be able to immediately see why this choice should help in either case, but it turns out that proving that it does is (in both cases) surprisingly simple.
+In Section 4.1 we will state precisely the object we will construct, and show that its existence implies the existence of a -generalized frame. In Section 4.2 we will describe how we choose the sub-tree T  T, the frame elements (F1, . . . , Fk), and the `garbage' sets (G1, . . . , Gk); in Section 4.3, we will prove two lemmas on the disjointness of the frame elements and garbage sets; and in Section 4.4 we will complete the proof of Theorem 2.3.
+
+4.1. Tree-frames. The purpose of this section is to introduce the following somewhat complicated objects, which also provide significantly more information (though we will not need this) about the covering system. We will use these objects to construct our frames.
+Definition 4.1. Let T be a rooted tree equipped with maps
+
+ : V (T )  [k],  : [k]  V (T ) and  : E(T )  S1  · · ·  Sk
+such that
+(a) (u) = (v) if u T v and u = v; (b)  (i) = i for each i  [k]; (c) if e  E(T ) and v is the endpoint of e that is closer to the root, then (e)  S(v); (d) there exists a permutation  of [k] such that, if for each i  [k] we set
+
+J(i) := (u) : u T (i)
+
+and I(i) := [k] \ J(i),
+
+then J((i))  {(1), . . . , (i)} for each i  [k].
+Now, for each  > 0, a -generalized tree-frame centred at T is a sequence (F1, . . . , Fk), where Fi is a collection of at most |Si| - 1 hyperplanes, satisfying
+(i) i  F (H) for each H  Fi. (ii) µI(i)(H) >  for each H  Fi. (iii) Hj  {(e), Sj} for each H  Fi and each j  J(i) \ {i}, where e  E(T ) is the edge
+leaving the unique vertex v T (i) with (v) = j in the direction of (i); (iv) If min |Si|, |Sj| -1 and i = j, then Fi and Fj are disjoint.
+
+In Sections 4.2-4.4 we will construct, for any A satisfying (3), a -generalized tree-frame satisfying (4). The next lemma shows that this will be sufficient to prove Theorem 2.3.
+
+Lemma 4.2. If (F1, . . . , Fk) is a -generalized tree-frame centred at a rooted tree T , then (F1, . . . , Fk) is a -generalized frame.
+
+Proof. Let T be a rooted tree equipped with maps ,  and  satisfying conditions (a)- (d) of Definition 4.1. In particular, let  be the permutation given by condition (d), and (to simplify the notation) let us permute the sets S1, . . . , Sk so that  is the identity, and therefore J(i)  {1, . . . , i} (and hence I(i)  {i + 1, . . . , k}) for each i  [k]. Now, for each i  [k] and j  J(i) \ {i}, set sj(i) := (e)  Sj, where e  E(T ) is the edge leaving the unique vertex v T (i) with (v) = j in the direction of (i).
+
+13
+
+We claim that, for each H  Fi,
+
+i  F (H),
+
+µI(i)(H) > 
+
+and
+
+Hj  sj(i), Sj .
+
+Indeed, these follow directly from properties (i), (ii) and (iii) of Definition 4.1. Finally, observe that if min |Si|, |Sj| -1 then Fi and Fj are disjoint, by property (iv).
+
+4.2. Constructing the frame. In this section we will construct the -generalized tree-
+
+frame (F1, . . . , Fk), along with the rooted tree T , and a collection (G1, . . . , Gk) of `garbage'
+
+sets. Let C > 0 and  > 0 be arbitrary, as in the statement of Theorem 2.3, and set
+
+  := 4
+2C
+
+and
+
+ := 2-2342 log2(1/)+15.
+
+(14)
+
+Recall that the sets S1, . . . , Sk were fixed earlier, and let us fix, for the rest of this section, a
+
+minimal cover A of S[k] with hyperplanes such that F (A) = [k]. By Lemma 3.3, there exists
+
+an (, /2, )-exploration tree of A; let us also fix such a tree T.
+
+The first step is to observe that every i  [k] occurs as the label iu of some vertex u  V (T).
+
+This is an immediate consequence of the following simple observation about index trees.
+
+Observation 4.3. Let T be an index tree, let u  V (T), and let j  Iu. Then there exists v  V (T), with u T v, such that iv = j.
+Proof. This follows easily from (5): if j  Iv and iv = j, then j  Iw for some w  N (u), and if j  Iv and v  (T) then Iv = {j}, so iv = j.
+
+To extract our -generalized tree-frame from the exploration tree T, we will also need the notion of a depth-first search ordering  on the vertices of a rooted tree T . This is defined by placing an arbitrary linear order on the out-neighbours of each vertex of T , and then setting u  v if either u T v, or if the branch leading to u precedes the branch leading to v in the ordering of the neighbours of the last common ancestor of u and v.
+
+Definition 4.4. Let  be a depth-first search ordering on the vertices of T. We define a rooted tree T and a -generalized tree-frame centred at T as follows:
+1. For each i  [k], define (i) to be the -minimal vertex u of T such that iu = i. 2. Define T to be the union of the paths in T from (1), . . . , (k) to the root. 3. For each u  V (T ), define (u) := iu. 4. For each edge uv  E(T ), where u  N (v), define (uv) := su  Siv . 5. (a) Set Fi := F(i) and Gi :=  for each i  [k] such that (i) is a good vertex of T.
+(b) Set Gi := G(i) and Fi :=  for each i  [k] such that (i) is a bad vertex of T.
+
+Properties (a)-(d) of Definition 4.1 follow easily from this construction. Indeed, we have ((i)) = i for each i  [k] by our choice of  and , and (uv)  Siv = S(v) for all uv  E(T ) with u  N(v). To see that (u) = (v) if u T v and u = v, recall T is an index tree, and therefore satisfies (5), so (u) = iu is not included in any of the sets associated with the descendants of u. For (d), let  be the permutation of [k] given by the ordering  restricted to {(1), . . . , (k)}, and observe that if u T ((i)) then u  ((i)), and hence ((u))  ((i)), by our choice of . It follows that (u)  {(1), . . . , (i)}, and therefore that J((i)) = (u) : u T ((i))  {(1), . . . , (i)} for each i  [k], as required.
+14
+
+The following lemma shows that properties (i), (ii) and (iii) of Definition 4.1 also hold.
+Lemma 4.5. Let i  [k] and H  Fi, let j  J(i) \ {i}, and let ej  E(T ) be the edge leaving the unique vertex v T (i) with (v) = j in the direction of the vertex (i). Then
+
+i  F (H), µI(i)(H) >  and Hj  {(ej), Sj}.
+
+Proof. Note that Fi =  implies that the vertex (i) is good. By Definition 3.2(b), it
+
+follows that i  F (H), and also that µI(i)\{i}(H) > . Moreover Fi = F(i)  A(i) and
+
+F (A(i))  J(i)  I(i), by Definition 3.2, and therefore Hj = Sj for every j  I(i) \ I(i).
+
+Since i  J(i), and therefore i  I(i), it follows that µI(i)(H) > .
+
+Now suppose that ej = uv, with u  N(v), and observe that, by Definition 3.2(a), we have
+
+H
+j
+
+
+
+{su, Sj}
+
+=
+
+{(ej), Sj}
+
+for
+
+every
+
+hyperplane
+
+H
+
+
+
+Au.
+
+Noting
+
+that
+
+Fi
+
+
+
+A(i)
+
+
+
+Au
+
+(by
+
+Definition 3.2, and since u T (i)), it follows that Hj  {(ej), Sj}, as claimed.
+
+It therefore only remains to show that property (iv) of Definition 4.1 and the inequality (4) hold. Both of these properties will follow from our choice of (1), . . . , (k).
+
+4.3. Lemmas on disjointness. In this section we will prove two straightforward but crucial lemmas; the first verifies condition (iv) of the definition of a -generalized tree-frame.
+Lemma 4.6. If min{|Si|, |Sj|} -1 and i = j, then Fi and Fj are disjoint.
+Proof. Suppose that H  F(i)  F(j), and suppose that (i)  (j) in the depth-first search ordering. Recall that i, j  F (H), by Definition 3.2(b), and µI(i)(H) > , by Lemma 4.5. Since |Sj| -1, it follows that j  I(i), and hence j  J(i), i.e., there exists u T (i) with (u) = j. However, this is a contradiction, since u  (i)  (j) in the depth-first search ordering, and (j) was chosen to be the -minimal vertex u of T such that (u) = j.
+
+The final lemma we need shows that each garbage set only appears on a single path through T . Since the number of fixed coordinates of HIu decreases along the path (and decreases strictly whenever (u)  F (H)), this will imply that each hyperplane contributes only O(1) to the sum of the left-hand side of (7) over vertices u  {(1), . . . , (k)}.
+Lemma 4.7. Let H  Gi  Gj. Then either (i) T (j), or (j) T (i).
+Proof. Suppose (without loss of generality) that (i)  (j) in the depth-first search ordering, and suppose that (i) T (j), which implies that u  (j) for every u  V (T) with (i) T u. Note that j  F (H)  I(i)  J(i), since H  Gi  Gj and by Definition 3.2.
+If j  J(i), then iv = j for some v  V (T) with v T (i), and hence v  (i)  (j). On the other hand, if j  I(i), then by Observation 4.3 we have iv = j for some v  V (T) with (i) T v, and hence (by the observation above) v  (j). In either case, this contradicts our choice of (j) as the -minimal vertex v of T such that iv = j.
+
+Let us record here the following simple consequence of Lemma 4.7.
+Lemma 4.8. If H  Gi  Gj and i = j, then |F (H)  I(i)| = |F (H)  I(j)|.
+Proof. By Lemma 4.7, we have (without loss of generality) (i) T (j), which implies, by (5) and since (i) = (j), that I(j)  I(i) \ {i}. Since i  F (H)  I(i), it follows that F (H)  I(j) F (H)  I(i), as required.
+15
+
+4.4. The proof of Theorem 2.3. We are now ready to prove our main structural result, Theorem 2.3. It only remains to show that the inequality (4) follows from (3). We will use the following easy consequence of Lemma 4.8. Set B := {i  [k] : (i) is bad}.
+
+Lemma 4.9.
+
+Gi
+iB
+
+1 |Si|. 5 iB
+
+Proof. Summing (7) over i  B, we obtain
+
+2-|F (H)I(i)|/4
+iB HGi
+
+1 |Si|.  iB
+
+Now, by Lemma 4.8, for each H and  2 there is at most one value of i  B such that
+
+H  Gi and |F (H)  I(i)| = , so for each H  iB Gi we have
+
+2-|F (H)I(i)|/4
+
+
+2-/4 = 21/2 - 21/4 -1 < 5,
+
+iB : HGi
+
+=2
+
+as required.
+
+Theorem 2.3 now follows easily from the lemmas above.
+
+Proof of Theorem 2.3. We claim that the sequence (F1, . . . , Fk) constructed in Definition 4.4 is a -generalized tree-frame centred at T , and satisfies (4). By Lemma 4.2, it will follow that (F1, . . . , Fk) is also a -generalized frame, so this will be sufficient to prove the theorem. Note that properties (a)-(d) and (i)-(iv) of Definition 4.1 follow from the comments after Definition 4.4, and by Lemmas 4.5 and 4.6. Moreover, by discarding excess hyperplanes if necessary, we may assume that |Fi| |Si| - 1 for each i  [k]. It therefore only remains to show that (4) holds.
+To do so, recall that T is an (, /2, )-exploration tree of A, and hence
+
+|Fi| > 1 - /2 |Si| - 1
+
+for each i such that (i) is a good vertex, i.e., for each i  [k] \ B. Now, by Lemma 4.9 and the condition (3), we have
+
+1k |Si| |A| C |Si| - 1 ,
+5 iB i=1 and hence, recalling from (14) that  = /(24C), we obtain
+
+k
+|Fi|
+i=1
+as required.
+
+1 - /2 |Si| - 1
+i[k]\B
+
+k
+
+1 - /2
+
+|Si| - 1 - |Si|
+
+i=1
+
+iB
+
+k
+
+1 - /2 - 5C
+
+|Si| - 1
+
+i=1
+
+k
+(1 - ) |Si| - 1 ,
+i=1
+
+16
+
+5. Arithmetic frames and the proof of the lower bound
+
+In order to deduce Theorem 1.1 from Theorem 2.3, we will need to bound the number
+
+of -generalized frames in the integers. In this section we will warm up for the calculation
+
+ahead by counting a simpler set of objects, which we call `arithmetic frames', and thereby deducing a lower bound on the number of minimal covering systems of Z. Recall that4
+
+
+=
+t=1
+
+log t + 1 2  0.977. t
+
+The following proposition provides the lower bound in Theorem 1.1.
+
+Proposition 5.1. The number of minimal covering systems of Z of size n is at least 4 n3/2
+exp 3 + o(1) (log n)1/2 as n  .
+
+We shall first prove Proposition 5.1 for an infinite sequence of values of n (see (18)); since
+
+this sequence will be sufficiently dense, it will then be easy to deduce the bound for the
+
+remaining values of n. For each n in our sequence, we will choose a single value of N, and
+
+count only covering systems A of size n with lcm(A) = N. We will moreover count only
+
+covering systems that correspond to simple frames of a certain family of sets (see below),
+
+with a specific (carefully chosen) order, see Definition 5.4. We remark that when N is not
+
+square-free, this is not quite as straightforward as counting the simple frames, since there
+
+will exist hyperplanes that do not correspond to arithmetic progressions in ZN . In order to
+
+characterise the hyperplanes that do, we need to introduce a little notation.
+
+Given
+
+N
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+pm
+m
+
+>
+
+1,
+
+we
+
+define
+
+m
+
+N := (pi, j) : j  [i] ,
+
+(15)
+
+i=1
+
+and set S(p,e) = {0, . . . , p - 1} for each (p, e)  N . Now define a map
+
+N : ZN  S N =
+
+S(p,e)
+
+(p,e) N
+
+as follows: if x  ZN , then y = N (x)  S N is the vector such that, for each (p, e)  N , y(p,e)  S(p,e) is the coefficient of pe-1 in the p-ary expansion of x modulo pe. Observe that
+N is a bijection, by the Chinese Remainder Theorem. We say that a hyperplane H in S N is arithmetic if -N1(H) is an arithmetic progression in
+ZN . The following observation provides a simple characterization of arithmetic hyperplanes.
+
+Observation 5.2. A hyperplane H in S N is arithmetic if and only if, for each prime p, the set
+(p, e)  N : (p, e)  F (H)
+forms a (possibly empty) initial segment of the sequence (p, 1), (p, 2), (p, 3), . . .
+4We remark that the constant  also appears in the study of the iterated divisor function, see [3, 4].
+
+17
+
+Proof. Suppose first that H is arithmetic, so A := -N1(H) is an arithmetic progression in ZN . Let d be the modulus of A, and observe that (p, e)  F (H) if and only if pe divides d, by the definition of N . On the other hand, if {(p, 1), . . . , (p, e(p))}  F (H) and (p, e)  F (H) for all e > e(p), then every pair of points of -N1(H) differs by a multiple of pe(p), and therefore -N1(H) is contained in an arithmetic progression with modulus d = p pe(p). Since |H| = N/d, it follows that -1 N (H) is in fact the entire arithmetic progression, as claimed.
+Let us now say that a total ordering  on the elements of N is arithmetic if
+
+(pi, 1)  (pi, 2)  · · ·  (pi, i)
+
+(16)
+
+for all i  [m]. Note that (16) does not impose any constraint on  for different primes, and in particular we may have (p, i)  (q, j)  (p, i + 1). We say that a simple frame of S N is `arithmetic' if the order of the sets is arithmetic, and if moreover each of the hyperplanes of the frame is arithmetic. We can now prove the following lower bound on the number of minimal covering systems of Z of size n.
+
+Lemma
+
+5.3.
+
+Let
+
+N
+
+=
+
+p1 · · · pm
+
+1
+
+m
+
+>
+
+1,
+
+and
+
+let
+
+
+
+be
+
+an
+
+arithmetic
+
+ordering
+
+of
+
+are at least
+
+exp (p - 1) log f + 1
+
+(p,e) N
+
+(q,f )(p,e) f
+
+q=p
+
+minimal covering systems of Z of size n := i=1 m i(pi - 1) + 1.
+
+N . There
+
+Proof. To prove the lemma we count arithmetic frames of S N centred at (0, . . . , 0), where the sets S(p,e) are listed in the order . Recall from Definition 2.1 that, for each (p, e)  N and each a  {1, . . . , p - 1}, we need to choose an arithmetic hyperplane of the form
+
+x1, . . . , xi-1, a, , · · · ,  ,
+
+with xj  {0, } for each j  [i - 1], where (p, e) is the ith element in the ordering . To do so, we will choose, for each prime q = p, an initial segment (in the order ) of the set
+
+Jq(p, e) := (q, f )  N : (q, f )  (p, e)
+
+set xj = 0 for the corresponding coordinates, and set xj =  for all other elements of Jq(p, e). If we also set xj = 0 for every j  Jp(p, e) then, by Observation 5.2, every hyperplane obtained in this way will be arithmetic, and therefore the frame we construct will be arithmetic.
+We claim that each such choice gives a different minimal covering system of Z of size n. To see this, note that the frame consists of n - 1 arithmetic hyperplanes, each of which
+corresponds (via the bijection N-1) to an arithmetic progression in ZN . Moreover, the only element of ZN not covered by these arithmetic progressions is 0, so adding this progression gives a covering system of Z of size n, and (as observed after Definition 2.1) if we remove the hyperplane H = x1, . . . , xi-1, a, , · · · ,  , then the element (0, . . . , 0, a, 0, . . . , 0) will be uncovered by the remaining hyperplanes, so the covering system we have constructed is minimal. Finally, each hyperplane in the frame has a unique entry a  {0, }, and therefore
+each choice leads to a distinct covering system, as claimed.
+
+18
+
+Finally, since we have exactly
+
+|Jq(p, e)| + 1 = exp
+q=p
+
+log
+(q,f )(p,e) q=p
+
+f +1 f
+
+choices for each hyperplane corresponding to (p, e), the lemma follows.
+
+Now, for each arithmetic ordering  of N , let us define
+
+Q(N, ) :=
+
+(p - 1)
+
+log f + 1 .
+
+(p,e) N
+
+(q,f )(p,e) f
+
+q=p
+
+(17)
+
+We will use the following particular arithmetic ordering < to prove Proposition 5.1.
+
+Definition 5.4. For each prime p and integer e  N, set yp,e := (p - 1) log e+1 e -1. Now, given primes p and q, and integers e, f  N, define
+
+(q, f ) < (p, e)  yq,f < yp,e.
+
+Moreover, if x  R then we write (p, e) < x if and only if yp,e < x, and define
+
+n(x) := 1 +
+
+(p - 1) and N(x) :=
+
+p.
+
+(18)
+
+(p,e)<x
+
+(p,e)<x
+
+Note that n(x), N(x) <  for every x  R, and that for any N  N, the ordering < on N is arithmetic. Our next lemma, combined with Lemma 5.3, implies Proposition 5.1.
+
+Lemma 5.5. Let x > 0, and set N = N(x) and n = n(x). Then
+
+Q(N, <) =
+
+4 3 + o(1)
+
+n3/2 (log n)1/2
+
+as x  .
+
+Proof. Recalling the definition of Q(N, <), observe first that, for each (p, e)  N ,
+
+log
+(q,f )<(p,e) q=p
+
+f +1 f
+
+=
+f1
+
+q = p : q - 1 < yp,e log f + 1 f
+
+· log f + 1 . (19) f
+
+Now, by the prime number theorem, for each fixed f  N and as yp,e  ,
+
+q = p : q - 1 < yp,e log f + 1 f
+
+= 1 + o(1)
+
+yp,e log f f+1 f+1 .
+
+log yp,e log f
+
+Moreover, the sum in (19) of the terms with f f0 is o yp,e/ log yp,e as f0  , so
+
+log
+(q,f )<(p,e) q=p
+
+f +1 f
+
+= 1 + o(1) yp,e log yp,e f 1
+
+log f + 1 2 =  + o(1) yp,e
+
+f
+
+log yp,e
+
+19
+
+as yp,e  . We next fix e  N, and sum over primes p. We obtain
+
+(p - 1)
+
+log
+
+p : yp,e<x
+
+(q,f )<(p,e) q=p
+
+f +1 f
+
+=
+p-1 < x log e+1 e
+
+ + o(1) log
+
+(p - 1)2 e+1 e · log yp,e
+
+=  + o(1) x3 log e+1 2 e
+2
+3(log x)
+
+(20)
+
+as x  , again using the prime number theorem.5 Thus, summing over e, and noting that the left-hand side of (20) is uniformly bounded from above by an absolute constant times the right-hand side (without the o(1) term), we obtain
+
+Q(N, <) =  + o(1)
+
+x3
+2
+
+3(log x) e 1
+
+log e + 1 e
+
+2
+=  2 + o(1)
+
+x3
+2
+
+3(log x)
+
+as x  . Finally, using the prime number theorem a third time, we obtain
+
+n(x) = 1 +
+
+(p - 1) =
+
+e 1 p-1 < x log e+1 e
+
+1 + o(1)
+
+x log e e+1 2 e 1 2 log x log e+1 e
+
+= 1 + o(1) x2 log e + 1 2 =  + o(1) x2 , (21)
+
+2 log x e 1 e
+
+2 log x
+
+and hence Q(N, <) · n-3/2log n  2( 2/3)( /2)-3/2 = 4 /3 as x  , as claimed.
+
+We can now easily deduce the lower bound in Theorem 1.1, the only remaining difficulty being to deal with those n  N that are not of the form n = n(x) for some x  R.
+
+Proof of Proposition 5.1. It follows immediately from Lemmas 5.3 and 5.5 that the number
+
+of minimal covering systems of Z of size n(x) is at least
+
+eQ(N(x),<) = exp
+
+4 3 + o(1)
+
+n(x)3/2 (log n(x))1/2
+
+as x  . Let x > 0 be maximal such that n(x) n, and set t := n - n(x). Observe that
+
+t < x = o(n), by (21), and that, by removing the hyperplane [0, . . . , 0] (i.e., the progression
+
+{0 (mod N)}) from the construction given in the proof of Lemma 5.3, we obtain a family of
+
+minimal covers of ZN \ {0} of size n(x) - 1. We complete each to a minimal cover of Z of size n by adding the progressions 2-1N (mod 2N ) , for each   [t], and 0 (mod 2tN ) .
+
+We obtain a family of
+
+4 n3/2 exp 3 + o(1) (log n)1/2
+
+minimal covering systems of Z of size n(x) + t = n, as required.
+
+5Indeed, the prime number theorem implies that p<z p2 = 1/3 + o(1) z3/ log z as z  .
+
+20
+
+6. Counting coverings that are far from frames
+
+In this section we will begin the deduction of Theorem 1.1 from Theorem 2.3 by bounding the number of minimal covers that fail to satisfy (3). In the process, we will obtain a short proof of weaker version of Theorem 1.1, bounding the number of minimal covering systems of Z of size n up to a constant factor in the exponent.
+
+Proposition
+
+6.1.
+
+Let
+
+C
+
+>
+
+0
+
+be
+
+a
+
+constant,
+
+and
+
+let
+
+n
+
+
+
+N
+
+and
+
+N
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+pm
+m
+
+satisfy
+
+m
+n > C i pi - 1 .
+
+i=1
+
+Then the number of minimal covering systems A of Z of size n with lcm(A) = N is at most 2 n3/2
+exp C + o(1) (log n)1/2 as n  .
+
+In order to bound the number of covering systems, we will need to bound the number of choices for the modulus d and shift a of each arithmetic progression in A. The following simple but important lemma, which we will use again later, shows that, given the moduli, we have relatively few choices for the shifts.
+
+Lemma 6.2. Let d1, . . . , dn  N. There are at most (n!)2 minimal covering systems A = {A1, . . . , An} of Z of size n such that, for each i  [n], the modulus of Ai is di.
+
+Proof. Let A = {A1, . . . , An} be a minimal covering system of Z, and observe that we may reorder the elements of A so that, for each i  [n], the arithmetic progression Ai covers at least a 1/i proportion of the set
+Ri := Z \ Aj.
+j>i
+Indeed, to see that this is possible we simply choose the sets one by one (in reverse order), letting Ai be the (remaining) progression in A whose intersection with Ri has largest density, observing that Ri is non-empty (since A is minimal) and recalling that A covers Z. The total number of choices for A is therefore at most the sum over permutations of (d1, . . . , dn) of the number of sequences (A1, . . . , An) with this additional property.
+Now let i  [n], and suppose that we have already chosen progressions (Ai+1, . . . , An). We claim that we have at most i choices for the arithmetic progression Ai. Indeed, since the progressions {a (mod di)} (for a  {0, . . . , di - 1}) are disjoint, there are at most i progressions with modulus di that cover at least a 1/i proportion of Ri. It follows that the number of choices for A is at most (n!)2, as claimed.
+
+It therefore only remains to bound the number of choices for the moduli. Note that if
+
+lcm(A)
+
+=
+
+p1 · · · pm
+
+1
+
+m
+
+then
+
+we
+
+have
+
+at
+
+most
+
+i i + 1 choices for each modulus. The
+
+following lemma, which we will use again later, provides a sharp bound on this product.
+
+21
+
+Lemma 6.3. Let (p1, . . . , pm) be a sequence of distinct primes, let (1, . . . , m) be a sequence
+
+of positive integers, and let M
+
+i=1 m i(pi - 1). Then
+
+m  M 1/2 log i + 1 2  + o(1) log M (22)
+i=1
+
+as M  .
+
+Proof. We may assume that p1 < · · · < pm, and reorder the i so that 1 · · · m,
+noting that this does not change the left-hand side of (22), and that the inequality M i=1 m i(pi - 1) still holds under the new ordering. Set xt := max i : i t , and observe
+that maximizing the left-hand side of (22) is equivalent to maximizing
+
+X := xt · log
+t1
+
+t+1 t
+
+subject to the constraint
+
+xt
+
+2
+
+xt
+
+M i(pi - 1) = (pi - 1) 2 max log xt - 3, 1 , (23)
+
+i1
+
+t 1 i=1
+
+t1
+
+where in the final step we used the following bound of Massias and Robin [18],
+
+x
+pi
+i=1
+
+x2 log x + log log x - 3 - 3.568
+
+2
+
+2 log x
+
+x2 log x - 2 , 2
+
+which holds for every x e3. Note that X is increasing in xt for each t 1, and so (by allowing 0 xt  R) we may assume that M is equal to the right-hand side of (23).
+Applying the method of Lagrange multipliers, it follows that there exists   R such that,
+
+for each t 1, either
+
+ log t + 1 = xt log xt - 5 , (24)
+
+t
+
+2
+
+or xt e4. We will first show that the contribution to X of those values of t such that xt = O(1) is small. To do so, note that xt = 0 for all t > M, by (23), and observe that therefore
+xt · log t + 1 ½ xt log M log(M + 1) 2. (25)
+t1 t
+
+We may therefore restrict our attention to those values of t for which xt > log M > e4, so that, in particular, (24) holds. Let T = max t : xt > log M and observe that, by (23), (24) and (25), we have
+
+T X  log t t+1 + O log M 2 2 and M 2 T log t t+1 2 .
+
+t=1 log xt - 5/2
+
+2 t=1 log xt
+
+To bound these sums, observe that    as M   (by (24) and since x1 > log M), and that therefore, uniformly in 1 t log , we have
+log xt = log  + log log t + 1 - log log xt - 5/2 = 1 + o(1) log  t
+
+22
+
+as M  . Moreover, if log 
+
+t
+
+T
+
+,
+
+then
+
+log
+
+t+1 t
+
+that, for each fixed c  R, we have
+
+1/t and log xt
+
+log log M. It follows
+
+T log t t+1 2 = 1 + o(1)
+
+t=1 log xt - c
+
+log  t 1
+
+log t + 1 2 =  + o(1),
+
+t
+
+log 
+
+as M  , and hence M  /2 + o(1) 2/ log . Finally, we deduce that
+
+X  + o(1) 
+
+ 2  + o(1)
+
+M 1/2
+
+log 
+
+log M
+
+as M  , as required.
+
+We can now easily deduce Proposition 6.1.
+
+Proof of Proposition 6.1. We first choose the moduli of the progressions in A = {A1, . . . , An},
+
+and
+
+then
+
+the
+
+shifts.
+
+Since
+
+lcm(A)
+
+=
+
+N
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+pm
+m
+
+,
+
+for
+
+each
+
+j
+
+
+
+[n]
+
+we
+
+have
+
+at
+
+most
+
+m
+i + 1
+i=1
+
+ exp 2  + o(1)
+
+n 1/2
+
+C log(n/C)
+
+choices for the modulus of the arithmetic progression Aj, where the inequality follows by
+
+applying Lemma 6.3 with M = n/C, and using our bound on n. By Lemma 6.2, it follows
+
+that the number of choices for A is at most
+
+(n!)2 · exp
+
+2  + o(1)
+
+n3/2
+1/2
+
+C
+
+log(n/C )
+
+= exp
+
+2  + o(1)
+C
+
+n3/2 (log n)1/2
+
+as n  , as required.
+
+Using Simpson's theorem (Theorem 2.4), we can now easily deduce an upper bound on the number of minimal covering systems that is sharp up to a constant factor in the exponent.
+
+Corollary 6.4. The number of minimal covering systems of Z of size n is
+
+ n3/2 exp (log n)1/2 .
+
+Proof. The lower bound follows by Proposition 5.1 (or by the simpler construction in the introduction). For the upper bound, recall that, by Simpson's theorem, we have
+
+m
+
+m
+
+|A|
+
+i pi - 1 + 1
+
+i log2 pi
+
+i=1
+
+i=1
+
+for
+
+any
+
+minimal
+
+covering
+
+system
+
+A
+
+of
+
+Z
+
+with
+
+lcm(A)
+
+=
+
+N
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+pm
+m
+
+,
+
+and
+
+hence
+
+N
+
+2n.
+
+Thus, applying Proposition 6.1 with C = 1 (and summing over N 2n), there are at most
+
+ exp 2  + o(1)
+
+n3/2
+1/2
+
+(log n)
+
+minimal covering systems of Z of size n, as required.
+
+23
+
+7. Proof of Theorem 1.1
+
+In this section we will complete the proof of Theorem 1.1; we begin by giving an overview
+of the remaining part of the argument. Let A be a minimal covering system of Z of size n,
+let N = lcm(A) and, recalling (15), set S(p,e) = {0, . . . , p - 1} for each (p, e)  N . We map ZN into S N = (p,e) N S(p,e) as described in Section 5; that is, we associate x  ZN with the vector y = N (x)  S N , where y(p,e) is the coefficient of pe-1 in the p-ary expansion of x modulo pe. Note that the image of each progression in A  A is a hyperplane in S N . Moreover, by Observation 5.2, if H = N (A) then, for each prime p, the set
+
+(p, e)  N : (p, e)  F (H)
+
+forms a (possibly empty) initial segment of the sequence (p, 1), (p, 2), . . . . Recall that we call hyperplanes that satisfy this condition `arithmetic'.
+We will apply Theorem 2.3 to A (with C = 4 and  > 0 an arbitrarily small constant), and deduce that either (3) fails to hold, or A contains an almost optimal -generalized frame F(p,e) : (p, e)  N . In the former case we are done by Proposition 6.1, so let us assume the latter. We will carefully count the number of choices for the fixed sets of the frame elements F(p,e) such that p > -1. The bound we obtain will be sufficiently strong unless N is primarily composed of primes smaller than -1; however, for such N it turns out that the simpler argument used in Section 6 suffices to give a sufficiently strong bound.
+Next, we bound the number of choices for the fixed sets of the remaining hyperplanes: those in frame sets F(p,e) for some prime p -1, and those not used in the frame. Surprisingly, it turns out that we can again obtain a sufficiently strong bound using the method of Section 6. Roughly speaking, these `extra' hyperplanes are being used inefficiently, and would be better off (in terms of increasing the number of choices) by contributing to the construction of a larger frame (and thus a different value of N).
+Finally, noting that the fixed sets of the hyperplanes in A correspond to the moduli of the original arithmetic progressions, we will use Lemma 6.2 to bound the number of minimal covering systems of Z of size n with given moduli.
+
+7.1. Choosing the fixed sets of -generalized frames. Let N  N and  > 0, and
+suppose that F(p,e) : (p, e)  N is a -generalized frame in S N consisting of arithmetic hyperplanes.6 Recall that F(p,e) is a collection of at most p - 1 hyperplanes, and that there exists an ordering  on N , and for each (p, e)  N a set
+
+I(p, e)  (q, f )  N : (p, e)  (q, f ) and (q, f ) = (p, e) ,
+
+(26)
+
+such that µI(p,e)(H) >  for each (p, e)  N and H  F(p,e). Recall also that (p, e)  F (H), and that the sets F(p,e) with p > -1 are disjoint. We remark that the ordering  might not be arithmetic, but the hyperplanes are arithmetic, and this will turn out to be sufficient.
+In this subsection we will bound the number of choices for the fixed sets of the hyperplanes in F(p,e) : (p, e)  N corresponding to primes larger than -1. While doing so, it will be
+
+6By Definition 2.2, we may suppose that  is sufficiently small; in particular, we will assume that  < 1/2.
+
+24
+
+convenient to write N  := (p, e)  N : p > -1 , and to define
+
+(N) :=
+
+(p - 1) and (N ) :=
+
+(p - 1).
+
+(p,e) N
+
+(p,e) N 
+
+Note that, by Simpson's theorem, if lcm(A) = N then |A|
+
+N , for each (p, e)  N set
+
+M(p, e) :=
+
+q,
+
+(q,f )(p,e)
+
+(N). Given an ordering  on
+
+and given a collection A of hyperplanes, let us write D(A) := F (H) : H  A for the corresponding collection of fixed sets. We begin by observing the following upper bound (cf. Lemma 5.3) on the number of choices for the sequence D(F(p,e)) : (p, e)  N  .
+
+Lemma 7.1. Let N  N and  > 0, and let  be an ordering on N . There are at most
+
+exp
+
+(p - 1)
+
+f +1 1
+
+log
+
++2
+
+f
+
+
+
+(p,e) N 
+
+(q,f ) M(p,e)
+
+sequences D(F(p,e)) : (p, e)  N  such that F(p,e) : (p, e)  N is a simple -generalized frame in S N with ordering  and consisting only of arithmetic hyperplanes.
+
+Proof. Let (p, e)  N , let H  F(p,e), and let q be a prime. Recall that, since H is an arithmetic hyperplane, it follows by Observation 5.2 that the set F (H) induces a (possibly empty) initial segment of the set (q, 1), (q, 2), (q, 3), . . .
+Suppose first that q > -1. We claim in this case that there are at most
+
+f : (q, f )  M(p, e)
+
++ 1 = exp
+
+log
+f : (q,f ) M(p,e)
+
+f +1 f
+
+choices for this initial segment. To see this, recall that µI(p,e)(H) > , and therefore (q, f )  F (H) for every (q, f )  I(p, e). By (26), it follows that F (H) does not contain any element
+(q, f ) with (p, e)  (q, f ) and (p, e) = (q, f ), and therefore the elements (q, f ) in F (H) form
+an initial segment (in increasing order of f ) of the set (q, f )  N : (q, f )  (p, e) . Since
+this set has the same size as the set f : (q, f )  M(p, e) (which is an initial segment of the positive integers), the claimed bound on the number of choices follows.
+Now suppose instead that q -1. In this case the condition µI(p,e)(H) >  only implies that F (H) contains at most log2(-1) elements of I(p, e), and hence, by (26), at most log2(-1) elements (q, f ) such that (q, f )  (p, e). Repeating the argument from the case q > -1, it follows that we have at most
+
+f : (q, f )  M(p, e)
+
++ 1 + log2(-1)
+
+exp log f + 1 + 1
+
+f : (q,f ) M(p,e)
+
+f
+
+
+
+choices for the initial segment of the set (q, 1), (q, 2), (q, 3), . . .
+
+25
+
+Finally, recall that there are at most p - 1 hyperplanes in F(p,e) for each (p, e)  N , and note that there are at most -1 primes q -1. Hence, multiplying the number of choices
+
+for all (p, e)  N , all H  F(p,e), and all primes q that divide N , it follows that we have
+
+at most
+
+exp
+
+(p - 1)
+
+f +1 1
+
+log
+
++2
+
+f
+
+
+
+(p,e) N 
+
+(q,f ) M(p,e)
+
+choices for the sequence D(F(p,e)) : (p, e)  N  , as claimed.
+
+For each N  N and  > 0, and each ordering  on N , let us define
+
+Q(N, ) :=
+
+(p - 1)
+
+log f + 1 .
+
+(p,e) N  (q,f ) M(p,e) f
+
+The following lemma provides a sufficiently strong upper bound on Q(N, ).
+
+Lemma 7.2. Let N  N and  > 0, and let  be an ordering on N . If (N) >  · (N),
+
+then
+
+4 (N )3/2
+
+Q(N, ) 3 + o(1) log (N ) 1/2 (27)
+
+as N  .
+
+We first use Lemma 6.3 to obtain the following bound when (M) is large.
+
+Lemma 7.3. Let M  N and  > 0. Then
+
+log
+(q,f ) M
+
+f +1 f
+
+ 2  + o(1)
+
+(M ) 1/2 + 2 log (M )
+
+log (M )
+
+
+
+as (M)  .
+
+Proof.
+
+Let
+
+M
+
+=
+
+p11
+
+·
+
+·
+
+·
+
+pm
+m
+
+,
+
+and
+
+observe
+
+that
+
+log
+(q,f ) M
+
+f +1 f
+
+m
+= log
+i=1
+
+i + 1
+
+=
+
+log
+
+i : pi>-1
+
+i + 1
+
++
+i : pi
+
+log
+-1
+
+i + 1
+
+ 2  + o(1)
+
+(M ) 1/2 + 2 log (M )
+
+log (M )
+
+
+
+as (M)  , as required, by Lemma 6.3 applied to the sequence i · ½ pi > -1 , and by
+the bound i (M), which holds for every i  [m].
+
+When (M) is bounded and (M)  , we will instead use the bound
+
+log f + 1 3 log (M), (28) (q,f) M f 
+
+which follows from the proof above by using the trivial bound log(i + 1) (bounded number of) large primes pi, instead of applying Lemma 6.3.
+
+(M) for the
+
+26
+
+We will also need the following easy lemma.
+
+Lemma 7.4. as m  .
+
+Let 2
+-1
+i=0
+
+m0 < m1 < · · · < m m.
+
+mi log mi
+
+1/2
+mi+1 - mi
+
+Then 2 + o(1) 3
+
+m3/2 (log m)1/2
+
+We can now prove Lemma 7.2.
+
+Proof of Lemma 7.2. Observe first that, by Lemma 7.3 applied with M = M(p, e), we have
+
+log
+(q,f ) M(p,e)
+
+f +1 f
+
+ 2  + o(1)
+
+ M(p, e) log  M(p, e)
+
+1/2 2 + log  M(p, e) 
+
+as (M(p, e))  , and that when (M(p, e)) is bounded, by (28) we have
+
+log
+(q,f ) M(p,e)
+
+f +1 f
+
+3 log (N), 
+
+as (N )  , since (M(p, e)) (N ). Thus, summing over (p, e)  N , it follows that
+
+Q(N, )
+
+ 2  + o(1)
+
+(p - 1)
+
+(p,e) N 
+
+ M(p, e) log  M(p, e)
+
+1/2 + 3 (N ) log (N ) 
+
+as N   (which, in particular, implies that (N)  ). Next, we apply Lemma 7.4 with (m0, . . . , m) =  M(p, e) (p,e) N  and m = (N ).
+Note that if (p, e) immediately follows (p, e) in the ordering  restricted to N , then
+
+ M(p, e) -  M(p, e) = p - 1,
+
+since  only counts the large primes. It follows that
+
+4 (N )3/2 3
+
+Q(N, )
+
+3 + o(1) log (N ) 1/2 +  (N ) log (N ),
+
+as N  . Since (N) >  · (N), by assumption, we obtain (27), as required.
+
+Before continuing, let us observe that the condition (N) >  · (N) in the statement of Lemma 7.2 (which in any case could be weakened considerably) is not a serious restriction, since we can easily obtain, using the method of Section 6, a suitable bound on the number of minimal covering systems whose least common multiple has mostly small prime factors.
+
+Lemma 7.5. Let ,  > 0 be constants and let n  N and N  N with (N)  · (N). The number of minimal covering systems A of Z of size n with lcm(A) = N is at most
+
+as n  .
+
+exp 2  + o(1)
+
+n3/2
+1/2
+
+(log n)
+
+27
+
+Proof. The proof is essentially the same as that of Proposition 6.1, but we use Lemma 7.3
+
+in place of Lemma 6.3 to count the choices of the moduli. To be more precise, in order to
+
+count the minimal covering systems A = {A1, . . . , An} of Z of size n with lcm(A) = N , we
+
+will first choose the moduli, and then the shifts. Observe first that, for each j  [n], we have
+
+at most
+
+(p,e) N
+
+e+1 e
+
+ exp 2  + o(1)
+
+(N ) 1/2 + 2 log (N )
+
+log (N )
+
+
+
+choices for the modulus of the arithmetic progression Aj. Indeed, the left-hand side is simply the number of divisors of N, and the inequality follows from Lemma 7.3.
+Now, since (by assumption and by Simpson's theorem) we have (N)  · (N) n, it follows by Lemma 6.2 that the number of choices for A is at most
+
+(n!)2 · exp
+
+2  + o(1)
+
+n3/2
+
+2n log n
+
+1/2 +
+
+= exp
+
+(log n)
+
+
+
+2  + o(1)
+
+n3/2
+1/2
+
+(log n)
+
+as n  , as claimed.
+
+7.2. Proof of Theorem 1.1. We are finally ready to put together the pieces and deduce our main counting result. We will need the following easy bound.
+
+Lemma 7.6. For every m  N and x 0, we have
+
+as m  .
+
+(m + x)3/2 (log(m + x))1/2
+
+m3/2 (log m)1/2 +
+
+3 + o(1) 2
+
+m 1/2 x, log m
+
+We can now deduce Theorem 1.1 from Theorem 2.3, Propositions 5.1 and 6.1, Lemma 6.2, Simpson's theorem, and the results of this section.
+
+Proof of Theorem 1.1. The lower bound follows immediately from Proposition 5.1, so we will prove the upper bound. Observe first (cf. Section 6) that, by Simpson's theorem, if A is a minimal covering system of Z of size n, then lcm(A) 2n. We may therefore fix N 2n, and consider only covering systems A such that lcm(A) = N. We associate each progression A  A with an arithmetic hyperplane in S N using the bijection N , as described above.
+Let  > 0 be an arbitrarily small constant, set C = 4, and let  = (C, ) > 0 be the constant given by Theorem 2.3. Suppose first that either n > 4(N) or (N) > 4(N). Then, by Proposition 6.1 and Lemma 7.5, there are at most
+
+ exp  + o(1)
+
+n3/2
+1/2
+
+(log n)
+
+minimal covering systems A of Z of size n with lcm(A) = N, as required. By Simpson's theorem, let us therefore assume from now on that (N ) n 4(N ) 24(N ).
+
+28
+
+By Theorem 2.3 (and our choice of ), every minimal covering system A of Z of size n 4(N ) with lcm(A) = N contains a -generalized frame F(p,e) : (p, e)  N , with
+
+|F(p,e)|
+(p,e) N
+
+(1 - )(N).
+
+(29)
+
+Since (N) 4(N), it follows by Lemmas 7.1 and 7.2 that the number of sequences
+D(F(p,e)) : (p, e)  N  such that F(p,e) : (p, e)  N is a -generalized frame in S N
+consisting only of arithmetic hyperplanes is at most 4 (N )3/2 (N )
+(N )! · exp 3 + o(1) log (N ) 1/2 + 2 , (30)
+
+where the factor of (N)! bounds (noting that (N) | N |) the number of choices for the
+
+ordering  on N associated with the -generalized frame.
+
+We next need to count the choices of the moduli for the remaining arithmetic progressions
+
+in A, that is, those corresponding to hyperplanes that are not included in F(p,e) for any
+
+(p, e)  N . Recall (from Definition 2.2) that the sets F(p,e) with (p, e)  N  are pairwise
+
+disjoint, so there are exactly
+
+x := n -
+
+|F(p,e)|,
+
+(p,e) N 
+
+such arithmetic progressions in A. We bound the number of choices for the fixed sets of
+
+these remaining hyperplanes in A using Lemma 7.3, which implies that we have at most
+
+(p,e) N
+
+e+1 e
+
+ exp 2  + o(1)
+
+(N ) 1/2 + 2 log (N )
+
+log (N )
+
+
+
+choices for each. Combining this bound with (30), and recalling that (N) n
+
+it follows that we have at most 4
+exp 3 + o(1)
+
+(N )3/2 + log (N ) 1/2
+
+ 2  + o(1)
+
+(N )
+
+1/2
+x
+
+log (N )
+
+24(N ), (31)
+
+choices for the moduli of the arithmetic progressions in A, given N and x. In order to bound (31), we apply Lemma 7.6 with m = (N). Since 0 x n and
+2-4n m n, we obtain
+
+(N )3/2
+
++3
+
+(N )
+
+1/2
+x
+
+(N ) + x 3/2 1/2 +
+
+o(n3/2)
+1/2
+
+(32)
+
+log (N ) 1/2 2 log (N )
+
+log((N ) + x)
+
+(log n)
+
+as n  . Now, since |F(p,e)| p - 1 for each (p, e)  N , it follows from (29) that
+
+n-x=
+
+|F(p,e)|
+
+(p,e) N 
+
+(N ) - (N )
+
+(N ) - n,
+
+29
+
+so (N ) + x (1 + )n, and hence
+
+(N ) + x 3/2 log((N ) + x) 1/2
+
+(1 + )3/2 n . 3/2 (log n)1/2
+
+Combining this with (31) and (32), it follows that we have at most
+
+exp 4 + o(1) (1 + )3/2 n3/2
+
+3
+
+(log n)1/2
+
+choices for the moduli of the progressions in A.
+Finally, by Lemma 6.2, it follows that there are at most 4 n3/2
+exp 3 + O() (log n)1/2
+
+minimal covering systems of Z of size n with lcm(A) = N. Since  > 0 was arbitrarily small, this completes the proof of Theorem 1.1.
+
+Acknowledgements
+This research was partly carried out during a one-month visit by the authors to IMT Lucca, and partly during visits by various subsets of the authors to IMPA and to the University of Memphis. We are grateful to each of these institutions for their hospitality, and for providing a wonderful working environment. We are also grateful to Christian Elsholtz for pointing out the appearance of the constant  in the iterated divisor function.
+
+References
+[1] P. Balister, B. Bollob´as, R. Morris, J. Sahasrabudhe and M. Tiba, On the Erdos Covering Problem: the density of the uncovered set, Invent. Math., 228 (2022), 377-414.
+[2] P. Balister, B. Bollob´as, R. Morris, J. Sahasrabudhe and M. Tiba, The Erdos-Selfridge problem with square-free moduli, Algebra & Number Theory, 15 (2021), 609-626.
+[3] Y. Buttkewitz, C. Elsholtz, K. Ford and J.-C. Schlage-Puchta, A Problem of Ramanujan, Erdos, and K´atai on the Iterated Divisor Function, Int. Math. Res. Notices, 17 (2012), 4051-4061.
+[4] C. Elsholtz, M. Technau and N. Technau, The maximal order of iterated multiplicative functions, Mathematika, 65 (2019), 990-1009.
+[5] P. Erdos, On integers of the form 2k + p and some related problems, Summa Brasil. Math., 2 (1950), 113-123.
+[6] P. Erdos, Egy kongruenciarendszerekrol sz´ol´o probl´ema´r´ol (On a problem concerning congruence-systems, in Hungarian), Mat. Lapok, 4 (1952), 122-128.
+[7] P. Erdos, Problems and results in combinatorial number theory, A survey of combinatorial theory, J. N. Srivastava, ed., North-Holland, Amsterdam, 1973, 117-138.
+[8] P. Erdos, R´esultats et probl`emes en th´eorie des nombres, S´eminaire Delange-Pisot-Poitou (14e ann´ee: 1972/73), Th´eorie des nombres, Fasc. 2, Exp. No. 24, 7 pp., Secr´etariat Math´ematique, Paris, 1973.
+[9] P. Erdos, Problems and results on combinatorial number theory III, in Number Theory Day (Proc. Conf., Rockefeller Univ., New York, 1976), pp. 43-72. Lecture Notes in Math., Vol. 626, Springer, Berlin, 1977.
+30
+
+[10] P. Erdos, A survey of problems in combinatorial number theory, Combinatorial mathematics, optimal designs and their applications, Ann. Discrete Math., 6 (1980), 89-115.
+[11] P. Erdos, Some of my favourite problems in number theory, combinatorics, and geometry, Resenhas, 2, (1995), 165-186.
+[12] P. Erdos and R. L. Graham, Old and new problems and results in combinatorial number theory, Monographies de L'Enseignement Math´ematique, No. 28, 1980.
+[13] M. Filaseta, K. Ford, S. Konyagin, C. Pomerance and G. Yu, Sieving by large integers and covering systems of congruences, J. Amer. Math. Soc., 20 (2007), 495-517.
+[14] J. Friedlander, On exact coverings of the integers, Israel J. Math., 12 (1972), 299-305. [15] I. P. Goulden, A. Granville, L. B. Richmond and J. Shallit, Natural exact covering systems and the
+reversion of the Mo¨bius series, Ramanujan J., 50 (2019), 211-235. [16] R. Hough, Solution of the minimum modulus problem for covering systems, Ann. Math., 181 (2015),
+361-382. [17] R. Hough and P. Nielsen, Covering systems with restricted divisibility, Duke Math. J., 168 (2019),
+3261-3295. [18] J.-P. Massias and G. Robin, Bornes effectives pour certaines fonctions concernant les nombres premiers,
+Journal Th. Nombres de Bordeaux, 8 (1996), 213-238. [19] M. Newman, Roots of unity and covering sets, Math. Ann., 191 (1971), 279-282. [20] S. Porubsky´ and J. Scho¨nheim, Covering systems of Paul Erdos: Past, present and future, in Paul Erdos
+and his mathematics, vol. I, J´anos Bolyai Math. Soc., Budapest, 2002, pp. 581-627. [21] A. Schinzel, Reducibility of polynomials and covering systems of congruences, Acta Arith., 13 (1967),
+91-101. [22] R. J. Simpson, Regular coverings of the integers by arithmetic progressions, Acta Arith., 45 (1985),
+145-152. [23] S. Zna´m, On exactly covering systems of arithmetic sequences, Math. Ann., 180 (1969), 227-232.
+
+Appendix A. Proof of the geometric Simpson's theorem
+In this appendix we will provide, for the reader's convenience, a proof of the following slight generalization of Simpson's theorem [22].
+
+Theorem A.1 (Simpson's theorem). Let A be a minimal cover of S[k] with hyperplanes, and let I F (A). Then
+
+H  A : F (H)  I
+
+|Si| - 1 + 1.
+iF (A)\I
+
+Note that Theorem 2.4 follows from Theorem A.1 by setting I = .
+
+Proof. The proof is by induction on |F (A)|. Set
+
+(i)
+Ls
+
+:=
+
+S1
+
+×
+
+·
+
+·
+
+· Si-1
+
+×
+
+{s}
+
+×
+
+Si+1
+
+×
+
+·
+
+·
+
+·
+
+Sk
+
+for each i  [k] and s  Si, and note that if F (A) = {i}, then A (being minimal) must
+(i)
+consist precisely of the |Si| hyperplanes Ls , one for each s  Si. Moreover, if I F (A)
+then I = , and hence
+H  A : F (H)  I = |A| = |Si|,
+
+31
+
+as required. So suppose that |F (A)| 2, and (recalling that I F (A)) choose an element
+(i)
+i  F (A) \ I. For each s  Si, let As  A be a minimal cover of Ls , and observe that
+
+A = As,
+sSi
+since A is minimal. For convenience, let us assume (without loss) that Si = {1, . . . , p}. Now, set Fi(H) := F (H) \ {i} for each H  As (and similarly for a family of hyperplanes),
+and define a sequence of sets (R0, . . . , Rp) by setting R0 := I, and
+
+Rs := Rs-1  Fi(As)
+
+for each s  Si, so in particular Rp = F (A) \ {i}. Now set Is := Rs-1  Fi(As), and define
+
+Qs := H  As : Fi(H)  Is .
+
+(i)
+We claim that, applying the induction hypothesis to the minimal cover As of Ls (which we naturally identify with S1 × · · · Si-1 × Si+1 × · · · Sk), we have either Rs-1 = Rs, or
+
+|Qs|
+
+|Sj| - 1 + 1
+j Rs \Rs-1
+
+(33)
+
+for each s  Si. To see this, simply note that Rs \ Rs-1 = Fi(As) \ Is, so if Rs-1 = Rs then Is Fi(As), and that Fi(As)  F (A) \ {i}, so (since i  F (A)) we have |Fi(As)| < |F (A)|.
+Set J := s  Si : Rs-1 = Rs , and recall that (33) holds for each s  J. We claim that
+
+Qs = |Qs|
+
+sJ
+
+sJ
+
+|J| - |Si| - 1 +
+
+|Sj| - 1 .
+
+jF (A)\I
+
+The inequality follows from summing (33) over s  J, and recalling that i  F (A) \ I, so it remains to show that the sets Qs are disjoint. To see this, observe that, if H  As, then
+
+Fi(H)  Is  Fi(H)  Rs and Fi(H)  Rs-1,
+
+and so H  As for at most one element s  Si.
+
+Finally, we claim that for each s  Si \ J, there exists a hyperplane H  A such that H 
+
+(i)
+
+(i)
+
+Ls and F (H)  I. To see this, observe first that Ls is not covered by H  A : i  F (H) ,
+
+as otherwise S[k] would be covered by H  A : i  F (H) , contradicting the minimality of
+
+(i)
+A and the fact that i  F (A). It follows that there exists H  A with H  Ls , and we
+
+have F (H)  I because i  F (H) \ I. Moreover, none of these |Si| - |J| distinct hyperplanes
+(i)
+is included in Qs for any s  J, since they do not intersect the set sJ Ls .
+
+Hence, noting that F (H)  I for each H  Qs (since I  Rs-1 and F (H)  Rs-1), we
+
+obtain
+
+H  A : F (H)  I as required.
+
+Qs + |Si| - |J|
+sJ
+
+|Sj| - 1 + 1,
+jF (A)\I
+
+32
+
+Mathematical Institute, University of Oxford, Radcliffe Observatory Quarter, Woodstock Road, Oxford, OX2 6GG, UK
+Email address: Paul.Balister@maths.ox.ac.uk Department of Pure Mathematics and Mathematical Statistics, Wilberforce Road, Cambridge, CB3 0WA, UK, and Department of Mathematical Sciences, University of Memphis, Memphis, TN 38152, USA Email address: b.bollobas@dpmms.cam.ac.uk IMPA, Estrada Dona Castorina 110, Jardim Bota^nico, Rio de Janeiro, 22460-320, Brazil Email address: rob@impa.br Department of Pure Mathematics and Mathematical Statistics, Wilberforce Road, Cambridge, CB3 0WA, UK Email address: jdrs2@cam.ac.uk IMPA, Estrada Dona Castorina 110, Jardim Bota^nico, Rio de Janeiro, 22460-320, Brazil Email address: mt576@dpmms.cam.ac.uk
+33
+
+

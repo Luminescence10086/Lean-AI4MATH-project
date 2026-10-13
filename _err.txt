@@ -1,0 +1,25 @@
+IMO组合预选题.lean:838:70: error: Application type mismatch: The argument
+  hess_c
+has type
+  ∀ (i : Fiber.{u_1} p a ↑↑c), Essential (fibA p a ↑↑c) (fibD p a (↑↑c) d) i
+but is expected to have type
+  ∀ (i : Fiber.{u_2} p ?m.455 ↑↑c), Essential ?m.459 ?m.462 i
+in the application
+  IH (lcmDiff (fibD p a (↑↑c) d)) hlt (Fiber p ?m.455 ↑↑c) ?m.459 ?m.462 ?m.465 ?m.467 ?m.469 hess_c
+IMO组合预选题.lean:869:41: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  c ≥ 0
+  c - e ≥ 0
+  b ≥ 2
+where
+ b := ↑(p ^ k)
+ c := ↑(∑ c, jf c)
+ e := ↑(k - 1)
+ f := ↑(∑ c, jf c) * ↑(p - 1)
+ g := ↑(k - 1) * ↑(p - 1)
+IMO组合预选题.lean:882:8: warning: declaration uses `sorry`
+IMO组合预选题.lean:970:8: warning: declaration uses `sorry`

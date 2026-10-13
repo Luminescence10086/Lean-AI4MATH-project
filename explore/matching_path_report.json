@@ -1,0 +1,50 @@
+{
+  "exhaustive": {
+    "6": {
+      "K": 7,
+      "legal_covers": 24
+    },
+    "12": {
+      "K": 7,
+      "legal_covers": 592
+    },
+    "18": {
+      "K": 7,
+      "legal_covers": 387
+    },
+    "24": {
+      "K": 7,
+      "legal_covers": 3652
+    }
+  },
+  "named": {
+    "n720_A": {
+      "n": 720,
+      "clauses": 51,
+      "slots": 12,
+      "selected": 13
+    },
+    "n720_B": {
+      "n": 720,
+      "clauses": 51,
+      "slots": 12,
+      "selected": 13
+    },
+    "n60": {
+      "n": 60,
+      "clauses": 32,
+      "slots": 8,
+      "selected": 9
+    },
+    "n240": {
+      "n": 240,
+      "clauses": 22,
+      "slots": 10,
+      "selected": 11
+    }
+  },
+  "exact_partitions": 640,
+  "rich_covers": 640,
+  "large_true_lcm_cases": 1255,
+  "maximum_true_lcm": 1680
+}

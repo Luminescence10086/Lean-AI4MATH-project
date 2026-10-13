@@ -1,0 +1,25 @@
+/-! 递归检查最终证明的实际常量依赖，而不只搜索本文件中的调用文本。
+类型和 theorem/opaque 的证明体均递归展开；出现禁用工具立即报错。 -/
+open Lean Elab Command in
+run_cmd do
+  let env ← getEnv
+  let mut todo : List Name := [``ElementaryAPProof.problem7, ``ElementaryAPProof.T23prime]
+  let mut seen : NameSet := {}
+  while !todo.isEmpty do
+    let n := todo.head!
+    todo := todo.tail!
+    if seen.contains n then
+      continue
+    seen := seen.insert n
+    let s := n.toString
+    for token in ["HallMarriageTheorem", "all_card_le_biUnion_card", "strict_deficiency",
+        "sorryAx", "Lean.ofReduceBool", "Simpson"] do
+      if (s.splitOn token).length > 1 then
+        throwError "禁用工具出现在最终证明依赖中：{n}"
+    if let some info := env.find? n then
+      for dep in info.type.getUsedConstants do
+        todo := dep :: todo
+      if let some value := info.value? (allowOpaque := true) then
+        for dep in value.getUsedConstants do
+          todo := dep :: todo
+  logInfo m!"初等路线依赖审计通过：递归检查 {seen.size} 个常量，无 Hall、亏格稳定性、sorryAx 或原题文献定理。"

@@ -1,0 +1,218 @@
+    ④ lcm 条件：必须有 d = p² 的列 ⟹ q ≥ 1 ⟹ t < p；
+    ⑤ s = t + q ≥ t + p(p−t) ≥ 2p−1。 -/
+theorem case_prime_sq {s : ℕ} {p : ℕ} {a : Fin s → ℤ} {d : Fin s → ℕ}
+    {n : ℕ} (hp : p.Prime) (hn : n = p ^ 2) (heq : lcmDiff d = n) (hd : ∀ i, 0 < d i)
+    (hcover : ∀ m : ℤ, ∃ i, MemAP a d i m)
+    (hess : ∀ i, ∃ m, MemAP a d i m ∧ ∀ j, j ≠ i → ¬ MemAP a d j m) :
+    s ≥ bound n := by
+  subst heq
+  have hp2 : p * p = lcmDiff d := by rw [hn, pow_two]
+  haveI : NeZero p := ⟨ne_of_gt hp.pos⟩
+  have hnl : 1 < lcmDiff d := by
+    rw [← hp2]
+    have h1 : 1 < p := hp.one_lt
+    nlinarith
+  -- 分类：每个公差是 p 或 p·p
+  have hcls : ∀ i, d i = p ∨ d i = p * p := by
+    intro i
+    have hdvd : d i ∣ lcmDiff d := dvd_lcmDiff i
+    rw [hn] at hdvd
+    rcases (Nat.dvd_prime_pow hp).1 hdvd with ⟨j, hj, hjd⟩
+    rcases j with _ | j
+    · rw [Nat.pow_zero] at hjd
+      exact absurd hjd (no_diff_one hcover hess hnl i)
+    rcases j with _ | k
+    · rw [Nat.pow_one] at hjd
+      exact Or.inl hjd
+    · have hdvd2 : p ^ (k + 1 + 1) ∣ p ^ 2 := by rw [← hjd]; exact hdvd
+      have hk2 : k + 1 + 1 ≤ 2 := (Nat.pow_dvd_pow_iff_le_right hp.one_lt).1 hdvd2
+      have hk0 : k = 0 := by omega
+      rw [hk0, Nat.zero_add, Nat.pow_two] at hjd
+      exact Or.inr hjd
+  -- 指标集：T = 满块（d = p），Q = 点块（d = p²）
+  set T : Finset (Fin s) := Finset.univ.filter (fun i => d i = p) with hTdef
+  set Q : Finset (Fin s) := Finset.univ.filter (fun i => d i = p * p) with hQdef
+  have hmemT : ∀ i, i ∈ T ↔ d i = p := fun i => Finset.mem_filter.trans
+    ⟨fun h => h.2, fun h => ⟨Finset.mem_univ _, h⟩⟩
+  have hmemQ : ∀ i, i ∈ Q ↔ d i = p * p := fun i => Finset.mem_filter.trans
+    ⟨fun h => h.2, fun h => ⟨Finset.mem_univ _, h⟩⟩
+  have hunion : T ∪ Q = Finset.univ := by
+    ext i
+    rcases hcls i with h | h
+    · exact ⟨fun _ => Finset.mem_univ _, fun _ => Finset.mem_union.2 (Or.inl ((hmemT i).2 h))⟩
+    · exact ⟨fun _ => Finset.mem_univ _, fun _ => Finset.mem_union.2 (Or.inr ((hmemQ i).2 h))⟩
+  have hdisj : Disjoint T Q := by
+    rw [Finset.disjoint_iff_ne]
+    intro i hi j hj hne
+    rw [hmemT] at hi
+    rw [hmemQ] at hj
+    rw [← hne, hi] at hj
+    have h1 : 1 < p := hp.one_lt
+    exact absurd hj (by nlinarith)
+  have hdisjne : ∀ i ∈ T, ∀ j ∈ Q, i ≠ j := Finset.disjoint_iff_ne.1 hdisj
+  have hspl : s = T.card + Q.card := by
+    have hu : (Finset.univ : Finset (Fin s)).card = s := by
+      rw [Finset.card_univ, Fintype.card_fin]
+    calc s = Finset.univ.card := hu.symm
+      _ = (T ∪ Q).card := by rw [hunion]
+      _ = T.card + Q.card := Finset.card_union_of_disjoint hdisj
+  -- ① 满块的 mod p 残差两两不同
+  have hTres : ∀ i ∈ T, ∀ j ∈ T, i ≠ j → ¬ (a i ≡ a j [ZMOD (p : ℕ)]) := by
+    intro i hi j hj hij hae
+    rw [Int.modEq_iff_dvd] at hae
+    obtain ⟨m, hm, hpriv⟩ := hess i
+    simp only [MemAP] at hm
+    rw [(hmemT i).1 hi] at hm
+    obtain ⟨k, hk⟩ := hm
+    have hme : m ≡ a j [ZMOD (p : ℕ)] := by
+      rw [Int.modEq_iff_dvd, hk]
+      obtain ⟨u, hu⟩ := hae
+      refine ⟨u - k, ?_⟩
+      linarith
+    rw [← (hmemT j).1 hj] at hme
+    exact hpriv j (Ne.symm hij) (memAP_of_modEq (a := a) (d := d) (i := j) (m := m) hme)
+  -- 满块残差函数在 T 上单射 ⟹ t ≤ p
+  have hinj : Set.InjOn (fun i : Fin s => ((a i : ℤ) : ZMod p)) (↑T : Set (Fin s)) := by
+    intro i hi j hj heq
+    by_contra hne
+    exact absurd ((ZMod.intCast_eq_intCast_iff _ _ _).1 heq) (hTres i hi j hj hne)
+  have hcard : (T.image (fun i : Fin s => ((a i : ℤ) : ZMod p))).card = T.card :=
+    Finset.card_image_of_injOn hinj
+  have hTle : T.card ≤ p := by
+    have hsub : T.image (fun i : Fin s => ((a i : ℤ) : ZMod p))
+        ⊆ (Finset.univ : Finset (ZMod p)) :=
+      Finset.image_subset_iff.2 fun i _ => Finset.mem_univ _
+    calc T.card = (T.image (fun i : Fin s => ((a i : ℤ) : ZMod p))).card := hcard.symm
+      _ ≤ (Finset.univ : Finset (ZMod p)).card := Finset.card_le_card hsub
+      _ = p := by rw [Finset.card_univ, ZMod.card]
+  -- ② 点块避开满块残差
+  have hQres : ∀ i ∈ T, ∀ j ∈ Q, ¬ (a j ≡ a i [ZMOD (p : ℕ)]) := by
+    intro i hi j hj hae
+    rw [Int.modEq_iff_dvd] at hae
+    obtain ⟨m, hm, hpriv⟩ := hess j
+    simp only [MemAP] at hm
+    rw [(hmemQ j).1 hj] at hm
+    obtain ⟨k, hk⟩ := hm
+    obtain ⟨u, hu⟩ := hae
+    have huv : (a i : ℤ) - a j = (p : ℤ) * u := by rw [hu]; ring
+    have hme : m ≡ a i [ZMOD (p : ℕ)] := by
+      rw [Int.modEq_iff_dvd]
+      refine ⟨u - (p : ℤ) * k, ?_⟩
+      rw [hk, huv]
+      ring
+    rw [← (hmemT i).1 hi] at hme
+    exact hpriv i (hdisjne i hi j hj) (memAP_of_modEq (a := a) (d := d) (i := i) (m := m) hme)
+  -- ④ 点块存在（否则 lcm = p ≠ p²）
+  have hQne : Q ≠ ∅ := by
+    intro hQe
+    have hall : ∀ i, d i = p := by
+      intro i
+      rcases hcls i with h | h
+      · exact h
+      · exact absurd ((hmemQ i).2 h) (by rw [hQe]; simp)
+    have hle : lcmDiff d ∣ p := Finset.lcm_dvd (fun i _ => by rw [hall i])
+    obtain ⟨i₀, -⟩ := hcover (0 : ℤ)
+    have hge : p ∣ lcmDiff d := (hall i₀) ▸ dvd_lcmDiff i₀
+    have hEq : lcmDiff d = p := Nat.dvd_antisymm hle hge
+    rw [hEq, pow_two] at hn
+    have hz : p * (p - 1) = 0 := by nlinarith [hn]
+    rcases Nat.mul_eq_zero.1 hz with h | h
+    · exact absurd h hp.pos.ne'
+    · exact absurd (by omega : p = 1) hp.ne_one
+  -- ④' 于是 t < p
+  have hTlt : T.card < p := by
+    by_contra hc
+    push_neg at hc
+    have hTeq : T.card = p := by omega
+    obtain ⟨j, hj⟩ := Finset.nonempty_iff_ne_empty.2 hQne
+    have hmem : ((a j : ℤ) : ZMod p) ∈ T.image (fun i : Fin s => ((a i : ℤ) : ZMod p)) := by
+      by_contra hmem0
+      have hsub : T.image (fun i : Fin s => ((a i : ℤ) : ZMod p))
+          ⊆ (Finset.univ (α := ZMod p)).erase ((a j : ℤ) : ZMod p) := by
+        intro x hx
+        obtain ⟨i, hiT, hAI⟩ := Finset.mem_image.1 hx
+        rw [Finset.mem_erase]
+        refine ⟨fun he => hQres i hiT j hj (Int.ModEq.symm
+          ((ZMod.intCast_eq_intCast_iff _ _ _).1 (by rw [he] at hAI; exact hAI))),
+          Finset.mem_univ _⟩
+      have hle2 := Finset.card_le_card hsub
+      have hpp : 0 < p := hp.pos
+      rw [hcard, hTeq, Finset.card_erase_of_mem (Finset.mem_univ _), Finset.card_univ,
+        ZMod.card] at hle2
+      omega
+    obtain ⟨i, hiT, hAI⟩ := Finset.mem_image.1 hmem
+    exact hQres i hiT j hj ((ZMod.intCast_eq_intCast_iff _ _ _).1 hAI.symm)
+  -- T 内块两两不交
+  have hbij : ∀ i ∈ T, ∀ j ∈ T, i ≠ j → ∀ x, x ∈ Block a d i → x ∉ Block a d j := by
+    intro i hi j hj hij x hxI hxJ
+    obtain ⟨m, hmx⟩ := ZMod.intCast_surjective x
+    rw [← hmx] at hxI hxJ
+    have hmI : MemAP a d i m := (mem_block_iff hd i).2 hxI
+    have hmJ : MemAP a d j m := (mem_block_iff hd j).2 hxJ
+    simp only [MemAP] at hmI hmJ
+    rw [(hmemT i).1 hi] at hmI
+    rw [(hmemT j).1 hj] at hmJ
+    obtain ⟨c, hcI⟩ := hmI
+    obtain ⟨e, hcJ⟩ := hmJ
+    have hmod : a i ≡ a j [ZMOD (p : ℕ)] := by
+      rw [Int.modEq_iff_dvd]
+      refine ⟨(p : ℤ) * e - c, ?_⟩
+      linear_combination (norm := ring_nf) hcI - hcJ
+    exact absurd hmod (hTres i hi j hj hij)
+  -- ③ 无满块残差上的类全部由点块覆盖
+  set U : Finset (ZMod (lcmDiff d)) := T.biUnion (fun i => Block a d i) with hUdef
+  have hpair : (↑T).PairwiseDisjoint (fun i => Block a d i) := by
+    intro i hi j hj hij
+    refine Finset.disjoint_left.2 fun x hx₁ hx₂ => ?_
+    exact hbij i hi j hj hij x hx₁ hx₂
+  have hUcard : U.card = T.card * p := by
+    rw [hUdef, Finset.card_biUnion hpair]
+    have hsum : ∑ i ∈ T, (Block a d i).card = ∑ _i ∈ T, p := by
+      refine Finset.sum_congr rfl fun i hi => ?_
+      have hdi := (hmemT i).1 hi
+      have hc := card_block (a := a) hd i
+      rw [hp2, hdi] at hc
+      rw [Nat.mul_div_cancel_left _ hp.pos] at hc
+      exact hc
+    rw [hsum, Finset.sum_const, smul_eq_mul]
+  have hYsub : Uᶜ ⊆ Q.image (fun j => (a j : ZMod (lcmDiff d))) := by
+    intro x hx
+    obtain ⟨i, hi⟩ := cover_block hd hcover x
+    by_cases hiT : i ∈ T
+    · exact absurd (Finset.mem_biUnion.2 ⟨i, hiT, hi⟩) hx
+    · have hiQ : i ∈ Q := by
+        rw [hmemQ]
+        rw [hmemT] at hiT
+        rcases hcls i with h | h
+        · exact absurd h hiT
+        · exact h
+      refine Finset.mem_image.2 ⟨i, hiQ, ?_⟩
+      obtain ⟨m, hmx⟩ := ZMod.intCast_surjective x
+      rw [← hmx] at hi
+      have hxI : MemAP a d i m := (mem_block_iff hd i).2 hi
+      simp only [MemAP] at hxI
+      rw [(hmemQ i).1 hiQ] at hxI
+      obtain ⟨k, hkx⟩ := hxI
+      rw [hmx, hkx, Nat.cast_mul, Nat.cast_eq_zero.2 (by rw [← hp2]; exact dvd_lcmDiff i),
+        zero_mul, add_zero]
+  -- 计数与收尾
+  haveI : NeZero (lcmDiff d) := ⟨ne_of_gt (lcmDiff_pos hd)⟩
+  have hYcard : Uᶜ.card = p * (p - T.card) := by
+    rw [Finset.card_compl, ZMod.card, hUcard, ← hp2, Nat.mul_sub, Nat.mul_comm T.card p]
+  have hQge : p * (p - T.card) ≤ Q.card := by
+    calc p * (p - T.card) = Uᶜ.card := hYcard.symm
+      _ ≤ (Q.image (fun j => (a j : ZMod (lcmDiff d)))).card :=
+          Finset.card_le_card (fun x hx => hYsub hx)
+      _ ≤ Q.card := Finset.card_image_le
+  rw [hn, bound_prime_pow hp 2, hspl]
+  have key : p * (p - T.card) + T.card ≥ 1 + 2 * (p - 1) := by
+    have h1 : 1 ≤ p := hp.pos
+    have h2 : T.card + 1 ≤ p := by omega
+    nlinarith [mul_nonneg h1 (by omega : (0 : ℕ) ≤ p - (T.card + 1))]
+  omega
+
+/-! ## 蓝图·素数幂：n = p^k -/
+
+/-- 【蓝图·素数幂】n = p^k 时 s ≥ 1 + k(p−1) = bound (p^k)。
+    证明路线（数学上已论证完毕，形式化进行中）：
+    ① 公差 1 被排除（no_diff_one），故所有 d_i = p^{β_i}，β_i ≥ 1；

@@ -1,0 +1,14 @@
+'ElementaryAPProof.ElementaryAlternating.full_matching_of_no_local_assignment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ElementaryAPProof.ElementaryMatching.local_assignment_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ElementaryAPProof.ElementaryMatching.minimal_cover_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.matching_capacity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.DigitCoordinates.int_modEq_iff_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.DigitCoordinates.realize_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.truncated_cover_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.T23prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementaryAPProof.problem7' depends on axioms: [propext, Classical.choice, Quot.sound]
+初等路线依赖审计通过：递归检查 9649 个常量，无 Hall、亏格稳定性、sorryAx 或原题文献定理。

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Pq2VxH2nI2yteh4apDf7oJMuJrU</id>
+  <title>arXiv Query: search_query=all:"minimal covering system" OR all:"minimal covering systems"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-10T07:26:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22minimal+covering+system%22+OR+all:%22minimal+covering+systems%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1904.04806v2</id>
+    <title>The structure and number of Erdős covering systems</title>
+    <updated>2022-11-16T18:09:18Z</updated>
+    <link href="https://arxiv.org/abs/1904.04806v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.04806v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Introduced by Erdős in 1950, a covering system of the integers is a finite collection of arithmetic progressions whose union is the set $\mathbb{Z}$. Many beautiful questions and conjectures about covering systems have been posed over the past several decades, but until recently little was known about their properties. Most famously, the so-called minimum modulus problem of Erdős was resolved in 2015 by Hough, who proved that in every covering system with distinct moduli, the minimum modulus is at most $10^{16}$.
+  In this paper we answer another question of Erdős, asked in 1952, on the number of minimal covering systems. More precisely, we show that the number of minimal covering systems with exactly $n$ elements is \[ \exp\left( \left(\frac{4\sqrtτ}{3} + o(1)\right) \frac{n^{3/2}}{(\log n)^{1/2}} \right) \] as $n \to \infty$, where \[ τ= \sum_{t = 1}^\infty \left( \log \frac{t+1}{t} \right)^2. \] En route to this counting result, we obtain a structural description of all covering systems that are close to optimal in an appropriate sense.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-09T17:36:28Z</published>
+    <arxiv:comment>33 pages, minor update</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Paul Balister</name>
+    </author>
+    <author>
+      <name>Béla Bollobás</name>
+    </author>
+    <author>
+      <name>Robert Morris</name>
+    </author>
+    <author>
+      <name>Julian Sahasrabudhe</name>
+    </author>
+    <author>
+      <name>Marius Tiba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.01299v2</id>
+    <title>On the $j$-th smallest modulus of a covering system with distinct moduli</title>
+    <updated>2023-08-23T19:08:58Z</updated>
+    <link href="https://arxiv.org/abs/2212.01299v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.01299v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Covering systems were introduced by Erdős in 1950. In the same article where he introduced them, he asked if the minimum modulus of a covering system with distinct moduli is bounded. In 2015, Hough answered affirmatively this long standing question. In 2022, Balister, Bollobás, Morris, Sahasrabudhe and Tiba gave a simpler and more versatile proof of Hough's result. Building upon their work, we show that there exists some absolute constant $c&gt;0$ such that the $j$-th smallest modulus of a minimal covering system with distinct moduli is $\le \exp(cj^2/\log(j+1))$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-02T16:47:19Z</published>
+    <arxiv:comment>8 pages, minor corrections and changes. Final version, to appear in Int. J. Number Theory</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jonah Klein</name>
+    </author>
+    <author>
+      <name>Dimitris Koukoulopoulos</name>
+    </author>
+    <author>
+      <name>Simon Lemieux</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.05946v2</id>
+    <title>On the minimum modulus problem in number fields</title>
+    <updated>2026-08-05T23:44:32Z</updated>
+    <link href="https://arxiv.org/abs/2302.05946v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.05946v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The minimum modulus problem on covering systems was posed in 1950 by Erdős, who asked whether the minimum modulus of a covering system with distinct moduli is bounded. In 2007, Filaseta, Ford, Konyagin, Pomerance and Yu affirmed it if the reciprocal sum of the moduli of a covering system is bounded. Later in 2015, Hough resolved this problem by showing that the minimum modulus in any covering system with distinct moduli is at most $10^{16}$. In 2022, Balister, Bollobás, Morris, Sahasrabudhe and Tiba reduced this bound to $616,000$ by developing a versatile method called the distortion method. Recently, Klein, Koukoulopoulos and Lemieux generalized Hough's result by using a suitable modification of the distortion method. In this paper, we develop the distortion method further by introducing the theory of probability measures associated to an inverse system. Following Klein et al.'s work, we provide a solution to Erdős' minimum modulus problem in number fields. As an application, we prove that the $j$-th smallest norm in a minimal covering system of a number field with distinct moduli is bounded.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-12T16:01:45Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Huixi Li</name>
+    </author>
+    <author>
+      <name>Biao Wang</name>
+    </author>
+    <author>
+      <name>Shaoyun Yi</name>
+    </author>
+  </entry>
+</feed>

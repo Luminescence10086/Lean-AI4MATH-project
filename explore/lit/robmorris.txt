@@ -1,0 +1,1866 @@
+Erdos covering systems
+Robert Morris IMPA, Rio de Janeiro (Based on joint work with Paul Balister, B´ela Bollob´as, Julian Sahasrabudhe and Marius Tiba) University of Oxford, March 31st, 2020
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+
+8
+
+5
+
+2
+
+11
+
+4
+
+1
+
+10
+
+7
+
+0
+
+9
+
+6
+
+3
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+What is a covering system?
+Definition (Erdos, 1950)
+A covering system is a finite collection A1, . . . , Ak of arithmetic progressions that cover the integers, that is, A1  · · ·  Ak = Z.
+Erdos was interested in covering systems with distinct moduli. For example:
+0 (mod 2) , 0 (mod 3) , 1 (mod 4) , 5 (mod 6) , 7 (mod 12) .
+Erdos used a similarly simple covering system to answer a question of Romanoff (and refute a conjecture of de Polignac), by showing that not all odd numbers are of the form 2k + p, where p is either 1 or prime.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some questions about covering systems
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some questions about covering systems
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some questions about covering systems
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some questions about covering systems
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Conjecture (Erdos and Graham, 1980)
+If the moduli of a system of arithmetic progressions are distinct and lie in the interval [n, Cn], where n n0(C) is sufficiently large, then the uncovered set has density at least  for some  = (C) > 0.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n. His bound was doubly exponential.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n. His bound was doubly exponential. (Note that there are infinitely many covering systems of size 2, since we can take A = {Z, A} for any arithmetic progression A.)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n. His bound was doubly exponential. (Note that there are infinitely many covering systems of size 2, since we can take A = {Z, A} for any arithmetic progression A.) Simpson proved in 1985 that the largest modulus in a minimal covering system of size n is at most 2n-1.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n. His bound was doubly exponential. (Note that there are infinitely many covering systems of size 2, since we can take A = {Z, A} for any arithmetic progression A.) Simpson proved in 1985 that the largest modulus in a minimal covering system of size n is at most 2n-1. This bound is best possible, since the following system is minimal:
+A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Erdos gave a simple proof that there are only finitely many minimal covering systems of size n. His bound was doubly exponential.
+(Note that there are infinitely many covering systems of size 2, since we can take A = {Z, A} for any arithmetic progression A.) Simpson proved in 1985 that the largest modulus in a minimal covering system of size n is at most 2n-1.
+This bound is best possible, since the following system is minimal:
+A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1) .
+It also implies there are only 2O(n2) minimal covering systems of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system. We generalise this construction as follows:
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system. We generalise this construction as follows: Let p1 < . . . < pk be the first k primes, and set Qk := p1 · · · pk.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system. We generalise this construction as follows: Let p1 < . . . < pk be the first k primes, and set Qk := p1 · · · pk. For each 1 i k and 1 a pi - 1, choose an arithmetic progression
+a · Qi-1 (mod d · pi) for some d Qi-1.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system. We generalise this construction as follows: Let p1 < . . . < pk be the first k primes, and set Qk := p1 · · · pk. For each 1 i k and 1 a pi - 1, choose an arithmetic progression
+a · Qi-1 (mod d · pi) for some d Qi-1. Together with 0 (mod Qk) , these cover Z.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Constructing many minimal covering systems
+Recall that A = 2i-1 (mod 2i) : i  [n - 1]  0 (mod 2n-1)
+is a minimal covering system. We generalise this construction as follows: Let p1 < . . . < pk be the first k primes, and set Qk := p1 · · · pk. For each 1 i k and 1 a pi - 1, choose an arithmetic progression
+a · Qi-1 (mod d · pi) for some d Qi-1. Together with 0 (mod Qk) , these cover Z. A frame is a collection of arithmetic progressions as above.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}. p = 2: we take 1 (mod 2) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+p = 2: we take 1 (mod 2) . p = 3: we take 2 (mod 3) or 2 (mod 6)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+
+p = 2: we take p = 3: we take
+and
+
+1 (mod 2) . 2 (mod 3) or 1 (mod 3) or
+
+2 (mod 6) 4 (mod 6) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+p = 2: we take 1 (mod 2) . p = 3: we take 2 (mod 3) or 2 (mod 6)
+and 1 (mod 3) or 4 (mod 6) . p = 5: we could take (for example):
+1 (mod 5) , 2 (mod 10) , 3 (mod 15) and 24 (mod 30) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+
+p = 2: we take 1 (mod 2) . p = 3: we take 2 (mod 3) or 2 (mod 6)
+and 1 (mod 3) or 4 (mod 6) . p = 5: we could take (for example):
+
+1 (mod 5) , 2 (mod 10) , 3 (mod 15) and 24 (mod 30) .
+
+p = 7: we could take (for example):
+
+2 (mod 7)
+
+4 (mod 14)
+
+6 (mod 21)
+
+15 (mod 35)
+
+24 (mod 42)
+
+40 (mod 70) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+An example of a frame
+
+For each prime p we choose p - 1 progressions of the form a · Qi-1 (mod d · pi) for some d Qi-1 = p1 · · · pi-1,
+one for each a  {1, . . . , p - 1}.
+
+p = 2: we take 1 (mod 2) . p = 3: we take 2 (mod 3) or 2 (mod 6)
+and 1 (mod 3) or 4 (mod 6) . p = 5: we could take (for example):
+
+1 (mod 5) , 2 (mod 10) , 3 (mod 15) and 24 (mod 30) .
+
+p = 7: we could take (for example):
+
+2 (mod 7)
+
+4 (mod 14)
+
+6 (mod 21)
+
+15 (mod 35) and so on...
+
+24 (mod 42)
+
+40 (mod 70) .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+Each frame has size n =
+
+i=1 k (pi - 1) + 1  k2 log k.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+Each frame has size n = i=1 k (pi - 1) + 1  k2 log k. We have 2i-1 choices for the progression a · Qi-1 (mod d · pi) 1 i k and 1 a pi - 1
+
+for each
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+Each frame has size n = i=1 k (pi - 1) + 1  k2 log k. We have 2i-1 choices for the progression a · Qi-1 (mod d · pi) for each 1 i k and 1 a pi - 1, so this implies that there are at least
+k
+2(i-1)(pi-1)
+i=1
+minimal covering systems of Z of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+Each frame has size n = i=1 k (pi - 1) + 1  k2 log k. We have 2i-1 choices for the progression a · Qi-1 (mod d · pi) for each 1 i k and 1 a pi - 1, so this implies that there are at least
+k
+2(i-1)(pi-1) = exp  k3 log k
+i=1
+minimal covering systems of Z of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Counting the frames
+
+Proposition
+There are at least
+
+ n3/2 exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Proof.
+
+Each frame has size n = i=1 k (pi - 1) + 1  k2 log k.
+
+We have 2i-1 choices for the progression a · Qi-1 (mod d · pi) for each 1 i k and 1 a pi - 1, so this implies that there are at least
+
+k
+2(i-1)(pi-1) = exp  k3 log k
+i=1
+
+ n3/2 = exp (log n)1/2
+
+minimal covering systems of Z of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+The number of minimal covering systems of Z of size n is 4 n3/2
+exp 3 + o(1) (log n)1/2
+
+as n  , where
+
+
+
+t+1 2
+
+ = log
+
+.
+
+t=1 t
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The number of minimal covering systems
+Question (Erdos, 1952)
+How many minimal covering systems of size n are there?
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+The number of minimal covering systems of Z of size n is 4 n3/2
+exp 3 + o(1) (log n)1/2
+
+as n  , where
+
+
+
+t+1 2
+
+ = log
+
+.
+
+t=1 t
+
+To prove this result, we needed to study the `rough typical structure' of a minimal covering system of size n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 9 (Churchhouse, 1968)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 18 (Krukenberg, 1971)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 20 (Choi, 1971)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 24 (Morikawa, 1981)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 25 (Gibson, 2006)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 40 (Nielsen, 2009)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 42 (Owens, 2014).
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+There exists a system with minimum modulus 42 (Owens, 2014). The first significant progress in the other direction was made in 2007 by Filaseta, Ford, Konyagin, Pomerance and Yu:
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+
+There exists a system with minimum modulus 42 (Owens, 2014).
+
+The first significant progress in the other direction was made in 2007 by Filaseta, Ford, Konyagin, Pomerance and Yu:
+
+Theorem (Filaseta, Ford, Konyagin, Pomerance and Yu, 2007)
+
+Let A be a covering system with distinct moduli d1, . . . , dk M . Then
+
+k1 i=1 di
+
+log M log log log M .
+4 log log M
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+The minimum modulus problem (Erdos, 1950)
+Do there exist covering systems with distinct moduli such that the minimum modulus is arbitrarily large?
+
+There exists a system with minimum modulus 42 (Owens, 2014).
+
+The first significant progress in the other direction was made in 2007 by Filaseta, Ford, Konyagin, Pomerance and Yu:
+
+Theorem (Filaseta, Ford, Konyagin, Pomerance and Yu, 2007)
+
+Let A be a covering system with distinct moduli d1, . . . , dk M . Then
+
+k1 i=1 di
+
+log M log log log M .
+4 log log M
+
+They also proved the conjecture of Erdos and Graham.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+`Reveal' the arithmetic progressions `prime by prime', and `track' the evolution of the uncovered set.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+`Reveal' the arithmetic progressions `prime by prime', and `track' the evolution of the uncovered set. The key idea is to define a probability measure that distorts the space,
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+`Reveal' the arithmetic progressions `prime by prime', and `track' the evolution of the uncovered set. The key idea is to define a probability measure that distorts the space, blowing up the uncovered set, but without increasing the measure of any single point too much.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+`Reveal' the arithmetic progressions `prime by prime', and `track' the evolution of the uncovered set. The key idea is to define a probability measure that distorts the space, blowing up the uncovered set, but without increasing the measure of any single point too much.
+We bound the (distorted) measure of the set covered when revealing the prime p,
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The minimum modulus problem
+
+Building on their work, Hough resolved the minimum modulus problem:
+
+Theorem (Hough, 2015)
+Every covering system with distinct moduli has minimum modulus
+
+1016.
+
+Sketch of the proof.
+`Reveal' the arithmetic progressions `prime by prime', and `track' the evolution of the uncovered set. The key idea is to define a probability measure that distorts the space, blowing up the uncovered set, but without increasing the measure of any single point too much.
+We bound the (distorted) measure of the set covered when revealing the prime p, and show that if the minimum modulus is sufficiently large, then the total (distorted) measure removed can be made arbitrarily small.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n. A hyperplane in Qn is a set
+A = Y1 × · · · × Yn  Qn, with each Yi either equal to Si or a singleton element of Si.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n. A hyperplane in Qn is a set
+A = Y1 × · · · × Yn  Qn, with each Yi either equal to Si or a singleton element of Si. The set of fixed coordinates of A is
+F (A) := k : Yk = Sk .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n. A hyperplane in Qn is a set
+A = Y1 × · · · × Yn  Qn, with each Yi either equal to Si or a singleton element of Si. The set of fixed coordinates of A is
+F (A) := k : Yk = Sk . We say that two hyperplanes A and A are parallel if F (A) = F (A ).
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric theorem
+The set of fixed coordinates of a hyperplane A = Y1 × · · · × Yn is F (A) := k : Yk = Sk ,
+and two hyperplanes A and A are parallel if F (A) = F (A ).
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric theorem
+The set of fixed coordinates of a hyperplane A = Y1 × · · · × Yn is
+F (A) := k : Yk = Sk ,
+and two hyperplanes A and A are parallel if F (A) = F (A ).
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| 4k for all sufficiently large k, then there exists a constant C such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric theorem
+The set of fixed coordinates of a hyperplane A = Y1 × · · · × Yn is
+F (A) := k : Yk = Sk ,
+and two hyperplanes A and A are parallel if F (A) = F (A ).
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| 4k for all sufficiently large k, then there exists a constant C such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+This implies Hough's theorem in the case of square-free moduli.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A geometric theorem
+The set of fixed coordinates of a hyperplane A = Y1 × · · · × Yn is F (A) := k : Yk = Sk ,
+and two hyperplanes A and A are parallel if F (A) = F (A ).
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| 4k for all sufficiently large k, then there exists a constant C such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+This implies Hough's theorem in the case of square-free moduli.
+(Proof: Set Sk = {1, . . . , pk}, where pk is the kth prime, and use the Chinese Remainder Theorem to map progressions to hyperplanes.)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+A picture of the geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Sk
+
+Robert Morris
+
+Qk-1 = S1 × · · · × Sk-1
+Erdos covering systems
+
+Oxford, March 2020
+
+A picture of the geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Sk
+
+Robert Morris
+
+Qk-1 = S1 × · · · × Sk-1
+Erdos covering systems
+
+Oxford, March 2020
+
+A picture of the geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Sk
+
+Robert Morris
+
+Qk-1 = S1 × · · · × Sk-1
+Erdos covering systems
+
+Oxford, March 2020
+
+A picture of the geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Sk
+
+Robert Morris
+
+Qk-1 = S1 × · · · × Sk-1
+Erdos covering systems
+
+Oxford, March 2020
+
+A picture of the geometric setting
+Let S1, . . . , Sn be finite sets with at least two elements, and set Qk = S1 × · · · × Sk
+for each 1 k n.
+
+Sk
+
+Robert Morris
+
+Qk-1 = S1 × · · · × Sk-1
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points;
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points;
+we do not increase the measure of any set too much.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points; we do not increase the measure of any set too much.
+Let Pk-1 be a probability measure on Qk-1.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points;
+we do not increase the measure of any set too much.
+Let Pk-1 be a probability measure on Qk-1. A natural way to define the measure Pk on Qk would be to define Pk(x) = 0 if x is covered in step k,
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points;
+we do not increase the measure of any set too much.
+Let Pk-1 be a probability measure on Qk-1. A natural way to define the measure Pk on Qk would be to define Pk(x) = 0 if x is covered in step k, and redistribute the removed measure over the remaining elements (taking care not to change the measure of any Qk-1-measurable set).
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (Hough, 2015)
+
+We will reveal the hyperplanes in n rounds, and define a sequence of probability measures P0, . . . , Pn on Qn that gradually distort the space. The measure Pk will depend on the hyperplanes with max(F (A)) k, i.e., those that were revealed in the first k rounds. It will be chosen so that the Pk-measure of the set covered in the kth round is small. However, it will be important that:
+we do not change the measure of the set of already-covered points;
+we do not increase the measure of any set too much.
+Let Pk-1 be a probability measure on Qk-1. A natural way to define the measure Pk on Qk would be to define Pk(x) = 0 if x is covered in step k, and redistribute the removed measure over the remaining elements (taking care not to change the measure of any Qk-1-measurable set).
+However, it turns out to be simpler to do something more complicated!
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (BBMST version)
+
+Recall that Qk = Qk-1 × Sk, and for each x  Qk-1 define
+
+k(x) :=
+
+y  Sk : (x, y)  Bk , |Sk|
+
+where Bk is the set covered by the hyperplanes with max(F (A)) = k.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (BBMST version)
+
+Recall that Qk = Qk-1 × Sk, and for each x  Qk-1 define
+
+k(x) :=
+
+y  Sk : (x, y)  Bk , |Sk|
+
+where Bk is the set covered by the hyperplanes with max(F (A)) = k. In words, k(x) is the proportion of the `fibre'
+
+Fx := (x, y) : y  Sk  Qk
+
+that is covered in round k.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (BBMST version)
+
+Recall that Qk = Qk-1 × Sk, and for each x  Qk-1 define
+
+k(x) :=
+
+y  Sk : (x, y)  Bk , |Sk|
+
+where Bk is the set covered by the hyperplanes with max(F (A)) = k. In words, k(x) is the proportion of the `fibre'
+
+Fx := (x, y) : y  Sk  Qk
+
+that is covered in round k. Fix  > 0, and define Pk as follows:
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (BBMST version)
+
+Recall that Qk = Qk-1 × Sk, and for each x  Qk-1 define
+
+k(x) :=
+
+y  Sk : (x, y)  Bk , |Sk|
+
+where Bk is the set covered by the hyperplanes with max(F (A)) = k. In words, k(x) is the proportion of the `fibre'
+
+Fx := (x, y) : y  Sk  Qk
+
+that is covered in round k. Fix  > 0, and define Pk as follows:
+If k(x) , then we set Pk(x, y) = 0 for every element of Fx  Bk, and increase the measure proportionally on the rest of Fx;
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (BBMST version)
+
+Recall that Qk = Qk-1 × Sk, and for each x  Qk-1 define
+
+k(x) :=
+
+y  Sk : (x, y)  Bk , |Sk|
+
+where Bk is the set covered by the hyperplanes with max(F (A)) = k. In words, k(x) is the proportion of the `fibre'
+
+Fx := (x, y) : y  Sk  Qk
+
+that is covered in round k. Fix  > 0, and define Pk as follows:
+If k(x) , then we set Pk(x, y) = 0 for every element of Fx  Bk, and increase the measure proportionally on the rest of Fx;
+If k(x) > , then we `cap' the distortion by increasing the measure at each point of Fx \ Bk by a factor of 1/(1 - ), and decreasing the measure on points of Fx  Bk by a corresponding factor.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (key lemma)
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn. If 1 Ek-1 k(x)2 n < 1,
+4(1 - ) k=1 then A does not cover Qn.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (key lemma)
+
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn. If 1 Ek-1 k(x)2 n < 1,
+4(1 - ) k=1
+then A does not cover Qn.
+
+Proof.
+A simple calculation (using the inequality max{a - b, 0}
+
+Pk (Bk )
+
+Ek-1 k(x)2 . 4(1 - )
+
+a2/4b) gives
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (key lemma)
+
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn. If 1 Ek-1 k(x)2 n < 1,
+4(1 - ) k=1
+then A does not cover Qn.
+
+Proof.
+A simple calculation (using the inequality max{a - b, 0}
+
+a2/4b) gives
+
+Pk (Bk )
+
+Ek-1 k(x)2 . 4(1 - )
+
+Hence k Pn(Bk) = k Pk(Bk) < 1, and so A does not cover Qn.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (bounding the moments of k)
+To deduce the theorem, it only remains to bound, for each 1 k n, the second moment of k(x) with respect to the measure Pk-1.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (bounding the moments of k)
+
+To deduce the theorem, it only remains to bound, for each 1 k n, the second moment of k(x) with respect to the measure Pk-1.
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn, no two of which are parallel. Then, for each 1 k n,
+
+Ek-1 k(x)2
+
+1 k-1 3 |Sk| j=1 2 1 + (1 - )|Sj| .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (bounding the moments of k)
+
+To deduce the theorem, it only remains to bound, for each 1 k n, the second moment of k(x) with respect to the measure Pk-1.
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn, no two of which are parallel. Then, for each 1 k n,
+
+Ek-1 k(x)2
+
+1 k-1 3 |Sk| j=1 2 1 + (1 - )|Sj| .
+
+Proof.
+
+A straightforward induction shows that if F (A)  [k], then
+
+Pk(A)
+
+1 .
+jF (A) (1 - )|Sj |
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (bounding the moments of k)
+
+To deduce the theorem, it only remains to bound, for each 1 k n, the second moment of k(x) with respect to the measure Pk-1.
+Lemma
+Let A be a collection of hyperplanes in Qn = S1 × · · · × Sn, no two of which are parallel. Then, for each 1 k n,
+
+Ek-1 k(x)2
+
+1 k-1 3 |Sk| j=1 2 1 + (1 - )|Sj| .
+
+Proof.
+
+A straightforward induction shows that if F (A)  [k], then
+
+Pk(A)
+
+1 .
+jF (A) (1 - )|Sj |
+
+The lemma now follows from a simple union bound.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (completing the proof)
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| (3 + )k for all k k0, then there exists C = C(, k0) such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (completing the proof)
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| (3 + )k for all k k0, then there exists C = C(, k0) such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+Proof.
+
+The previous lemma gives (via a straightforward calculation)
+
+1 Ek-1 k(x)2 n 4(1 - ) k=C
+
+n
+O k-(1+)
+k=C
+
+<1
+
+if C is sufficiently large.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (completing the proof)
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| (3 + )k for all k k0, then there exists C = C(, k0) such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+Proof.
+
+The previous lemma gives (via a straightforward calculation)
+
+1 Ek-1 k(x)2 n 4(1 - ) k=C
+
+n
+O k-(1+)
+k=C
+
+<1
+
+if C is sufficiently large. Moreover, if F (A)  {1, . . . , C} for every A  A, then k(x) = 0 for every 1 k C and x  Qk-1.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The distortion method (completing the proof)
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+If |Sk| (3 + )k for all k k0, then there exists C = C(, k0) such that the following holds. Let A be a collection of hyperplanes that cover Qn = S1 × · · · × Sn. Then either two of the hyperplanes are parallel, or there exists a hyperplane A  A with F (A)  {1, . . . , C}.
+
+Proof.
+
+The previous lemma gives (via a straightforward calculation)
+
+1 Ek-1 k(x)2 n 4(1 - ) k=C
+
+n
+O k-(1+)
+k=C
+
+<1
+
+if C is sufficiently large. Moreover, if F (A)  {1, . . . , C} for every A  A, then k(x) = 0 for every 1 k C and x  Qk-1.
+
+By the Key Lemma, it follows that A does not cover Qn, as required.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The density of the uncovered set
+
+Theorem (Filaseta, Ford, Konyagin, Pomerance and Yu, 2007)
+
+If n exp log C log log C , then for any system of arithmetic
+
+progressions with distinct moduli d1, . . . , dk  [n, Cn], the uncovered set
+
+has density at least
+
+k1
+
+1 + o(1)
+
+1- .
+
+i=1
+
+di
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The density of the uncovered set
+
+Question (Filaseta, Ford, Konyagin, Pomerance and Yu, 2007)
+
+If a covering system has distinct moduli d1, . . . , dk satisfying
+
+k1
+
+d1, . . . , dk M and
+
+< C,
+
+i=1 di
+
+does it follow that the uncovered set has density at least  = (C) > 0?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The density of the uncovered set
+
+Question (Filaseta, Ford, Konyagin, Pomerance and Yu, 2007)
+
+If a covering system has distinct moduli d1, . . . , dk satisfying
+
+k1
+
+d1, . . . , dk M and
+
+< C,
+
+i=1 di
+
+does it follow that the uncovered set has density at least  = (C) > 0?
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+For every M > 0 and  > 0, there exists a finite collection of arithmetic progressions with distinct moduli d1, . . . , dk M , such that
+k1 <1
+i=1 di and the density of the uncovered set is less than .
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The density of the uncovered set
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+Let  be the multiplicative function defined by
+
+(pi) = 1 + (log p)4 p
+
+for all primes p and integers i 1. There exists M > 0 so that for any system of arithmetic progressions with distinct moduli d1, . . . , dk M , if
+
+k (di)
+
+C=
+
+,
+
+i=1 di
+
+then the density of the uncovered set is at least e-4C.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+The density of the uncovered set
+
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+Let  be the multiplicative function defined by
+
+(pi) = 1 + (log p)4 p
+
+for all primes p and integers i 1. There exists M > 0 so that for any system of arithmetic progressions with distinct moduli d1, . . . , dk M , if
+
+k (di)
+
+C=
+
+,
+
+i=1 di
+
+then the density of the uncovered set is at least e-4C.
+
+The function  cannot be replaced by one of the form (pi) = 1 + O(1/p).
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Conjecture (Schinzel, 1967)
+In any covering system, one of the moduli divides another.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system, one of the moduli divides another.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system, one of the moduli divides another.
+The Erdos-Selfridge problem
+Does there exist a covering system with all moduli distinct and odd?
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system, one of the moduli divides another.
+The Erdos-Selfridge problem
+Does there exist a covering system with all moduli distinct and odd?
+Theorem (Hough and Nielsen, 2019)
+In any covering system with distinct odd moduli, one of the moduli is divisible by 3.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system, one of the moduli divides another.
+The Erdos-Selfridge problem
+Does there exist a covering system with all moduli distinct and odd?
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system with distinct odd moduli, the least common multiple of the moduli is divisible by either 9 or 15.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Some additional consequences
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system, one of the moduli divides another.
+The Erdos-Selfridge problem
+Does there exist a covering system with all moduli distinct and odd?
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+In any covering system with distinct odd moduli, the least common multiple of the moduli is divisible by either 9 or 15.
+Theorem (Balister, Bollob´as, M., Sahasrabudhe and Tiba, 2020+)
+No covering system exists with distinct odd square-free moduli.
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+Thank you!
+
+Robert Morris
+
+Erdos covering systems
+
+Oxford, March 2020
+
+

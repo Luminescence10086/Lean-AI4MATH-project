@@ -1,0 +1,511 @@
+{
+  "named": {
+    "n720_A": {
+      "n": 720,
+      "blocks": 51,
+      "prime_certificates": {
+        "2": {
+          "carrier": 49,
+          "private_point": 23,
+          "star_blocks": [
+            46,
+            47,
+            48,
+            50
+          ],
+          "pp_selected": [
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          "rp_selected": [
+            0,
+            8,
+            46,
+            47,
+            48,
+            50
+          ],
+          "overfull_groups": [
+            30,
+            36
+          ]
+        },
+        "3": {
+          "carrier": 8,
+          "private_point": 33,
+          "star_blocks": [
+            9,
+            19,
+            25,
+            47
+          ],
+          "pp_selected": [
+            8,
+            9,
+            19,
+            25,
+            47
+          ],
+          "rp_selected": [
+            0,
+            8,
+            9,
+            19,
+            25,
+            47
+          ],
+          "overfull_groups": [
+            30,
+            36
+          ]
+        },
+        "5": {
+          "carrier": 0,
+          "private_point": 81,
+          "star_blocks": [
+            3,
+            4,
+            6,
+            19
+          ],
+          "pp_selected": [
+            0,
+            3,
+            4,
+            6,
+            19
+          ],
+          "rp_selected": [
+            0,
+            3,
+            4,
+            6,
+            19
+          ],
+          "overfull_groups": [
+            30
+          ]
+        }
+      }
+    },
+    "n720_B": {
+      "n": 720,
+      "blocks": 51,
+      "prime_certificates": {
+        "2": {
+          "carrier": 49,
+          "private_point": 23,
+          "star_blocks": [
+            46,
+            47,
+            48,
+            50
+          ],
+          "pp_selected": [
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          "rp_selected": [
+            0,
+            8,
+            46,
+            47,
+            48,
+            50
+          ],
+          "overfull_groups": [
+            30,
+            36
+          ]
+        },
+        "3": {
+          "carrier": 8,
+          "private_point": 33,
+          "star_blocks": [
+            9,
+            19,
+            25,
+            47
+          ],
+          "pp_selected": [
+            8,
+            9,
+            19,
+            25,
+            47
+          ],
+          "rp_selected": [
+            0,
+            8,
+            9,
+            19,
+            25,
+            47
+          ],
+          "overfull_groups": [
+            30,
+            36
+          ]
+        },
+        "5": {
+          "carrier": 0,
+          "private_point": 81,
+          "star_blocks": [
+            3,
+            4,
+            6,
+            19
+          ],
+          "pp_selected": [
+            0,
+            3,
+            4,
+            6,
+            19
+          ],
+          "rp_selected": [
+            0,
+            3,
+            4,
+            6,
+            19
+          ],
+          "overfull_groups": [
+            30
+          ]
+        }
+      }
+    },
+    "n60": {
+      "n": 60,
+      "blocks": 32,
+      "prime_certificates": {
+        "2": {
+          "carrier": 0,
+          "private_point": 12,
+          "star_blocks": [
+            8,
+            29
+          ],
+          "pp_selected": [
+            0,
+            8,
+            29
+          ],
+          "rp_selected": [
+            0,
+            6,
+            8,
+            14,
+            29
+          ],
+          "overfull_groups": [
+            12,
+            20,
+            60
+          ]
+        },
+        "3": {
+          "carrier": 0,
+          "private_point": 12,
+          "star_blocks": [
+            4,
+            22
+          ],
+          "pp_selected": [
+            0,
+            4,
+            22
+          ],
+          "rp_selected": [
+            0,
+            4,
+            14,
+            22
+          ],
+          "overfull_groups": [
+            12,
+            60
+          ]
+        },
+        "5": {
+          "carrier": 6,
+          "private_point": 20,
+          "star_blocks": [
+            10,
+            14,
+            22,
+            28
+          ],
+          "pp_selected": [
+            6,
+            10,
+            14,
+            22,
+            28
+          ],
+          "rp_selected": [
+            6,
+            10,
+            14,
+            15,
+            22,
+            28
+          ],
+          "overfull_groups": [
+            20,
+            60
+          ]
+        }
+      }
+    },
+    "n240": {
+      "n": 240,
+      "blocks": 22,
+      "prime_certificates": {
+        "2": {
+          "carrier": 14,
+          "private_point": 7,
+          "star_blocks": [
+            2,
+            9,
+            18,
+            20
+          ],
+          "pp_selected": [
+            2,
+            9,
+            14,
+            18,
+            20
+          ],
+          "rp_selected": [
+            0,
+            2,
+            8,
+            9,
+            18,
+            20
+          ],
+          "overfull_groups": [
+            10,
+            12
+          ]
+        },
+        "3": {
+          "carrier": 8,
+          "private_point": 24,
+          "star_blocks": [
+            10,
+            12
+          ],
+          "pp_selected": [
+            8,
+            10,
+            12
+          ],
+          "rp_selected": [
+            8,
+            10,
+            12
+          ],
+          "overfull_groups": [
+            12
+          ]
+        },
+        "5": {
+          "carrier": 0,
+          "private_point": 10,
+          "star_blocks": [
+            2,
+            5,
+            6,
+            21
+          ],
+          "pp_selected": [
+            0,
+            2,
+            5,
+            6,
+            21
+          ],
+          "rp_selected": [
+            0,
+            2,
+            5,
+            6,
+            21
+          ],
+          "overfull_groups": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "exhaustive": {
+    "6": 24,
+    "12": 592,
+    "18": 387,
+    "24": 3652
+  },
+  "random_covers": 320,
+  "large_true_lcm_cases": 307,
+  "n80": {
+    "n": 80,
+    "blocks": 13,
+    "prime_certificates": {
+      "2": {
+        "carrier": 0,
+        "private_point": 0,
+        "star_blocks": [
+          1,
+          2,
+          4,
+          10
+        ],
+        "pp_selected": [
+          0,
+          1,
+          2,
+          4,
+          10
+        ],
+        "rp_selected": [
+          0,
+          1,
+          2,
+          4,
+          10
+        ],
+        "overfull_groups": [
+          16
+        ]
+      },
+      "5": {
+        "carrier": 8,
+        "private_point": 1,
+        "star_blocks": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "pp_selected": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "rp_selected": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "overfull_groups": []
+      }
+    }
+  },
+  "n80_single_carrier_budget": [
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 16,
+      "star_size": 4,
+      "unused_groups": 2,
+      "budget": 6
+    },
+    {
+      "carrier_difference": 10,
+      "star_size": 5,
+      "unused_groups": 2,
+      "budget": 7
+    },
+    {
+      "carrier_difference": 10,
+      "star_size": 5,
+      "unused_groups": 2,
+      "budget": 7
+    },
+    {
+      "carrier_difference": 10,
+      "star_size": 5,
+      "unused_groups": 2,
+      "budget": 7
+    },
+    {
+      "carrier_difference": 10,
+      "star_size": 5,
+      "unused_groups": 2,
+      "budget": 7
+    },
+    {
+      "carrier_difference": 10,
+      "star_size": 5,
+      "unused_groups": 2,
+      "budget": 7
+    }
+  ],
+  "arithmetic_only_counterexample": {
+    "n": 6,
+    "census": {
+      "6": 3
+    },
+    "Lp": {
+      "2": 2,
+      "3": 3
+    },
+    "D": 0,
+    "H": 2,
+    "sumE": 0,
+    "legal_cover": false
+  }
+}

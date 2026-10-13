@@ -1,0 +1,243 @@
+CLASSIFIED PUBLICATIONS ON COVERING SYSTEMS
+
+Collected by Zhi-Wei Sun Last modified: Jan. 10, 2006
+
+[E52] [E62] [E73] [E77] [EG80] [E81] [Por81] [Zn82] [PS95] [E97] [P-S02]
+[G04] [Su04] [EGJN]
+
+0. Surveys of Problems and Results
+P. Erdos, On a problem concerning congruence systems (Hungarian), Mat. Lapok 3 (1952), 122-128. MR 17,14d. P. Erdos, Remarks on number theory IV: Extremal problems in number theory I, Mat. Lapok 13 (1962), 228-255. MR 33#4020. P. Erdos, Problems and results on combinatorial number theory, in: A Survey of Combinatorial Theory (J. N. Srivastava et al., eds.), North-Holland Publ. Comp., Amsterdam, 1973, Ch. 12, 117-138. P. Erdos, Problems and results on combinatorial number theory III, in: Number Theory Day (M. B. Nathanson, ed.), Lecture Notes in Math. 626, Springer, New York, 1977, 43-72. P. Erdos and R. L. Graham, Old and New Problems and Results in Combinatorial Number Theory, (Monogr.; Vol. 28), L'Enseignement Math. Geneve, 1980. MR 82j:10001. P. Erdos, Problems and results in number theory, in: Recent Progress in Analytic Number Theory (H. Halberstam and C. Hooley, eds.), Vol. 1, Academic Press, London, 1981, 1-14. S. Porubsky´, Results and Problems on Covering Systems of Residue Classes, Mitt. Math. Sem. Giessen, Heft 150, Giessen Univ., 1981, pp. 1-85. MR 83b:10068. S. Zn´am, A survey of covering systems of congruences, Acta Math. Univ. Comenian. 40/41 (1982), 59-79. MR 84e:10004. C. Pomerance and A. S´ark¨ozy, Combinatorial number theory, in: Handbook of Combinatorics, Vol. 1,2, Amsterdam, 1995, Chapter 20, 967-1018. MR 97e:11032. P. Erdos, Some of my favorite problems and results, in: The mathematics of Paul Erdos, I, 47-67, Algorithms Combin., 13, Springer, Berlin, 1997. S. Porubsky´ and J. Sch¨onheim, Covering systems of Paul Erd¨os: past, present and future, in: Paul Erd¨os and his Mathematics. I (edited by G. Hal´asz, L. Lov´asz, M. Simonvits, V. T. S´os), Bolyai Soc. Math. Studies 11, Budapest, 2002, pp. 581-627. R. K. Guy, Unsolved Problems in Number Theory (3nd, ed.), Springer, New York, 2004, Sections A19, B21, E23, F13, F14. Z. W. Sun, Groups and combinatorial number theory, a talk given at Nanjing Univ. on Oct. 8, 2004, arXiv:math.GR/0411289. P. Erdos, R. L. Graham, X.-D. Jia and M. B. Nathanson, Results and Problems in Combinatorial Number Theory, Springer-Verlag, to appear.
+1
+
+2
+
+COLLECTED BY ZHI-WEI SUN
+
+1. On Disjoint Systems and Disjoint Covering Systems
+
+[Zn69] [Zn70]
+[BS70] [Ne71] [Por72] [Por74] [NZ74] [Zn74] [B74] [B76a] [B76b]
+[HM82] [Zn84] [K85a] [K85b]
+[O86] [Si86] [Si87] [Z89] [Su91a] [Su91b] [Su92a] [Su92b] [Po94]
+
+S. Zn´am, On exactly covering systems of arithmetic sequences, Math. Ann. 180 (1969), 227-232. S. Zn´am, On exactly covering systems of arithmetic sequences, in: Number Theory (Colloq. J´anos Bolyai Math. Soc., Debrecen 1968) (1970), NorthHolland, Amsterdam, 221-225. MR 42#7586. N. Burshtein and J. Sch¨onheim, On a conjecture concerning exactly covering systems of congruences, Israel J. Math. 8 (1970), 28-29. M. Newman, Roots of unity and covering sets, Math. Ann. 191 (1971), 279-282. MR 44#3972. S. Porubsky´, Generalizations of some results for exactly covering systems, Mat. C asopis Sloven. Akad. Vied. 22 (1972), 208-214. S. Porubsky´, Natural exactly covering systems of congruences, Czech. Math. J. 24 (1974), 598-606. B. Nov´ak, and S. Zn´am, Disjoint covering systems, Amer. Math. Monthly 81 (1974), 42-45. MR 48#10958. S. Zn´am, Vector-covering systems of arithmetic sequences, Czech. Math. J. 24 (1974), 455-461. MR 50#4520. N. Burshtein, Exactly covering systems of congruences, Ph.D. Thesis, Tel. Aviv Univ., 1974. N. Burshtein, On natural exactly covering systems of congruences having moduli occurring at most twice, J. Number Theory 8 (1976), 251-259. N. Burshtein, On natural exactly covering systems of congruences having moduli occurring at most M times, Discrete Math. 14 (1976), 205-214. MR 53#2886. A. P. Huhn and L. Megyesi, On disjoint residue classes, Discrete Math. 41 (1982), 327-330. S. Zn´am, Vector-covering systems with a single triple of equal moduli 34 (1984), 343-348. I. Korec, Disjoint covering systems and product-invariant relations, Math. Slovaca 35 (1985), 233-237. I. Korec, Irreducible disjoint covering systems of Z with the common modulus consisting of three primes, Acta Math. Univ. Comenian. 46-47 (1985), 75-81. M. Otero, Extensions of some results on disjoint covering systems, Acta Math. Univ. Comenian. 48-49 (1986), 7-22. R. J. Simpson, Exact coverings of the integers by arithmetic progressions, Discrete Math. 59 (1986), 181-190. MR 87f:11011. R. J. Simpson, Disjoint covering systems of congruences, Amer. Math. Monthly 94 (1987), 865-868. D. Zeilberger, On a conjecture of R. J. Simpson about exact covering congruences, Amer. Math. Monthly 96 (1989), 243. Z. W. Sun, An improvement to the Zn´am-Newman result, Chinese Quart. J. Math. 6 (1991), no. 3, 90-96. Z. W. Sun, On a generalization of a conjecture of Erdos, Nanjing Univ. J. Natur. Sci. 27 (1991), no.1, 8-15. MR 92f:11008; Zbl. M. 805.11007. Z. W. Sun, Solutions to two problems of Huhn and Megyesi, Chin. Ann. Math. Ser. A 13 (1992), no.6, 722-727. MR 94c:11001; Zbl. M. 770.11003. Z. W. Sun, On disjoint residue classes, Discrete Math. 104 (1992), 321-326. MR 93d:11005; Zbl. M. 755.11002. I. Pol´ach, A new necessary condition for moduli of non-natural irreducible disjoint covering system, Acta Math. Univ. Comenian. 63 (1994), 133-140.
+
+[CP95] [C96a] [ZS99] [HS01]
+
+CLASSIFIED PUBLICATIONS ON COVERING SYSTEMS
+
+3
+
+Y. G. Chen and S. Porubsky´, Remarks on systems of congruence classes, Acta Arith. 71 (1995), 1-10. Y. G. Chen, On m-harmonic sequences, Discrete Math. 162 (1996), 273- 280. M. Zeleke and R. J. Simpson, On disjoint covering systems with precisely one repeated modulus, adv. in Appl. Math. 23 (1999), 322-332. MR 200m:11014. Z. Hu and Z. W. Sun, On n-dimensional covering systems, Nanjing Univ. J. Natur. Sci. 37 (2001), no. 4, 486-492.
+
+2. Equalities Related to Covering Equivalence
+
+[F73] [F75] [Zn75] [Por75] [Por82] [Su89a]
+[Su89b]
+[B91] [B92] [B94]
+[Por94a] [Por94b] [Por97]
+[Por00] [Su01a] [Su01b] [Su02]
+[PS04]
+
+A. S. Fraenkel, A characterization of exactly covering congruences, Discrete Math. 4 (1973), 359-366. MR 47#4906. A. S. Fraenkel, Further characterizations and properties of exactly covering congruences, Discrete Math. 12 (1975), 93-100, 397. MR 51#10276. S. Zn´am, A simple characterization of disjoint covering systems, Discrete math. 12 (1975), 89-91. S. Porubsky´, Covering systems and generating functions, Acta Arith. 26 (1975), 223-231. MR 52#328. S. Porubsky´, A characterization of finite unions of arithmetic sequences, Discrete Math. 38 (1982), 73-77. MR 84a:10057. Z. W. Sun, Several results on systems of residue classes (Research Announcement), Adv. in Math. (China) 18 (1989), no.2, 251-252. http://pweb.nju. edu.cn/zwsun/04a.pdf. Z. W. Sun, Systems of congruences with multipliers, Nanjing Univ. J. Math. Biquarterly 6 (1989), no.1, 124-133. MR 90m:11006; Zbl. M. 703.11002. http://pweb.nju.edu.cn/zwsun/05s.pdf. J. Beebee, Some trigonometric identities related to exact covers, Proc. Amer. Math. Soc. 112 (1991), 329-338. MR 91i:11013. J. Beebee, Bernoulli numbers and exact covering systems, Amer. Math. Monthly 99 (1992), 946-948. MR 93i:11025. J. Beebee, Exact covering systems and the Gauss-Legendre multiplication formula for the gamma function, Proc. Amer. Math. Soc. 120 (1994), 1061- 1065. MR 94f:33001. S. Porubsky´, Identities involving covering systems. I, Math. Slovaca 44 (1994), 153-162. MR 95f:11002. S. Porubsky´, Identities involving covering systems. II, Math. Slovaca 44 (1994), 555-568. S. Porubsky´, Identities with covering systems and Appell polynomials, in: Number Theory in Progress, Vol. 1 (Zakopane-Ko´scielisko, 1997), 407-417, de Gruyter, Berlin, 1999. MR 2000e:11013. S. Porubsky´, Covering systems, Kubert identities and difference equations, Math. Slovaca 50 (2000), 381-413. MR 2002h:11013. Z. W. Sun, Algebraic approaches to periodic arithmetical maps, J. Algebra 240 (2001), 723-743. MR 2002f:11009. Z. W. Sun, Products of binomial coefficients modulo p2, Acta Arith. 97 (2001), 87-98. MR 2002m:11013. Z. W. Sun, On covering equivalence, in: `Analytic Number Theory' (Beijing/Kyoto, 1999), 277-302, Dev. Math., 6, Kluwer Acad. Publ., Dordrecht, 2002. MR 2003g:11014. H. Pan and Z. W. Sun, A characterization of covering equivalence, submitted in 2004, arXiv:math.NT/0409521.
+
+4
+
+COLLECTED BY ZHI-WEI SUN
+
+3. On General Covers and Covers with Distinct Moduli
+
+[Sw54] [St58] [Se63] [JP65] [J67] [J68] [Chu68]
+[ES68] [CV69] [CV70]
+[Cho71] [JS71] [Kr71] [D71]
+[D72] [CV72]
+[BE73] [Si78] [H79] [M81a] [M81b] [SS87] [Su91a]
+
+J. D. Swift, Sets of covering congruences, Bull. Amer. Math. Soc. 60 (1954),
+
+390.
+
+S. K. Stein, Unions of arithmetic sequences, Math. Ann. 134 (1958), 289-
+
+294.
+
+J. L. Selfridge, Proposed Problem No. 28, in: Proc. of the 1963 Number
+
+Theory Conf., Univ. of Colorado.
+
+J. H. Jordan and C. J. Potratz, Complete residue systems in the Gaussian
+
+integers, Math. Mag. 38 (1965), 1-12.
+
+J. H. Jordan, Covering classes of residues, Canad. J. Math. 19 (1967), 514-
+
+519.
+
+J. H. Jordan, A covering class of residues with odd moduli, Acta Arith. 13
+
+(1968), 335-338.
+
+R. F. Churchhouse, Covering sets and systems of congruences, in: Com-
+
+puters in Math. Research (R. F. Churchhouse and J.-C. Herz, eds.), North-
+
+Holland, Amsterdam, 1968, pp. 20-36.
+
+P. Erdos and E. Szemer´edi, On a problem of P. Erdos and S. Stein, Acta
+
+Arith. 15 (1968), 85-90.
+
+R. B. Crittenden and C. L. Vanden Eynden, A proof of a conjecture of Erdos,
+
+Bull. Amer. Math. Soc. 75 (1969), 1326-1329.
+
+R. B. Crittenden and C. L. Vanden Eynden, Any n arithmetic progressions
+
+covering the first 2n integers cover all integers, Proc. Amer. Math. Soc. 24
+
+(1970), 475-481. MR 41#3365.
+
+S. L. G. Choi, Covering the set of integers by congruence classes of distinct
+
+moduli, Math. Comp. 25 (1971), 885-895.
+
+
+
+J. H. Jordan and D. G. Schneider, Covering classes of residues in Z[ -2],
+
+Math. Mag. 44 (1971), 257-261.
+
+C. E. Krukenberg, Covering sets of the integers, Ph. D. thesis, University
+
+of Illinois, 1971.
+
+J. A. Dewar, On finite and infinite covering sets, in: Proc. Washington State
+
+Univ. Conf. on Number Theory (Washington State Univ., Pullman, WA) (J.
+
+H. Jordan and W. A. Webb, eds.), Washington State Univ. Press, Pullman,
+
+WA, 1971, pp. 201-206.
+
+J. A. Dewar, On covering sets of congruences, Ph.D. Thesis, Univ. of South-
+
+ern California, 1972.
+
+R. B. Crittenden and C. L. Vanden Eynden, the union of arithmetic pro-
+
+gressions with differences not less than k, Amer. Math. Monthly 79 (1972),
+
+630.
+
+M. Billik and H. M. Edgar, Covering sets of congruences, Math. Mag. 46
+
+(1973), 265-270.
+
+J. H. Silverman, Mean and variance for covering sets of congruences, Math.
+
+Mag. 51 (1978), 120-122.
+
+J. A. Haight, Covering systems of congruences, a negative result, Mathe-
+
+matika 26 (1979), 53-61.
+
+R. Morikawa, Some examples of covering sets, Bull. Fac. Liberal Arts, Na-
+
+gasaki Univ. 21 (1981), no.2, 1-4. MR 84j:10064.
+
+R. Morikawa, On a method to construct covering sets, Bull. Fac. Liberal
+
+Arts, Nagasaki Univ. 22 (1981), 1-11.
+
+Z. W. Sun and Z. H. Sun, Some results on covering systems of congruences,
+
+J. Southwest-China Teachers Univ. (1987), no. 1, 10-15. Zbl. M. 749.11018.
+
+Z. W. Sun, A theorem concerning systems of residue classes, Acta Math.
+
+Univ. Comenian. 60 (1991), 123-131. MR 92f:11007; Zbl. M. 734.11022.
+
+CLASSIFIED PUBLICATIONS ON COVERING SYSTEMS
+
+5
+
+[Su91b] [SZ91]
+[Tu91] [Si97]
+[Su05] [GS05] [FFKPY] [Su06]
+
+Z. W. Sun, On covering systems with distinct moduli, J. Yangzhou Teachers College (Nat. Sci. Ed.) 11 (1991), no.3, 21-27. R. J. Simpson and D. Zeilberger, Necessary conditions for distinct covering systems with square-free moduli, Acta Arith. 59 (1991), 59-70. MR 92i:11014. S. P. Tung, Complexity of sentences over number rings, SIAM J. Comp. 20 (1991), 126-143. R. J. Simpson, On a conjecture of Crittenden and Vanden Eynden concerning coverings by arithmetic progressions, J. Austral Math. Soc. Ser. A 63 (1997), 396-420. MR 98k:11005. Z. W. Sun, On the range of a covering function, J. Number Theory 111 (2005), 190-196. S. Guo and Z. W. Sun, On odd covering systems with distinct moduli, Adv. in Appl. Math. 35 (2005), 182-187. M. Filaseta, K. Ford, S. Konyagin, C. Pomerance and G. Yu, Sieving by large integers and covering systems of congruences, preprint, 2005. Z. W. Sun, On covering numbers, http://arxiv.org/abs/math.NT/0601017.
+
+4. On m-Covers and their Connections with Unit Fractions
+
+[Por76] [Zh89] [Zh91] [Su92a] [Su95] [Su96] [Su97] [Su99] [Su03a]
+[Su03b] [Su04] [Su05a] [Su05b] [Su05c] [Su05d]
+
+S. Porubsky´, On m times covering systems of congruences, Acta Arith. 29 (1976), 159-169. MR 53#2884. M. Z. Zhang, A note on covering systems of residue classes, J. Sichuan Univ. (Nat. Sci. Ed.) 26 (1989), Special Issue, 185-188. MR 92c:11003. M. Z. Zhang, On irreducible exactly m times covering system of residue classes, J. Sichuan Univ. (Nat. Sci. Ed.) 28 (1991), 403-408. MR 92j:11001. Z. W. Sun, On exactly m times covers, Israel J. Math. 77 (1992), 345-348. MR 93k:11007; Zbl. M. 768.11001. Z. W. Sun, Covering the integers by arithmetic sequences, Acta Arith. 72 (1995), 109-129. MR 96k:11013; Zbl. M. 841.11011. Z. W. Sun, Covering the integers by arithmetic sequences II, Trans. Amer. Math. Soc. 348 (1996), 4279-4320. MR 97c:11011; Zbl. M. 884.11013. Z. W. Sun, Exact m-covers and the linear form s=1 k xs/ns, Acta Arith. 81 (1997), 175-198. 98h:11019; Zbl. M. 871.11011. Z. W. Sun, On covering multiplicity, Proc. Amer. Math. Soc. 127 (1999), 1293-1300. MR 99h:11012; Zbl. M. 917.11006. Z. W. Sun, Unification of zero-sum problems, subset sums and covers of Z (Research Announcement), Electron. Res. Announc. Amer. Math. Soc. 9 (2003), 51-60. Z. W. Sun, On the function w(x) = |{1 s k: x  as (mod ns)}|, Combinatorica 23 (2003), 681-691. Z. W. Sun, Arithmetic properties of periodic maps, Math. Res. Lett. 11 (2004), no. 2-3, 187-196. Z. W. Sun, A unified theory of zero-sum problems, subset sums and covers of Z, preprint [initial version (2003-03-01)], arXiv:math.NT/0305369. Z. W. Sun, On m-covers and m-systems, arXiv:math.NT/0403271. Z. W. Sun, A local-global theorem on periodic maps, submitted in 2004, arXiv:math.NT/0404137. Z. W. Sun, A connection between covers of Z and unit fractions, submitted, arXiv:math.NT/0411305.
+
+6
+
+COLLECTED BY ZHI-WEI SUN
+
+5. Inequalities of Mycielski's Type and Covers of Groups
+
+[N54a] [N54b] [MS66] [Zn66] [HZ71] [HS74] [K74]
+[Zn74]
+[Zn75] [Por76] [KZ77] [Por78] [Pa84] [K84] [Si85] [T87] [K87] [K90]
+[Br90] [Pa90] [Su90] [SV94]
+[Su01]
+
+B. H. Neumann, Groups covered by permutable subsets, J. London Math. Soc. 29 (1954), 236-248. MR 15, 931. B. H. Neumann, Groups covered by finitely many cosets, Publ. Math. Debrecen 3 (1954), 227-242. MR 17, 234. J. Mycielski and W. Sierpin´ski, Sur une propri´et´e des ensembles lin´eaires, Fund. Math. 58 (1966), 143-147. MR 34#4140. S. Zn´am, On Mycielski's problem on systems of arithmetical progressions, Colloq. Math. 15 (1966), 201-204. MR 34#134. M. Hejn´y and S. Zn´am, Coset decomposition of Abelian groups, Acta Fac. Rerum Natur. Univ. Comenian. Math. Publ. 25 (1971), 15-19. MR 46#3644. M. Herzog and J. Sch¨onheim, Research Problem No. 9, Canad. Math. Bull. 17 (1974), 150. I. Korec, On a generalization of Mycielski's and Zn´am's conjectures about coset decomposition of Abelian groups, Fund. Math. 85 (1974), 41-47. MR 50#10025. S. Zn´am, On covering sets of residue classes, in: Topics in Number Theory (Colloq. J´anos Bolyai Math. Soc., Debrecen 1972) (1974), North-Holland, Amsterdam, 443-449. MR 42#7586. S. Zn´am, On properties of systems of arithmetic sequences, Acta Arith. 26 (1975), 279-283. MR 51#329. S. Porubsky´, On coverings of almost Dedekind domains, Czech. Math. J. 26 (1976), 145-153. I. Korec and S. Zn´am, On disjoint covering of groups by their cosets, Math. Slovaca 27 (1977), 3-7. MR 58#5260. S. Porubsky´, On covering systems on rings, Math. Slovaca 28 (1978), 147- 152. M. M. Parmenter, Exact covering systems for groups, Fund. Math. 123 (1984), 133-136. MR 86h:20029. I. Korec, Irreducible disjoint covering systems, Acta Arith. 44 (1984), 389- 395. R. J. Simpson, Regular coverings of the integers by arithmetic progressions, Acta Arith. 45 (1985), 145-152. MR 86j:11004. M. J. Tomkinson, Groups covered by finitely many cosets or subgroups, Comm. Algebra 15 (1987), 845-859. MR 88c:20049. I. Korec, Improvement of Mycielski's inequality for non-natural disjoint covering systems of Z, Discrete Math. 64 (1987), 27-38. I. Korec, On number of cosets in nonnatural disjoint covering systems, in: Number Theory, Vol. I, Colloq. Math. Soc. J´anos Bolyai, 51, North-Holland, Amsterdam, 1990, pp. 265-278. MR 91k:11016. R. Brandl, Geometric coverings of groups and their directions, Bull. Austral. Math. Soc. 42 (1990), 177-184. M. M. Parmenter, Finite coverings by cosets of normal subgroups, Proc. Amer. Math. Soc. 110 (1990), 877-880. Z. W. Sun, Finite coverings of groups, Fund. Math. 134 (1990), 37-53. MR 91g:20031. T. Soundararajan and K. Venkatachaliengar, A variety of applications of a theorem of B. H. Neumann on groups, Acta Math. Vietnam. 19 (1994), 55-60. MR 96b:20002. Z. W. Sun, Exact m-covers of groups by cosets, European J. Combin. 22 (2001), 415-429. MR 2002a:20026.
+
+CLASSIFIED PUBLICATIONS ON COVERING SYSTEMS
+
+7
+
+[Su04] [LS04] [Ma05] [Su05] [H06]
+
+Z. W. Sun, On the Herzog-Sch¨onheim conjecture for uniform covers of groups, J. Algebra 273 (2004), 153-175. G. Lettl and Z. W. Sun, On covers of abelian groups by cosets, submitted in 2004, arXiv:math.GR/0411144. A. Mar´oti, Covering the symmetric groups with proper subgroups, J. Combin. Theory Ser. A 110 (2005), 97-111. Z. W. Sun, Finite covers of groups by cosets or subgroups, submitted in 2005, arXiv:math.GR/0501451. P. E. Holmes, Subgroup coverings of some sporadic groups, J. Combin. Theory Ser. A, 2006, in press.
+
+6. The Berger-Felzenbaum-Fraenkel Approach
+
+[BEFF88] [BFF85] [BFF86a] [BFF86b] [BFF86c] [BFF86d] [BFF87a] [BFF87a] [BFF87b] [BFF88a] [BFF88b] [BFF88c] [BFF90] [Z01]
+
+M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Nearly disjoint covering systems, Ars Combin. 25B (1988), 231-246. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Improvements to two results concerning systems of residue sets, Ars Combin. 20 (1985), 69-82. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, New results for covering systems of residue sets, Bull. Amer. Math. Soc. (New Series) 14 (1986), 121-125. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, A non-analytic proof of the Newman-Zn´am result for disjoint covering systems, Combinatorica 6 (1986), 235-243. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, The Herzog-Sch¨onheim conjecture for finite nilpotent groups, Canad. Math. Bull. 29 (1986), 329- 333. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Necessary condition for the existence of an incongruent covering system with odd moduli, Acta Arith. 45 (1986), 375-379. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Necessary condition for the existence of an incongruent covering system with odd moduli II, Acta Arith. 48 (1987), 73-79. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Lattice parallelotopes and disjoint covering systems, Discrete Math. 65 (1987), 23-46. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Remark on the multiplicity of a partition of a group into cosets, Fund. Math. 128 (1987), 139-144. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Covers of product sets and the Korec-Zn´am result, European J. Combin. 9 (1988), 131-138. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Mycielski-Sierpin´ski conjecture and Korec-Zn´am result, Colloq. Math. 56 (1988), 241-249. MR 90d:20044. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Disjoint covering systems with precisely one multiple modulus, Acta Arith. 50 (1988), 171-182. MR 89i : 11009. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Irreducible disjoint covering systems (with an application to Boolean algebra), Discrete Appl. Math. 29 (1990), 143-164. D. Zeilberger, How Berger, Felzenbaum, and Fraenkel revolutionized covering systems the same way the George Boole revolutionized logic, Electron. J. Combin. 8 (2001), no.2, A1, 9 pp.
+
+8
+
+COLLECTED BY ZHI-WEI SUN
+
+7. On Covers by Beatty Sequences and Infinite Covers of Z
+
+[B26] [F69] [F73] [G73] [M82] [M83] [M84]
+[H84]
+[M85a] [M85b] [M85c]
+[BFF86] [Be88] [M88] [M89] [Be90] [BFFH91] [Si91] [V92] [M92] [M93] [FS93] [M95] [L96]
+
+S. Beatty, Problem 3173, Amer. Math. Monthly 33 (1926), 159; 34(1927), 159. A. S. Fraenkel, The bracket function and complementary sets of integers, Canad. J. Math. 21 (1969), 6-27. A. S. Fraenkel, Complementing and exactly covering sequences, J. Combin. Theory Ser. A 14 (1973), 8-20. R. L. Graham, Covering the positive integers by disjoint sets of the form {[n + ]: n = 1, 2, · · · }, J. Combin. Theory Ser. A 15 (1973), 354-358. R. Morikawa, On eventually covering families generated by the bracket function, Bull. Fac. Liberal Arts, Nagasaki Univ. 23 (1982), 17-22. R. Morikawa, On eventually covering families generated by the bracket function II, Bull. Fac. Liberal Arts, Nagasaki Univ. 24 (1983), 1-9. R. Morikawa, On eventually covering families generated by the bracket function III, Bull. Fac. Liberal Arts, Nagasaki Univ. 25 (1984), 1-11; 26(1985), 15-17. J. A. Haight, On some problems of Erdos, in: Topics in Classical Number Theory, Vol. I, II, Colloq. Math. soc. J´anos bolyai 34, North-Holland, amersterm, 1984, pp. 677-698. R. Morikawa, On eventually covering families generated by the bracket function IV, Bull. Fac. Liberal Arts, Nagasaki Univ. 25 (1985), 1-8. R. Morikawa, Disjoint sequences generated by the bracket function, Bull. Fac. Liberal Arts, Nagasaki Univ. 26 (1985), 1-13. R. Morikawa, Disjoint sequences generated by the bracket function II, in: Number Theory & Combinatorics (J. Akiyama et al., eds), World Sci. Publ. Co., 1985, pp. 305-321. M. A. Berger, A. Felzenbaum and A. S. Fraenkel, Disjoint covering systems of rational Beatty sequences, J. Combin. Theory Ser. A 42 (1986), 150-153. J. Beebee, Examples of inifinite, incongruent exact covers, Amer. Math. Monthly 95 (1988), 121-123. R. Morikawa, Disjoint sequences generated by the bracket function III, Bull. Fac. Liberal Arts, Nagasaki Univ. 28 (1988), 1-24. R. Morikawa, Disjoint sequences generated by the bracket function IV, Bull. Fac. Liberal Arts, Nagasaki Univ. 30 (1989), 1-10. J. Beebee, Errata: "Examples of inifinite, incongruent exact covers", Amer. Math. Monthly 97 (1990), 412. M. A. Berger, A. Felzenbaum, A. S. Fraenkel and R. Holzman, On infinite and finite covering systems, Amer. Math. Monthly 98 (1991), 739-742. R. J. Simpson, Disjoint covering systems of rational Beatty sequences, Discrete Math. 92 (1991), 361-369. C. Vanden Eynden, On a problem of Stein concerning infinite covers, Amer. Math. Monthly 99 (1992), 355-358. R. Morikawa, Disjoint sequences generated by the bracket function V, Bull. Fac. Liberal Arts, Nagasaki Univ. 32 (1992), 181-185. R. Morikawa, Disjoint sequences generated by the bracket function VI, Bull. Fac. Liberal Arts, Nagasaki Univ. 34 (1993), 1-23. A. S. Fraenkel and R. J. Simpson, On infinite disjoint covering systems, Proc. Amer. Math. Soc. 119 (1993), 5-9. R. Morikawa, On eventually covering families generated by the bracket function V, Bull. Fac. Liberal Arts, Nagasaki Univ. Natur. Sci. 36 (1995), 1-17. E. Lewis, Infinite covering systems of congruences which don't exist, Proc. Amer. Math. Soc. 124 (1996), 355-360.
+
+CLASSIFIED PUBLICATIONS ON COVERING SYSTEMS
+
+9
+
+[C96] [Ti00] [Si04] [GO05] [BV05]
+
+Y. G. Chen, On infinite disjoint congruence covering systems, Chin. Quart. J. Math. 11 (1996), no.3, 36-39. R. Tijdeman, Fraenkel's conjecture for six sequences, Discrete Math. 222 (2000), 223-234. J. Simpson, Disjoint Beatty sequences, Integers 4 (2004), A12, 10pp (electronic). R. Graham and K. O'Bryant, A discrete Fourier kernel and Fraenkel's tiling conjecture, Acta Arith. 118 (2005), 283-304. J. Bar´at and P. P. Varju´, A contribution to infinite disjoint covering systems, J. Th´eor. Nombres Bordeaux 17 (2005), 51-55.
+
+8. Applications of Covers of Z
+
+[P1849] [B1886] [Z1892] [BV1904] [Ro34] [Co50] [E50] [R56] [Si60] [Sc67] [Cr71] [CS75] [Ga75] [EO79]
+[Ja83] [Sch83] [Si87] [KW90] [L94]
+
+A. de Polignac, Recherches nouvelles sur les nombres premiers, C. R. Acad. Sci. Paris Math. 29 (1849), 397-401, 738-739. A.S. Bang, Taltheoretiske Undersgelser, Tidsskrift for Mat. 4 (1886), no. 5, 70-80, 130-137. K. Zsigmondy, Zur Theorie der Potenzreste, Monatshefte Math. Phys. 3 (1892), 265-284. G.D. Birkhoff and H.S. Vandiver, On the integral divisors of an - bn, Ann. Math. 5 (1904), 173-180. N.P. Romanoff, U¨ber einige S¨atze der additiven Zahlentheorie, Math. Ann. 57 (1934), 668-678. J.G. van der Corput, On de Polignac's conjecture, Simon Stevin 27 (1950), 99-105. P. Erd¨os, On integers of the form 2k + p and some related problems, Summa Brasil. Math. 2 (1950), 113-123. MR 13, 437. H. Riesel, Naagra stora primtal [Some large primes], Elementa 39 (1956), 258-260. W. Sierpinski, Sur un probl ´e me concernment les nombres k × 2n + 1, Elem. Math. 15 (1960), 63-74. A. Schinzel, Reducibility of polynomials and covering systems of congruences, Acta Arith. 13 (1967), 91-101. MR 36#2596. R. Crocker, On a sum of a prime and two powers of two, Pacific J. Math. 36 (1971), 103-107. MR 43:3200. F. Cohen and J.L. Selfridge, Not every number is the sum or difference of two prime powers, Math. Comput. 29 (1975), 79-81. P.X. Gallagher, Primes and powers of 2, Invent. Math. 29 (1975), 125-142. P. Erdos and A. M. Odlyzko, On the density of odd integers of the form (p - 1)/2n and related questions, J. Number Theory 11 (1979), 257-263. MR 80i:10077. G. Jaeschke, On the smallest k such that all k · 2n + 1 are composite, Math. Comp. 40 (1983), 381-384. MR 84k:10006. J. Sch¨onheim, Covering congruences related to modular arithmetic and error correcting codes, Ars Combin. 16B (1983), 21-25. W. Sierpin´ski, Elementary Theory of Numbers, PWN-Polish Scientific Publishers, North-Holland, Amsterdam, 1987, pp. 445-448. H. Kellerer and G. Wirsching Prime covers and periodic patterns, Discrete Math. 85 (1990), 191-206. E. Lewis, A variation on the method of cartier and foata via covering systems for combinatorial identities, European J. Combin. 15 (1994), 491-511.
+
+10
+
+COLLECTED BY ZHI-WEI SUN
+
+[VM95] [GS] [YS98]
+[FFK00]
+[Su00] [SL02] [SY02] [C03] [Y04] [LS05]
+
+M.V. Vassilev-Missana, Note on `extraordinary primes', Notes Number Theory Discrete Math. 1 (1995), 111-113. MR 97g:11004. A. Granville and K. Soundararajan, A binary additive problem of Erd¨os and the order of 2 mod p2, Ramanujan J. 2 (1998), 283-298. S. M. Yang and Z. W. Sun, Covers with less than 10 moduli and their applications, J. Southeast Univ. (English Edition) 14 (1998), no.2, 106-114. MR 2000i:11157. M. Filaseta, K. Ford and S. Konyagin, On an irreducibility theorem of A. Schinzel associated with coverings of the integers, Illinois J. Math. 44 (2000), 633-643. Z. W. Sun, On integers not of the form ±pa ± qb, Proc. Amer. Math. Soc. 128 (2000), 997-1002. MR 2000i:11157; Zbl. M. 991.18749. Z. W. Sun and M. H. Le, Integers not of the form c(2a + 2b) + p, Acta Arith. 99 (2001), 183-190. MR 2002e:11043; Zbl. M. 1006.11015. Z. W. Sun and S. M. Yang, A note on integers of the form 2n + cp, Proc. Edinburgh Math. Soc. 45 (2002), 155-160. MR 2002j:11117. Y. G. Chen, On integers of the form kr - 2n and kr2n + 1, J. Number Theory 98 (2003), 310-319. P. Z. Yuan, Integers not of the form c(2a + 2b) + p, Acta Arith. 115 (2004), 23-28. F. Luca and P. Stanica, Fibonacci numbers that are not sums of two prime powers, Proc. Amer. Math. Soc. 133 (2005), 1887-1890.
+
+

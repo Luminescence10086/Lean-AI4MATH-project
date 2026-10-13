@@ -1,0 +1,55 @@
+namespace ElementaryMatching
+
+variable {B S V : Type*} [Fintype B] [Fintype S] [DecidableEq V]
+
+/-- 初等图论核心接入极小盒覆盖；余块也由未禁值赋值反证得到。 -/
+theorem minimal_cover_matching
+    (q : V → ℕ) (owner : S → V) (uses : B → Finset V)
+    (value : (i : B) → (v : V) → Fin (q v))
+    (hcapacity : ∀ v, (Finset.univ.filter (fun s => owner s = v)).card < q v)
+    (hcover : ∀ x : (v : V) → Fin (q v), ∃ i, ∀ v ∈ uses i, x v = value i v)
+    (hprivate : ∀ i, ∃ x : (v : V) → Fin (q v),
+      ∀ j, j ≠ i → ∃ v ∈ uses j, x v ≠ value j v)
+    (hfull : active (slotSupport owner uses) Finset.univ = Finset.univ) :
+    ∃ f : S → B, Function.Injective f ∧
+      (∀ s, owner s ∈ uses (f s)) ∧ ∃ anchor, ∀ s, f s ≠ anchor := by
+  classical
+  let support := slotSupport owner uses
+  have allSlotsUsed : ∀ s, ∃ i, s ∈ support i := by
+    intro s
+    have hs : s ∈ active support Finset.univ := hfull.symm ▸ Finset.mem_univ s
+    simpa only [active, Finset.mem_biUnion, Finset.mem_univ, true_and] using hs
+  have hno : ∀ H : Finset B, H ≠ Finset.univ →
+      ¬ ∃ g : {i : B // i ∉ H} → S, Function.Injective g ∧
+        ∀ i, g i ∈ support i.val ∧ g i ∉ H.biUnion support := by
+    intro H hH
+    rintro ⟨g, hg, hi⟩
+    exact local_assignment_contradiction q owner uses value hcapacity hcover hprivate H hH
+      g hg hi
+  obtain ⟨f, hf, hi⟩ := ElementaryAlternating.full_matching_of_no_local_assignment
+    support allSlotsUsed hno
+  have hempty : (∅ : Finset B) ≠ Finset.univ := by
+    obtain ⟨i, _⟩ := hcover (fun v => ⟨0, lt_of_le_of_lt (Nat.zero_le _) (hcapacity v)⟩)
+    intro he
+    have : i ∈ (∅ : Finset B) := he.symm ▸ Finset.mem_univ i
+    simp at this
+  have hanchor : ∃ anchor, ∀ s, f s ≠ anchor := by
+    by_contra hn
+    have hsurj : Function.Surjective f := by
+      simpa only [Function.Surjective, not_exists, not_forall, not_not] using hn
+    let e := Equiv.ofBijective f ⟨hf, hsurj⟩
+    apply hno ∅ hempty
+    refine ⟨fun i => e.symm i.val, ?_, ?_⟩
+    · intro i j he
+      exact Subtype.ext (e.symm.injective he)
+    · intro i
+      refine ⟨?_, ?_⟩
+      · have hh := hi (e.symm i.val)
+        simpa only [show f (e.symm i.val) = i.val from e.apply_symm_apply i.val] using hh
+      · rw [Finset.biUnion_empty]
+        exact Finset.notMem_empty _
+  exact ⟨f, hf, fun s => (Finset.mem_filter.mp (hi s)).2, hanchor⟩
+
+#print axioms minimal_cover_matching
+end ElementaryMatching
+
