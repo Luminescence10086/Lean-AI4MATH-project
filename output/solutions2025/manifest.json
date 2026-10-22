@@ -1,0 +1,42 @@
+{
+  "2025_Mathematics_Solutions.pdf": {
+    "bytes": 211523,
+    "sha256": "502b89d48f0899c686e5601cc010e3441d77fa71786ef517f9971b2d0f25e8a0"
+  },
+  "Exam2025.lean": {
+    "bytes": 23604,
+    "sha256": "2955dbaae73e7b2e03dd26b659b5ca06145729d9f9393036e3560b26e06593ba"
+  },
+  "COVERAGE.md": {
+    "bytes": 5004,
+    "sha256": "e7e00ecce0e1a4c34d98164ac492066ac64b6e65afaab66d444bcf05ee6be3cf"
+  },
+  "CHECK.ps1": {
+    "bytes": 2121,
+    "sha256": "4bc72436906e06d586c01a89bfb6dfa29d0fc38c417b6b978d580b89412e158b"
+  },
+  "Audit.lean": {
+    "bytes": 2726,
+    "sha256": "624b7b453899f255a2ab22fd55576021aa57e898d72c3f91fec5ddb555bd0700"
+  },
+  "verification.txt": {
+    "bytes": 349,
+    "sha256": "c1e5558f01f0f13debaf70aa19e7976a1be7571b3a231dd603c15bd1e523f292"
+  },
+  "axioms.txt": {
+    "bytes": 5670,
+    "sha256": "0dad0fd8b6ee1e11858ca9c4f84f3e831a40a122deb7be1c215c3ad583149620"
+  },
+  "numerical_checks.txt": {
+    "bytes": 668,
+    "sha256": "b27c259b8b81a0ebce3776fb36f4a30a44565db60702a0269e64652a8ac56583"
+  },
+  "build_pdf.py": {
+    "bytes": 36971,
+    "sha256": "fa35cd43685b3c8ea5ce4e4fe149e40ca06046726ca95443f7662ab9b71dcfa1"
+  },
+  "inspect_pdf.py": {
+    "bytes": 999,
+    "sha256": "be03959e108b607024eea66eef31c71f38cc63d5a129beaeec03146b437db4df"
+  }
+}

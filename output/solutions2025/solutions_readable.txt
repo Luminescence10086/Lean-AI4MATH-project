@@ -1,0 +1,512 @@
+# 2025 Mathematics Papers
+Independent Solutions
+
+Computational & Applied Mathematics
+Probability & Statistics
+
+Solutions to all six applied-mathematics questions and all four probability/statistics questions in the supplied papers. The reasoning was developed independently; no answer keys or direct solutions were searched.
+
+Important qualifications. Statistics 1(b) is false as written. Statistics 2 has a false universal follow-up request. Statistics 4 cannot guarantee solutions on every sample. Explicit counterexamples are supplied, and the intended high-probability result in Statistics 4 is proved under a stated regularity assumption.
+
+The companion Exam2025.lean checks selected mathematical components. It is a partial formalization, not an end-to-end formal proof of all ten problems. The last page and COVERAGE.md identify the missing analytic, spectral and probability bridges. There are no proof placeholders or added axioms in the file.
+
+## Reading guide
+
+Applied 1: optimized iteration and error constant.
+Applied 2: inverse spectral radius of a path matrix.
+Applied 3: associated Legendre interpolation and least squares.
+Applied 4: optimal approximation by principal components.
+Applied 5: maximum-norm and energy stability of a θ-scheme.
+Applied 6: a stiff ODE and three time-stepping methods.
+
+Statistics 1: exact coverage and the false minimax claim.
+Statistics 2: the observation model and counterexamples.
+Statistics 3: independent two-point cyclic variables.
+Statistics 4: root-existence obstruction and concentration proof.
+
+Conventions: σ > 0; the intervals in Statistics 1(a) are closed. Φ denotes the standard normal CDF. Real associated Legendre interpolation nodes lie in (-1,1). Infinite-grid maximum norms mean suprema. All asymptotic statements concern n → ∞. Prepared 14 October 2026.
+
+# Applied 1 · Optimal multipoint iteration
+
+Let ξ be a simple root and suppose f is sufficiently smooth near ξ, for example C⁴. Put e = x - ξ and c₂ = f″(ξ)/(2f′(ξ)), c₃ = f‴(ξ)/(6f′(ξ)). We seek the highest order valid for a generic smooth f, rather than an exceptional function.
+
+f(ξ+e)/f′(ξ) = e + c₂e² + c₃e³ + O(e⁴),
+f(x)/f′(x) = e - c₂e² + (2c₂²-2c₃)e³ + O(e⁴).
+
+If z = x - βf(x)/f′(x), then
+
+z-ξ = (1-β)e + βc₂e² + O(e³),
+f′(z)/f′(ξ) = 1 + 2(1-β)c₂e
++ [2βc₂² + 3(1-β)²c₃]e² + O(e³).
+
+Inverting the last series, multiplying by the series for f, and substituting into the iteration gives
+
+enew = (1-α)e + α(1-2β)c₂e²
+- α[(2-8β+4β²)c₂² + (-2+6β-3β²)c₃]e³ + O(e⁴).
+
+The linear coefficient vanishes universally only if α = 1. With this value, the quadratic coefficient vanishes universally only if β = 1/2. Thus
+
+α = 1, β = 1/2,
+enew = (c₂²-c₃/4)e³ + O(e⁴).
+
+The method is locally of order at least three, and exactly three when c₂²-c₃/4 ≠ 0. The denominator remains nonzero near ξ since it tends to f′(ξ) ≠ 0. The error estimate gives local convergence from a sufficiently close starting point.
+
+No universal fourth order is possible: eliminating the first two terms has fixed both parameters, and f(ξ+e) = e+e² gives c₂ = 1, c₃ = 0 and cubic coefficient 1. Special functions can have higher order; a linear function is solved in one step.
+
+Lean verifies the coefficient optimization and the nonzero cubic example. The Taylor expansions, remainder estimates and local convergence argument are not formalized.
+
+# Applied 2 · Spectral radius of A⁻¹
+
+The matrix is the adjacency matrix of a path with eight vertices. For k = 1,…,8 put tk = kπ/9 and v(k)j = sin(jtk), j = 1,…,8.
+
+v(k)0 = v(k)9 = 0,
+v(k)j-1 + v(k)j+1 = 2cos(tk)v(k)j.
+
+The boundary identities apply to the first and last rows. Therefore Av(k) = λkv(k) with
+
+λk = 2cos(kπ/9),   k = 1,…,8.
+
+Every vector is nonzero, since its first entry is nonzero. Cosine is strictly decreasing on (0,π), so the eight eigenvalues are distinct and the vectors form a basis. None of the eigenvalues vanishes, since kπ/9 = π/2 would require k = 9/2.
+
+The eigenvalues of A⁻¹ are 1/λk. The smallest absolute values of λk occur at k = 4 and 5, the indices nearest 9/2, and equal 2cos(4π/9) = 2sin(π/18). Hence
+
+ρ(A⁻¹) = 1/[2sin(π/18)] ≈ 2.8793852416.
+
+## An independent algebra check
+
+For the r-vertex path let Dr(t) = det(tI-Ar). Expansion along the last row gives D₀ = 1, D₁ = t and Dr = tDr-1-Dr-2. Thus
+
+D₈(t) = t⁸-7t⁶+15t⁴-10t²+1.
+
+In particular det A = 1. The Lean source additionally gives an explicit integer matrix B and verifies AB = BA = I entry by entry.
+
+Lean checks both inverse identities and the continuant expansion. The determinant interpretation, sine eigenbasis and spectral-radius minimization are not formalized.
+
+# Applied 3(a) · Interpolation
+
+Write qk = P′k. For -1 < x < 1,
+
+P¹k(x) = -√(1-x²)qk(x).
+
+Pk has degree k and leading coefficient Lk = 2-k(2k)!/(k!)² ≠ 0. Thus qk has degree k-1 and leading coefficient kLk. The polynomials q₁,…,qN form a basis for polynomials of degree at most N-1.
+
+Suppose a is in the interpolation matrix kernel. At each distinct node xi ∈ (-1,1),
+
+0 = ∑k=1NakP¹k(xi)
+= -√(1-xi²)∑k=1Nakqk(xi).
+
+The square-root factor is nonzero. Hence q = ∑ akqk, of degree at most N-1, vanishes at N distinct points. The polynomial root bound gives q = 0; basis independence gives a = 0. The square matrix therefore has trivial kernel and is nonsingular.
+
+## Equivalent determinant formula
+
+The change from q₁,…,qN to monomials is triangular with diagonal kLk. Combining it with the Vandermonde determinant yields
+
+det = (-1)N[∏i=1N√(1-xi²)]
+× [∏k=1NkLk][∏i<j(xj-xi)],
+
+which is nonzero.
+
+Domain qualification: merely excluding ±1 does not define a real square root at arbitrary nodes outside [-1,1]. On the standard real domain the intended condition is xi ∈ (-1,1). A consistent complex interpretation outside this interval gives the same nonzero-factor argument over ℂ.
+
+Lean proves the polynomial root-count implication, but not the Legendre basis identification or determinant factorization.
+
+# Applied 3(b,c) · Least squares and parity
+
+Assume f ∈ L²([-1,1]). Set φk = P¹k. Expanding the squared error gives
+
+E(a) = ‖f‖²-2∑kakbk+∑k,jakMkjaj,
+Mkj = ∫-11φkφj dx,   bk = ∫-11fφk dx.
+
+The normal equations are Ma = b. If a ≠ 0, the polynomial ∑ akP′k is nonzero, so its product with √(1-x²) is nonzero on an open interval. Therefore aᵀMa = ∫(∑ akφk)² > 0. This proves positive definiteness and uniqueness.
+
+## The matrix is actually diagonal
+
+The self-adjoint Legendre equation is ((1-x²)P′k)′ + k(k+1)Pk = 0. Integrating by parts gives a zero endpoint term, and hence
+
+Mkj = ∫-11(1-x²)P′kP′j dx
+= k(k+1)∫-11PkPj dx
+= [2k(k+1)/(2k+1)]δkj.
+
+For completeness, ordinary orthogonality follows by integrating Rodrigues’ formula Pk = (2kk!)⁻¹ dk(x²-1)k/dxk against a lower-degree polynomial k times. All boundary terms vanish. For its squared norm, the same calculation gives (Lk/2k)Ik, where Ik = ∫(1-x²)kdx. Integration by parts yields Ik = 2kIk-1/(2k+1), I₀ = 2, and thus ‖Pk‖² = 2/(2k+1). The differential equation follows from Rodrigues’ formula by differentiation.
+
+ak = [(2k+1)/(2k(k+1))]∫-11f(x)P¹k(x) dx.
+
+For (c), Pk(-x) = (-1)kPk(x) implies φk(-x) = (-1)k+1φk(x). When k+j is odd, φkφj is odd and its integral over [-1,1] is zero.
+
+Lean checks positive diagonal weights, diagonal-system algebra, and I = -I ⇒ I = 0. It does not identify the integrals with the diagonal weights.
+
+# Applied 4 · Optimal orthonormal vectors
+
+Let Y = [y₁ ··· yn] and C = YYᵀ = ∑ yjyjᵀ. Fix ℓ ≤ dim V. Choose ψ₁,…,ψℓ as orthonormal eigenvectors of C for its ℓ largest eigenvalues, equivalently the first ℓ left singular vectors of Y.
+
+For any orthonormal family, P = ∑ ψiψiᵀ is an orthogonal projection. Pythagoras gives
+
+J = ∑j‖yj‖² - ∑i=1ℓψiᵀCψi.
+
+Let u₁,…,um be an orthonormal eigenbasis with λ₁ ≥ ··· ≥ λm ≥ 0. Define wk = ∑i=1ℓ(ukᵀψi)². Bessel’s inequality and orthonormality give
+
+0 ≤ wk ≤ 1,   ∑kwk = ℓ,
+∑iψiᵀCψi = ∑kλkwk.
+
+For ℓ ≥ 1, subtract λℓ times the mass identity. For k ≤ ℓ the remaining term is at most λk-λℓ, because wk ≤ 1; for k > ℓ it is nonpositive because wk ≥ 0. Therefore
+
+∑k=1mλkwk ≤ ∑k=1ℓλk.
+
+Equality holds for ψi = ui. If r = rank Y = dim V and σ₁,…,σr are the positive singular values in decreasing order, then
+
+Jmin = ∑k=ℓ+1rλk = ∑k=ℓ+1rσk².
+
+For ℓ = 0 the value is ∑‖yj‖². If ℓ is free to choose as well, ℓ = r gives minimum zero. Repeated eigenvalues at the cutoff allow multiple optimal subspaces.
+
+For n much smaller than m, diagonalize YᵀY instead. If vi is a unit eigenvector with positive eigenvalue λi, set ψi = Yvi/√λi.
+
+Lean verifies the spectral weight inequality. The spectral theorem, Bessel step and projection-error reduction are not formalized.
+
+# Applied 5(a) · Maximum-norm stability
+
+Set τ = Δt, h = Δx and r = τ/h². Interpret ‖U‖∞ as supj∈ℤ|Uj|: bounded sequences need not attain a maximum. The printed sampling formula u₀(jΔt) should be u₀(jΔx) for the intended spatial grid, but stability only uses bounded initial data.
+
+[1+θτ+2θr]Um+1j - θr(Um+1j-1+Um+1j+1)
+= [1-(1-θ)τ-2(1-θ)r]Umj
++ (1-θ)r(Umj-1+Umj+1).
+
+A sufficient constant in the requested form is
+
+A(θ) = 1-θ.
+
+Indeed, A(θ)τ ≤ h²/(4+h²) is (1-θ)(τ+4r) ≤ 1. This makes every right-hand coefficient nonnegative; their sum is 1-(1-θ)τ ≥ 0.
+
+## Implicit inverse on the infinite grid
+
+Let S be the shift and a = 1+θτ+2θr. The left operator is L = aI-θr(S+S⁻¹). Since 2θr/a < 1, it has the norm-convergent Neumann inverse
+
+L⁻¹ = a⁻¹∑k=0∞[θr(S+S⁻¹)/a]k.
+
+Every term preserves positivity, and ‖L⁻¹‖∞ ≤ 1/(a-2θr) = 1/(1+θτ). This establishes existence and uniqueness of each bounded step without assuming an attained maximum.
+
+The right operator R has ‖R‖∞ ≤ 1-(1-θ)τ. With q = [1-(1-θ)τ]/[1+θτ] ≥ 0, induction gives
+
+‖Um+1‖∞ ≤ q‖Um‖∞,
+‖Um‖∞ ≤ qm‖U⁰‖∞.
+
+The chosen restriction is sufficient, not claimed sharp. This positivity proof actually needs only (1-θ)(τ+2r) ≤ 1. At θ = 1 there is no step restriction and q = 1/(1+τ).
+
+Lean verifies stencil algebra and norm-bound induction. The operator construction and norm estimates are not formalized.
+
+# Applied 5(b) · ℓ² stability
+
+On square-summable sequences with inner product h∑ UjVj, put H = I-δh². It is bounded and self-adjoint, and summation by parts gives
+
+⟨HU,U⟩ = ‖U‖₂² + h∑j|(Uj+1-Uj)/h|² ≥ ‖U‖₂².
+
+The scheme is (I+θτH)Um+1 = (I-(1-θ)τH)Um. The discrete Fourier transform, initially on finite sequences and then by density and Plancherel, turns H into multiplication by
+
+λ(ω) = 1+4h⁻²sin²(ω/2),   -π ≤ ω ≤ π,
+1 ≤ λ(ω) ≤ 1+4h⁻².
+
+For z = τλ(ω) ≥ 0 the step factor is
+
+gθ(z) = [1-(1-θ)z]/[1+θz].
+
+The denominator is positive. The upper inequality g ≤ 1 is automatic. The lower inequality g ≥ -1 is equivalent to
+
+(1-2θ)z ≤ 2.
+
+For θ ∈ [1/2,1], this holds for all z ≥ 0, so Plancherel implies ‖Um‖₂ ≤ ‖U⁰‖₂ for arbitrary τ,h > 0.
+
+For θ ∈ [0,1/2), require the inequality at the largest λ. This gives
+
+(1-2θ)τ(1+4h⁻²) ≤ 2,
+B(θ) = 1-2θ,
+B(θ)Δt ≤ 2(Δx)²/[4+(Δx)²].
+
+The condition is sharp for a uniform ℓ² contraction. At equality the endpoint factor can be -1, so only non-increase is claimed. If the condition fails, a frequency interval of positive measure has |g| > 1; a Fourier transform supported there violates one-step contraction.
+
+Lean proves the scalar stability equivalence and unconditional θ ≥ 1/2 case. The Fourier and operator bridges are not formalized.
+
+# Applied 6(a,b) · Exact solution and explicit Euler
+
+## (a) Exact solution
+
+The second equation gives y₂(t) = e-t. Using an integrating factor in the first gives
+
+(e1000ty₁(t))′ = 999e999t,
+y₁(t) = e-t+e-1000t,   y₂(t) = e-t.
+
+Differentiation and evaluation at zero verify the solution. The change a = y₁-y₂, b = y₂ diagonalizes the system: a′ = -1000a, b′ = -b, a(0) = b(0) = 1.
+
+## (b) Explicit Euler
+
+For y′ = λy the factor is R(z) = 1+z. Its non-amplifying stability region is the closed disk
+
+{z ∈ ℂ : |1+z| ≤ 1}.
+
+If absolute stability means asymptotic decay, use the open disk instead. Here the factors are 1-1000h and 1-h, so non-amplification requires 0 < h ≤ 0.002; strict decay requires 0 < h < 0.002.
+
+am = (1-1000h)m,   bm = (1-h)m,
+y₁,m = am+bm,   y₂,m = bm.
+
+For h > 0.002, |1-1000h| > 1, so |am| → ∞. Since |y₁,m-y₂,m| ≤ √2‖ym‖₂, the vector norm diverges. The actual initial fast-mode coefficient is 1, so the unstable mode is present.
+
+At h = 0.002 the fast mode is (-1)m, bounded but nondecaying. Divergence here concerns fixed h and m → ∞, not a finite computation on a fixed time interval.
+
+Lean verifies the exact initial data and derivatives, the threshold and unstable factor, and an explicit modal recurrence. The unbounded-power limit is not formalized.
+
+# Applied 6(c,d) · Implicit Euler and trapezoidal rule
+
+## (c) Implicit Euler
+
+R(z) = 1/(1-z). Its non-amplifying region {z : |1-z| ≥ 1} includes the closed left half-plane. For the system,
+
+am = (1+1000h)-m,   bm = (1+h)-m,
+ym = (am+bm, bm)ᵀ.
+
+For every h > 0 both factors lie strictly between 0 and 1. All solutions and initial perturbations decay in modal coordinates and hence in ℝ². This proves unconditional stability. Also R(z) → 0 on the negative real axis as z → -∞: implicit Euler is L-stable and strongly damps stiff modes.
+
+## (d) Trapezoidal rule
+
+R(z) = (1+z/2)/(1-z/2),
+|R(z)| ≤ 1 ⇔ |1+z/2|² ≤ |1-z/2|² ⇔ Re z ≤ 0.
+
+Its pole z = 2 is outside this region. Thus it is A-stable. The two factors for this system are
+
+rf = (1-500h)/(1+500h),
+rs = (1-h/2)/(1+h/2),
+am = rfm,   bm = rsm.
+
+Both have absolute value less than 1 for every h > 0. Therefore all perturbations decay. However rf is negative for h > 0.002, giving alternating fast-mode errors. For a very stiff mode rf is close to -1, so damping is poor.
+
+R(z) → -1 as z → -∞: not L-stable.
+
+Stability means boundedness and decay of repeated steps. For a nonnormal system it need not imply contraction in every norm on each step; the fixed invertible modal transformation suffices.
+
+Lean proves the strict real-mode bounds. The complex regions and long-time limits are not formalized.
+
+# Statistics 1(a) · Exact coverage probability
+
+Assume c₁ < c₂ and σ > 0. X = 0 has probability zero. Replacing (X,μ) with (-X,-μ) preserves coverage, so for μ ≠ 0 use t = |μ|/σ > 0. Let Ht(c) = Φ(t(1/c-1)) for c ≠ 0.
+
+c₁c₂ > 0: Ht(c₁)-Ht(c₂),
+c₁ < 0 < c₂: Ht(c₁)+1-Ht(c₂),
+c₁ = 0 < c₂: 1-Ht(c₂),
+c₁ < 0 = c₂: Ht(c₁).
+
+At μ = 0 the answer is
+
+1 if c₁ ≤ 0 ≤ c₂, and 0 otherwise.
+
+## Derivation
+
+For μ > 0 and 0 < c₁ < c₂, coverage means μ/c₂ ≤ X ≤ μ/c₁; only X > 0 contributes. Standardization gives Ht(c₁)-Ht(c₂).
+
+For c₁ < c₂ < 0, only X < 0 contributes, but the event is again μ/c₂ ≤ X ≤ μ/c₁ and has the same expression. Reciprocals have this order on either half-line.
+
+For c₁ < 0 < c₂, coverage means X ≤ μ/c₁ or X ≥ μ/c₂, giving two disjoint tails. A zero lower endpoint removes the negative tail; a zero upper endpoint removes the positive tail.
+
+At μ = 0 and X ≠ 0, the random interval contains zero exactly when its coefficient interval contains zero. This is why substituting t = 0 into the nonzero-mean formulas is not generally valid; coverage can jump there.
+
+Lean checks reflection and the zero-mean interval event. Gaussian measures and the CDF evaluation are not formalized.
+
+# Statistics 1(b) · The printed assertion is false
+
+The expected-length identity cannot hold for arbitrary procedures F. Take F to output the deterministic interval (X-1,X+1). Its length is 2 for every sample, so its expected length equals 2 for every μ,σ.
+
+For a scale-form randomized interval with (C₁,C₂) drawn independently of X from a fixed G, set L = EG(C₂-C₁). Tonelli’s theorem gives
+
+Eμ,σEG[(C₂-C₁)|X|] = L Eμ,σ|X|.
+
+Matching the finite length 2 forces L to be finite. At μ = 0, X = σZ with Z standard normal, and E|X| = σ√(2/π). Thus the asserted identity for all parameters would require
+
+Lσ√(2/π) = 2 for every σ > 0.
+
+At σ = 1 and σ = 2 this gives L√(2/π) = 2 and 2L√(2/π) = 2, a contradiction. The length identity alone is impossible, regardless of the coverage inequality.
+
+## Why an invariance theorem cannot be inserted silently
+
+The displayed supremum over F has no common length constraint. Moreover, the F in the second line is not bound by the first line’s supremum. A meaningful minimax statement needs a precisely specified procedure class, common scale-invariant length criterion or risk, and correct quantifiers.
+
+Different repairs give different theorems. The proper response to the printed universal assertion is therefore this counterexample, not an unprinted invariance claim.
+
+Lean checks the contradiction L·a = 2 and L·(2a) = 2. Tonelli factorization and the Gaussian absolute moment are not formalized.
+
+# Statistics 2 · Literal model and failed quantifiers
+
+The observation has law Q = (P₁+P₂)/2. Since E₁ν > E₂ν, choosing population 1 is correct regardless of which population generated the observation. Thus
+
+P(correct) = Qφ = (1/2)∫φp₁ + (1/2)∫φp₂.
+
+The expression (1/2)∫φp₁ + (1/2)∫(1-φ)p₂ would instead measure identification of the source population, a different task.
+
+## The proposed universal guarantee is false
+
+Take ν(r)=r, P₁=N(1,1), P₂=N(0,1), and
+
+φ-(r) = 1/4 + arctan(r)/(2π).
+
+The laws have Lebesgue densities and finite means 1 and 0; ν(X) and ν(Y) are unbounded. The rule is measurable and strictly increasing, hence injective. Since -π/2 < arctan r < π/2,
+
+0 < φ-(r) < 1/2 for every r.
+
+Hence Qφ- < 1/2. Strictness follows because the positive random variable 1/2-φ-(r) has strictly positive expectation.
+
+## But a counterexample for every given φ is impossible
+
+The admissible injective rule
+
+φ+(r) = 3/4 + arctan(r)/(2π)
+
+satisfies 1/2 < φ+(r) < 1 everywhere. Therefore Qφ+ > 1/2 for every pair of distributions, including all pairs with E₁ν > E₂ν. No requested counterexample exists for this φ.
+
+Both conclusions matter: “always at least 1/2” is false, and the follow-up demand for a counterexample for every injective φ is also false. Injectivity does not force a range crossing 1/2 or symmetry under relabeling. The joint dependence of X and Y is irrelevant to a single mixture observation.
+
+Lean proves the strict pointwise bounds and injectivity of both rules. Mixture integration and the normal-law example are not formalized.
+
+# Statistics 3 · Explicit cyclic construction
+
+For n ≥ 2 set
+
+t = π/(n+2),   q = 1/[4cos²t],   p = 1-q,
+ai = sin(it)/[2cos(t)sin((i+1)t)],   1 ≤ i ≤ n-1.
+
+Let X₀ = Xn = 0 be constant. Independently for i=1,…,n-1, choose
+
+Xi = i-n with probability ai,
+Xi = i with probability 1-ai.
+
+The next page proves 0 < ai < 1, a₁=q, an-1=1-q, and (1-ai-1)ai=q. These make the construction valid on the finite product space {0,1}n-1. A constant is independent of every family, so X₁,…,Xn are independent. X₀ is a second name for Xn, not an additional independent variable.
+
+## Endpoint comparisons
+
+P(X₀ < X₁) = 1-a₁ = 1-q,
+P(Xn-1 < Xn) = an-1 = 1-q.
+
+## Interior comparisons
+
+For 2 ≤ k ≤ n-1, the two low faces increase from k-1-n to k-n and the two high faces increase from k-1 to k. A preceding low face is below a following high face. The only losing outcome is preceding high followed by low. Independence gives
+
+P(Xk-1 ≥ Xk) = (1-ak-1)ak = q,
+P(Xk-1 < Xk) = 1-q.
+
+There are no ties. All n cyclic probabilities have the exact requested value.
+
+For n=2 there are no interior comparisons: X₁ takes -1 and 1 equally, and X₂=X₀=0, giving probability 1/2 in both directions. For n=3 the common winning probability is (√5-1)/2.
+
+Lean checks support order, the complete sine-ratio parameter identities, and finite-product normalization and rectangular independence. The final assembly into a cyclic random-variable existence theorem is not formalized.
+
+# Statistics 3 · Trigonometric verification
+
+We have 0 < t ≤ π/4, so cos t > 0. For 1 ≤ i ≤ n-1, all of it, (i+1)t and (i+2)t lie in (0,π), so their sines are positive.
+
+The addition identity gives
+
+2cos(t)sin((i+1)t)-sin(it) = sin((i+2)t).
+
+Dividing by a positive denominator yields
+
+1-ai = sin((i+2)t)/[2cos(t)sin((i+1)t)] > 0.
+
+The definition also gives ai > 0. Hence each two-point law is legitimate. For i=2,…,n-1,
+
+(1-ai-1)ai
+= [sin((i+1)t)/(2cos(t)sin(it))]
+× [sin(it)/(2cos(t)sin((i+1)t))]
+= 1/[4cos²t] = q.
+
+At the first endpoint, sin(2t)=2sin(t)cos(t) gives
+
+a₁ = sin(t)/[2cos(t)sin(2t)] = q.
+
+At the last endpoint, (n+2)t=π implies sin((n-1)t)=sin(3t) and sin(nt)=sin(2t). Using sin(3t)=sin(t)(4cos²t-1),
+
+an-1 = sin(3t)/[2cos(t)sin(2t)]
+= (4cos²t-1)/(4cos²t) = 1-q.
+
+This completes the construction without invoking an extremal-dice existence theorem.
+
+## How the formula arises
+
+Increasing both low and high faces leaves one losing interior outcome. Requiring probability q forces the recurrence ai = q/(1-ai-1). The sine ratios solve it, and the endpoint requirement an-1 = 1-q selects t = π/(n+2).
+
+# Statistics 4 · Universal root existence fails
+
+Roots existing with high probability is different from a solution estimator existing on every sample, or almost surely. The latter fails even for a bounded C¹ score with globally bounded derivative.
+
+ψ(x) = 1-(3/2)(1-x²)² for |x| ≤ 1;
+ψ(x) = 1 for |x| > 1.
+
+This score lies in [-1/2,1]. Its derivative is 6x(1-x²) on (-1,1), and zero outside. Values and derivatives agree at ±1, so ψ is C¹ with bounded continuous derivative.
+
+Let R=1/4 with probability 512/675 and R=3 with probability 163/675. Then
+
+ψ(1/4)=-163/512,   ψ(3)=1,
+Eψ(R)=0,
+ψ′(1/4)=45/32,   ψ′(3)=0,
+Eψ′(R)=16/15 ≠ 0.
+
+Take p=1 and even n. On the event of exactly n/2 observations of each value, the score equation is
+
+(n/2)[ψ(1/4-β)+ψ(3-β)] = 0.
+
+The arguments differ by 11/4 > 2, so they cannot both belong to [-1,1]. One score is 1 and the other is at least -1/2. Their sum is at least 1/2 for every β, so the equation has no root.
+
+The event has probability binomial(n,n/2)(512/675)n/2(163/675)n/2 > 0 for every even n, while p log p/n=0. Thus almost-sure existence for each n does not follow from the assumptions.
+
+The event can be rare; this does not refute the intended high-probability existence statement. The next page proves that precise version.
+
+Lean proves the score bounds, mean-zero arithmetic, derivative-value arithmetic and positivity of the two-score sum for every β. The C¹ argument and event probability are not formalized.
+
+# Statistics 4 · The intended concentration result
+
+Write β* for the estimator (the β-hat in the paper). A precise valid conclusion is: with probability at least 1-2p/n, all p equations have roots with |β̂j| < tn = √[p log n/(Bn)], for sufficiently large n. Estimators may be defined arbitrarily outside this good event; they need not solve the equations there.
+
+Assume ψ is globally differentiable with globally bounded derivative and is bounded. More generally, sample scores must be continuous and h(t)=Eψ(R-t) must satisfy h′(0)=-d. A derivative bound only near the point zero does not by itself justify differentiation under expectation for a general R.
+
+Let M=sup|ψ| > 0. Replace ψ by -ψ if needed so that d > 0. Dominated convergence in the difference quotient gives h(0)=0 and h′(0)=-d. Thus for all small t > 0,
+
+h(t) ≤ -dt/2,   h(-t) ≥ dt/2.
+
+Write m=n/p and Sj(b)=m⁻¹∑ψ(Rij-b). Each summand lies in [-M,M]. One-sided Hoeffding gives
+
+P(Sj(t) ≥ 0) ≤ exp[-md²t²/(8M²)],
+P(Sj(-t) ≤ 0) ≤ exp[-md²t²/(8M²)].
+
+Set B=d²/(8M²) and t=tn=√[log n/(Bm)]. Each bound equals 1/n. Taking the union over both signs and all cells yields
+
+P(∃j: Sj(-tn) ≤ 0 or Sj(tn) ≥ 0) ≤ 2p/n.
+
+On the complementary event, continuity and the intermediate value theorem give roots strictly inside (-tn,tn). A measurable choice can be obtained from the boundary of the first negative excursion using rational arguments. Extend it by zero when the sign test fails. Then
+
+P(maxj|β̂j| ≥ √[p log n/(Bn)]) ≤ 2p/n → 0.
+
+The estimating equations are guaranteed only on the good event. Finally, the hypothesis is log p/m → 0. It forces m → ∞, since any bounded-m subsequence would have p=n/m → ∞. Consequently log n/m=(log p+log m)/m → 0 and p/n=1/m → 0, so tn → 0 as needed.
+
+Lean only verifies the scalar tail-bound multiplication. Hoeffding, measurable root selection, the limit argument and the complete high-probability theorem are not formalized.
+
+# Formal verification · Scope and reproducibility
+
+Exam2025.lean is a collection of checked components, not a complete translation of the PDF. Compiling it establishes only the stated theorems under their explicit hypotheses. An algebraic inequality alone is not a formal proof of the probability or operator theorem using it.
+
+## Checked components
+
+Iteration: cancellation parameters and cubic coefficient.
+Path matrix: two exact inverse identities and continuant expansion.
+Legendre: root-count step, positive weights and diagonal system.
+Principal components: spectral weight inequality.
+θ-scheme: scalar stability, positive stencil and norm induction.
+Stiff ODE: exact derivatives and initial data, scalar factors and recurrence.
+Confidence interval: reflection, zero-mean event, length contradiction.
+Decision rules: arctangent bounds and injectivity.
+Cyclic variables: face comparisons, sine-ratio parameters, normalized finite products and rectangular independence.
+ANOVA: score bounds, mean identities and no-root algebra.
+
+## Remaining formalization
+
+Taylor remainders and convergence; the sine eigenbasis and spectral radius; Legendre special-function and integral identities; spectral/projection reductions; infinite-grid operators and Fourier analysis; stability limits; Gaussian laws and CDFs; mixture integration; assembly of the cyclic random-variable existence theorem; score differentiability and probability of the ANOVA counterexample; Hoeffding and the complete root-existence theorem.
+
+## Compiler and trust boundary
+
+The code uses the workspace’s pinned Lean 4.34.0-rc2 and Mathlib revision 85e3a25e006c35636f0e53b0e9296caca2685bc0. CHECK.ps1 invokes the installed compiler using the workspace package paths. verification.txt records the actual check result. There are no proof placeholders, added axioms or assumed exam answers used as proofs.
+
+Standard Lean/Mathlib classical foundations can include propext, Classical.choice and Quot.sound. No added axioms does not mean axiom-free foundations.
+
+Status: written solutions and counterexamples cover all ten questions. The requested complete Lean formalization is unfinished. The coverage record makes the missing work explicit and prevents a partial certificate from being mistaken for a complete one.

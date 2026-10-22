@@ -1,0 +1,9 @@
+Lean verification
+Toolchain: leanprover/lean4:v4.34.0-rc2
+Lean (version 4.34.0-rc2, x86_64-w64-windows-gnu, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)
+Source SHA256:
+2955DBAAE73E7B2E03DD26B659B5CA06145729D9F9393036E3560B26E06593BA
+
+Compile exit code: 0
+Axiom audit exit code: 0
+No sorryAx dependency in any declared theorem.

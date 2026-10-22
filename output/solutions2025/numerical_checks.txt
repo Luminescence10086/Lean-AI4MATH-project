@@ -1,0 +1,14 @@
+n=2: enumerated 2 atoms; max error=1.11e-16
+n=3: enumerated 4 atoms; max error=1.11e-16
+n=4: enumerated 8 atoms; max error=2.22e-16
+n=5: enumerated 16 atoms; max error=1.11e-16
+n=6: enumerated 32 atoms; max error=1.11e-16
+n=7: enumerated 64 atoms; max error=1.11e-16
+n=8: enumerated 128 atoms; max error=4.44e-16
+n=9: enumerated 256 atoms; max error=3.33e-16
+n=10: enumerated 512 atoms; max error=1.67e-15
+n=11: enumerated 1024 atoms; max error=1.44e-15
+n=12: enumerated 2048 atoms; max error=1.44e-15
+Spectral-radius numerical check: 2.879385241571817
+Expected formula: 2.879385241571817
+These are sanity checks, not replacements for mathematical proofs.
